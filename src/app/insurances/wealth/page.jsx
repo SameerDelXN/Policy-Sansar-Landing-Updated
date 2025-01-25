@@ -1,83 +1,275 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
 import VehicleImg from "../../../../public/insurance/car-insurance.jpeg";
-// import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-import ulipsImg from "../../../../public/insurance/ulips.png";
-import childImg from "../../../../public/insurance/child.png";
-import PensionImg from "../../../../public/insurance/pention.png";
+import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
+import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+import bgImage from "../../../../public/icons/bgImages/bgImage.png"
+import carIcon from "../../../../public/icons/carIcon.png"
+import bikeIcon from "../../../../public/icons/bikeIcon.png"
+import homeIcon from "../../../../public/icons/homeIcon.png"
+import travelIcon from "../../../../public/icons/travelIcon.png"
+import instantPolicyIcon from "../../../../public/icons/Flaticons/instantPolicy.png"
+import claimTrackingIcon from "../../../../public/icons/Flaticons/claimTracking.png"
+import supportIcon from "../../../../public/icons/Flaticons/247Icon.png"
+import securePaymentIcon from "../../../../public/icons/Flaticons/securePayment.png"
+import {toast,Toaster} from "react-hot-toast"
+import { RxCross1 } from "react-icons/rx";
+import { motion } from "framer-motion";
+const GeneralInsurance = () => {
+  const [showModal, setShowModal] = useState(true); // Initially show the modal
+  const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
+  const [insuranceType, setInsuranceType] = useState(""); // Track the selected insurance type
+  const [firstName, setFirstName] = useState(""); // Track the first name input
+  const [lastName, setLastName] = useState(""); // Track the last name input
+  const [mobileNumber, setMobileNumber] = useState(""); // Track the mobile number input
 
-import EndowermentPlan from "../../../../public/insurance/plans.png";
+   const handleContinueClick = () => {
+     setShowModal(false);
+     toast("We will get back to you soon...",{
+       icon:"😊"
+     })
+   };
+   const handleCloseModal = ()=>{
+     setShowModal(false)
+   }
+ 
 
-const WealthInsurance = () => {
+  // Check if all fields are filled and valid
+  const isFormValid = () => {
+    return (
+      firstName &&
+      lastName &&
+      mobileNumber &&
+      annualIncome &&
+      insuranceType &&
+      mobileNumber.match(/^[0-9]{10}$/) // Ensure mobile number is 10 digits
+    );
+  };
+  const handleEnquireClick=()=>{
+    setShowModal(true);
+  }
   return (
-    <div className="container mx-auto p-6 xxs:p-2 mt-12 mb-12">
-      <div className="flex items-center justify-center">
-        <div className="w-3/4 md:w-3/4 xxs:w-full">
-          <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">
-            Wealth Creation Insurance
-          </h1>
-          <div>
-            <p className=" text-gray-700 mb-4 text-justify">
-            At Policy Sansar, we provide tailored Wealth Creation Insurance products designed for high-net-worth individuals (HNIs), Non-Resident Indians (NRIs), and NRI clients. Our dedicated team offers personalized wealth creation advisory services, helping you secure your financial future while growing your wealth. We combine the security of life insurance with investment opportunities, allowing you to achieve long-term financial goals such as retirement planning, education funding, or wealth accumulation.
-            </p>
-            <p className=" text-gray-700 mb-8 text-justify">
-            We go beyond traditional wealth management by offering innovative Wealth Creation Insurance solutions that not only provide life coverage but also present robust opportunities for investment growth. Our plans are carefully designed to help individuals build and secure their wealth over time, ensuring financial stability and peace of mind. With a focus on high-net-worth individuals (HNIs), Non-Resident Indians (NRIs), and clients with specialized financial goals, we provide expert guidance to help you navigate the complexities of wealth creation. By offering a blend of insurance protection and strategic investments, we enable you to achieve financial independence and long-term
-            </p>
+    <div className="w-full h-auto p-10 ">
+      <Toaster/>
+      {showModal && (
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+          
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -100 }} // Start above the screen
+            animate={{ opacity: 1, y: 0 }} // Animate to its final position
+            exit={{  y: 100,opacity:0 }} // Exit animation
+            transition={{ duration: 0.5 }} // Duration of the animation
+          className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl">
+             <div className="w-full flex items-center justify-between">
+                        <h1 className="text-xl font-semibold">Get in touch</h1>
+                        <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
+                        </div>
+            <form className="w-full flex flex-col gap-4">
+              <div className="flex items-center justify-between w-full gap-4">
+                <input
+                  required
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="First Name"
+                />
+                <input
+                  required
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <input
+                required
+                type="tel"
+                pattern="^[0-9]{10}$"
+                value={mobileNumber}
+                onChange={(e) => setMobileNumber(e.target.value)}
+                className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Mobile Number"
+              />
+
+              <div className="flex items-center justify-between w-full gap-4">
+                <select
+                  required
+                  value={annualIncome}
+                  onChange={(e) => setAnnualIncome(e.target.value)}
+                  className="border border-slate-300 p-4 rounded-lg w-full bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-50"
+                >
+                  <option value="">Select Annual Income</option>
+                  <option value="1-2 lac">1-2 Lac</option>
+                  <option value="2-5 lac">2-5 Lac</option>
+                  <option value="5-10 lac">5-10 Lac</option>
+                  <option value="10-20 lac">10-20 Lac</option>
+                  <option value="20+ lac">20+ Lac</option>
+                </select>
+
+                <select
+                  required
+                  value={insuranceType}
+                  onChange={(e) => setInsuranceType(e.target.value)}
+                  className="border border-slate-300 p-4 rounded-lg w-full bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-50"
+                >
+                  <option value="">Select Insurance Type</option>
+                  <option value="Health">Health Insurance</option>
+                  <option value="Vehicle">Vehicle Insurance</option>
+                  <option value="Home">Home Insurance</option>
+                  <option value="Travel">Travel Insurance</option>
+                </select>
+              </div>
+
+              <input
+                onClick={handleContinueClick}
+                type="submit"
+                value="Continue"
+                disabled={!isFormValid()} // Disable button if form is not valid
+                className={`p-4 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
+              />
+            </form>
+          </motion.div>
+        </div>
+      )}
+      <div>
+      <div className="bg-white w-full h-[150vh] rounded-2xl flex shadow-lg border border-slate-300">
+          {/* Red container with background image */}
+          <div
+  className="w-1/2 h-full rounded-tl-2xl rounded-bl-2xl text-white pt-24 pl-10 flex flex-col items-start gap-2 bg-opacity-30 backdrop-blur-2xl"
+  style={{
+    backgroundImage: `url(${bgImage.src})`, // Setting the imported background image
+    backgroundSize: 'cover', // Ensure the image covers the entire container
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat', // Ensure the background doesn't repeat
+  }}
+>
+  <h1 className="text-4xl">
+    <span className="text-5xl font-bold">W</span>ealth Insurance
+  </h1>
+  <p className="w-2/3">
+  At Policy Sansar, we provide tailored Wealth Creation Insurance products designed for high-net-worth individuals (HNIs), Non-Resident Indians (NRIs), and NRI clients. Our dedicated team offers personalized wealth creation advisory services, helping you secure your financial future while growing your wealth. We combine the security of life insurance with investment opportunities, allowing you to achieve long-term financial goals such as retirement planning, education funding, or wealth accumulation.  </p>
+</div>
+
+          <div className="w-1/2  flex flex-col  justify-evenly">
+          <div className="flex flex-col gap-5 p-8">
+          <div className="flex flex-col items-start gap-3">
+            <h1 className="text-2xl font-bold">Types of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <hr className="w-64"/>
+            
+            </div>
+            <div className="w-full flex flex-wrap items-center justify-evenly">
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={carIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold">ULIPs</h1>
+               <p className="text-sm text-slate-500">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={bikeIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold">Endowment</h1>
+               <p className="text-sm text-slate-500">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={homeIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold">Pension</h1>
+               <p className="text-sm text-slate-500">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={travelIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold">Child</h1>
+               <p className="text-sm text-slate-500">Insurance</p>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-5 p-8 w-full">
+          <div className="flex flex-col items-start gap-3 ">
+            <h1 className="text-2xl font-bold">Top Features of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <hr className="w-64"/>
+            
+            </div>
+            <div className="w-full flex flex-wrap items-center justify-center gap-3 ">
+              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+                  <Image
+                    src={instantPolicyIcon}
+                    width={90}
+                    height={90}
+                    alt="Instant Policy Icon"
+                  />
+                  <h1 className="text-3xl text-center ">Wealth-building Plans</h1>
+                  <p className="text-center text-slate-500">Provide comparison of wealth-building insurance products for long-term financial growth.</p>
+              </div>
+              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+                  <Image
+                    src={claimTrackingIcon}
+                    width={90}
+                    height={90}
+                    alt="Instant Policy Icon"
+                  />
+                  <h1 className="text-3xl text-center ">Risk Management Tools</h1>
+                  <p className="text-center text-slate-500">Offer tools to help users assess and manage the risk of their insurance investments.</p>
+              </div>
+              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+                  <Image
+                    src={supportIcon}
+                    width={90}
+                    height={90}
+                    alt="Instant Policy Icon"
+                  />
+                  <h1 className="text-3xl text-center ">Estate Planning Insurance</h1>
+                  <p className="text-center text-slate-500">Provide estate planning solutions with life insurance to ensure wealth transfer.</p>
+              </div>
+              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+                  <Image
+                    src={securePaymentIcon}
+                    width={90}
+                    height={90}
+                    alt="Instant Policy Icon"
+                  />
+                  <h1 className="text-3xl text-center ">Tax-efficient Plans</h1>
+                  <p className="text-center text-slate-500">Compare tax-efficient wealth management plans with better returns.</p>
+              </div>
+            </div>
+          </div>
+        <div className="p-3 w-full">
+        <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 ">Enquire Now</button>
+        </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-wrap justify-center gap-6">
-        {[
-  {
-    "img": ulipsImg,
-    "title": "Unit-Linked Insurance Plans (ULIPs)",
-    "desc": "Combines life insurance with investment opportunities to create wealth.",
-    "extra": "ULIPs allow you to invest in a mix of funds while offering life insurance protection. They offer potential for wealth accumulation and help you achieve long-term financial goals."
-  },
-  {
-    "img": EndowermentPlan,
-    "title": "Endowment Plans",
-    "desc": "Provides life coverage along with a savings plan for future goals.",
-    "extra": "Endowment plans combine life insurance and savings, paying out a lump sum at the end of the policy term or in case of death, helping you plan for future needs like education, marriage, or retirement."
-  },
-  {
-    "img": PensionImg,
-    "title": "Pension Plans",
-    "desc": "Helps build a steady income stream post-retirement.",
-    "extra": "Pension plans allow you to accumulate savings during your working years and provide a regular income after retirement, ensuring financial independence in your later years."
-  },
-  {
-    "img": childImg,
-    "title": "Child Plans",
-    "desc": "Secures the future of your children by providing financial coverage.",
-    "extra": "Child Plans ensure your child's education and other future needs are covered by offering a combination of life coverage and savings, providing financial security for their future."
-  }
-]
-.map((item, index) => (
-          <div
-            key={index}
-            className={`w-full md:w-3/4 flex flex-col-reverse md:flex-row items-center gap-6 p-6 xxs:p-2  xxs:w-full ${index % 2 === 0 ? 'md:flex-row-reverse ' : ''}`}
-          >
-            <div className="flex-1">
-              <h2 className="text-xl font-semibold text-start">{item.title}</h2>
-              <p className="text-gray-700 mt-4 text-justify">{item.desc}</p>
-              <p className="text-gray-700 mt-4 text-justify">{item.extra}</p>
-            </div>
-            <div className="relative flex-1 w-full h-48 md:h-full ">
-              <Image
-                width={1920}
-                height={1080}
-                src={item.img}
-                alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 rounded-3xl"
-              />
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
 };
 
-export default WealthInsurance;
+export default GeneralInsurance;

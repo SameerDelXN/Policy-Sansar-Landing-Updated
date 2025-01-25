@@ -15,6 +15,7 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import Banner1 from "../../../public/images/banner/banner1.png";
 import Banner2 from "../../../public/images/banner/banner2.png";
 import Banner3 from "../../../public/images/banner/banner3.png";
+import Link from "next/link";
 
 const Homee = () => {
   const banners = [Banner1, Banner2, Banner3];
@@ -83,7 +84,8 @@ const Homee = () => {
           { icon: financialInsuranceIcon, title: "Financial" },
           { icon: wealthInsuranceIcon, title: "Wealth" }
         ].map(({ icon, title }, idx) => (
-          <div
+          <Link
+            href={`/insurances/${title}`}
             key={idx}
             className="flex flex-col items-center gap-2 w-1/3 hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl"
           >
@@ -92,7 +94,7 @@ const Homee = () => {
               <h1 className="text-xl font-bold">{title}</h1>
               <p className="text-md font-normal text-slate-500">Insurance</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

@@ -6,9 +6,16 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
-
+import generalInsuranceIcon from "../../../public/icons/Flaticons/genreralInsurance.png";
+import lifeInsuranceIcon from "../../../public/icons/Flaticons/lifeInsurance.png";
+import healthInsuranceIcon from "../../../public/icons/Flaticons/healthInsurance.png";
+import groupInsuranceIcon from "../../../public/icons/Flaticons/groupInsurance.png";
+import financialInsuranceIcon from "../../../public/icons/Flaticons/financialInsurance.png";
+import wealthInsuranceIcon from "../../../public/icons/Flaticons/wealthInsurance.png";
+import { RxCross1 } from "react-icons/rx";
 const Header = () => {
   const [logoSize, setLogoSize] = useState(120); // Initial logo size in px
+  const [showLoginModal,setShowLoginModal] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown state for large screens
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false); // Submenu state for mobile
@@ -71,23 +78,69 @@ const Header = () => {
     visible: { x: 0, opacity: 1 },
     exit: { x: "100%", opacity: 0 },
   };
-
+  const dropdownVariants = {
+    hidden: { opacity: 0, y: -10, height: 0 }, // Slightly offset initially
+    visible: {
+      opacity: 1,
+      y: 0,
+      height: 'auto',
+      transition: {
+        duration: 0.2, // Quick transition
+        ease: [0.165, 0.84, 0.44, 1], // Smooth and slightly bouncy easing
+      },
+    },
+  };
+  const handleCloseModal = ()=>{
+    setShowLoginModal(false)
+  }
   return (
     <div className="w-full sticky top-0 z-10 bg-white">
+        {showLoginModal && (
+              <div
+                className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+                
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }} // Start above the screen
+                  animate={{ opacity: 1, y: 0 }} // Animate to its final position
+                  exit={{  y: 100,opacity:0 }} // Exit animation
+                  transition={{ duration: 0.5 }} // Duration of the animation
+                className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-2xl">
+                 <div className="w-full flex items-start justify-between">
+                            <div className="flex flex-col items-start gap-3">
+                            <h1 className="text-2xl font-semibold">Login to Policy Sansar</h1>
+                            <hr className="w-64"/>
+                            </div>
+                            <button className="text-red-500 text-xl font-extrabold" onClick={handleCloseModal}><RxCross1 /></button>
+                            </div>
+                 <form className="w-full flex flex-col gap-4 items-end">
+                  <input
+                    placeholder="Enter Mobile Number"
+                    className="p-5 border border-slate-300 w-full rounded-lg outline-none"
+                  />
+                  <input
+                    type="submit"
+                    value="Login"
+                    className="p-5 bg-blue-700 text-white w-1/3 rounded-lg cursor-pointer"
+                  />
+                 </form>
+                </motion.div>
+              </div>
+            )}
       <div className="w-full flex items-center justify-between px-4 py-2 lg:py-1 text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.1)] border-b border-gray-200">
         {/* Logo Section */}
         <Link1
           href={"/"}
-          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 w-1/2"
+          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 w-1/3"
         >
           <Image
             src={Logo}
-            width={logoSize}
-            height={logoSize}
+            width={90}
+            height={90}
             alt="Logo"
             className="transition-all ease-in-out duration-300"
           />
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex flex-col items-start gap-1">
           <h1 className="text-2xl text-blue-700">Policy Sansar</h1>
           <h1 className="text-sm ">आपके संसार की सुरक्षा का भरोसा-पालिसी संसार</h1>
           </div>
@@ -106,10 +159,10 @@ const Header = () => {
         </button>
 
         {/* Navigation Links */}
-        <div className="hidden lg:flex gap-8">
+        <div className="hidden lg:flex gap-8  items-center">
           <Link1
             href="/"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
           >
             Home
           </Link1>
@@ -118,79 +171,116 @@ const Header = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <span className="relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]">
+            <span className="relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700">
               Products
             </span>
             {isDropdownOpen && (
-              <div
-                ref={dropdownRef}
-                className="absolute top-full mt-0 bg-white shadow-lg border rounded-md py-2 w-72"
-              >
+              <motion.div
+              ref={dropdownRef}
+              className="absolute top-full mt-0 bg-white shadow-lg border rounded-md py-2 w-80"
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+            >
+                {/* Links with Icons */}
                 <Link1
-                  onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/General"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
                 >
-                  General Insurance
+                  <div className="flex items-center">
+                  <Image src={generalInsuranceIcon} width={20} height={20} alt="General Insurance" className="mr-2" />
+                  <h1>General Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                 
                 </Link1>
                 <Link1
-                onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Health"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
                 >
+                  <div className="flex items-center">
+                  <Image src={healthInsuranceIcon} width={20} height={20} alt="Health Insurance" className="mr-2" />
                   Health Insurance
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                  
                 </Link1>
                 <Link1
-                onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Life"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
+                  <div className="flex items-center ">
+                  <Image src={lifeInsuranceIcon} width={20} height={20} alt="Life Insurance" className="mr-2" />
                   Life Insurance
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                 
                 </Link1>
                 <Link1
-                onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/group"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
+                  <div className="flex items-center">
+                  <Image src={groupInsuranceIcon} width={20} height={20} alt="Group Insurance" className="mr-2" />
                   Group Insurance
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                 
                 </Link1>
                 <Link1
-                onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/financial"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
+                  <div className="flex items-center">
+                  <Image src={financialInsuranceIcon} width={20} height={20} alt="Financial Insurance" className="mr-2" />
                   Financial Insurance
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                 
                 </Link1>
                 <Link1
-                onClick={()=>setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/wealth"
-                  className="block px-4 py-2  text-black relative after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
+                  <div className="flex items-center">
+                  <Image src={wealthInsuranceIcon} width={20} height={20} alt="Wealth Insurance" className="mr-2" />
                   Wealth Insurance
+                  <IoIosArrowForward className="absolute right-4" />
+                  </div>
+                  
                 </Link1>
-              </div>
+                
+              </motion.div>
             )}
           </div>
           <Link1
             href="/Distribution"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
           >
             Process
           </Link1>
           <Link1
             href="/about-us"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
           >
             About Us
           </Link1>
           <Link1
             href="/contact"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-[#1D951B] after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-[#1D951B]"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
           >
             Contact Us
           </Link1>
+          <div className="flex items-center gap-2"><button className="text-blue-700 border border-blue-700 p-3 rounded-lg w-32">Renew</button>
+          <button className="bg-blue-700 text-white p-3 rounded-lg w-32" onClick={()=>setShowLoginModal(true)}>Login</button></div>
         </div>
-
+        
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
