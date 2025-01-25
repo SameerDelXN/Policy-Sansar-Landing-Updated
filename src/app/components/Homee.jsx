@@ -91,8 +91,8 @@ const Homee = () => {
           >
             <Image src={icon} width={50} height={50} alt={`${title} Insurance`} />
             <div className="flex flex-col items-center">
-              <h1 className="text-xl font-bold">{title}</h1>
-              <p className="text-md font-normal text-slate-500">Insurance</p>
+              <h1 className="text-xl font-">{title}</h1>
+              <p className="text-sm text-slate-500">Insurance</p>
             </div>
           </Link>
         ))}
