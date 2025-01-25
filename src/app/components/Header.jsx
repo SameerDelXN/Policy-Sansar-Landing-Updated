@@ -87,7 +87,10 @@ const Header = () => {
             alt="Logo"
             className="transition-all ease-in-out duration-300"
           />
-          <h1 className="text-2xl text-[#1D951B]">Policy Sansar</h1>
+          <div className="flex flex-col items-start gap-3">
+          <h1 className="text-2xl text-blue-700">Policy Sansar</h1>
+          <h1 className="text-sm ">आपके संसार की सुरक्षा का भरोसा-पालिसी संसार</h1>
+          </div>
         </Link1>
 
         {/* Hamburger or Back Button */}
