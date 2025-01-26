@@ -13,7 +13,7 @@ const cardVariants = {
 
 const Why_Choose = () => {
   return (
-    <div className="w-full min-h-[100vh] bg-white relative flex flex-col items-center justify-evenly   overflow-hidden">
+    <div className="w-full min-h-[100vh] bg-white relative flex flex-col items-center justify-evenly xl:justify-center xl:gap-5   overflow-hidden">
       {/* Content Section */}
       <div className="p-8">
         <h1 className="lg:text-3xl font-bold text-center xxs:text-xl">

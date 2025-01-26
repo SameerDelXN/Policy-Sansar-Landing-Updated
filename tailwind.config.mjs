@@ -31,7 +31,7 @@ export default {
         md: '768px',  // Medium devices like tablets
         lg: '1024px', // Large devices like laptops
         xl: '1280px', // Extra large devices like desktops
-        '2xl': '1536px', // Extra extra large screens
+        desktopxl: '1536px', // Extra extra large screens
       },
     },
   },

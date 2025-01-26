@@ -87,9 +87,9 @@ const Homee = () => {
           <Link
             href={`/insurances/${title}`}
             key={idx}
-            className="flex flex-col items-center gap-2 lg:w-1/3 hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl xxs:w-1/2 xs:w-1/2 sm:w-1/2 md:w-1/3"
+            className="flex flex-col items-center gap-2 lg:w-1/3 hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl xxs:w-1/2 xs:w-1/2 sm:w-1/2 md:w-1/3 xl:p-6"
           >
-            <Image src={icon} width={50} height={50} alt={`${title} Insurance`}  className="xxs:w-6 lg:w-12"/>
+            <Image src={icon} width={50} height={50} alt={`${title} Insurance`}  className="xxs:w-6 lg:w-12 xl:w-14"/>
             <div className="flex flex-col items-center">
               <h1 className="lg:text-xl xxs:text-sm">{title}</h1>
               <p className="lg:text-sm text-slate-500 xxs:text-xs">Insurance</p>

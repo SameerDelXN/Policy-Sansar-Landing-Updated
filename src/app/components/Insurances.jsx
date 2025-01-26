@@ -19,7 +19,7 @@ const InsurancePlans = () => {
   ];
 
   return (
-    <div className="w-full min-h-[100vh] p-10 flex flex-col items-center gap-10">
+    <div className="w-full min-h-[100vh] p-10 flex flex-col items-center justify-center gap-10">
       <h2 className="text-center text-xl md:text-3xl font-medium mb-6">
         Explore Our Insurance Plans
       </h2>
@@ -27,7 +27,7 @@ const InsurancePlans = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative lg:w-64 lg:h-64 border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto xxs:w-44 xxs:h-44"
+            className="relative lg:w-64 lg:h-64 border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto xxs:w-44 xxs:h-44 xl:w-72 xl:h-72"
           >
             <Link href={plan.link}>
               <div className="relative w-full h-full rounded-full overflow-hidden">
