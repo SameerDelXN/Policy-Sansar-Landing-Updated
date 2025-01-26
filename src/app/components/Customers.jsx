@@ -20,7 +20,7 @@ const Customers = () => {
   return (
     <div className="flex flex-col items-center py-8">
       <h2 className="text-2xl font-bold mb-6">Customer's Say !!</h2>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         {/* Left Arrow */}
         <ChevronLeft className="cursor-pointer w-6 h-6" />
         

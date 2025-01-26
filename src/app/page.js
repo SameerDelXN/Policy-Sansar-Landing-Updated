@@ -11,8 +11,9 @@ export default function Home() {
     <Homee/>
     <Our_Partners/>
     <Insurances/>
-    <Customers/>
     <Why_Choose/>
     <Unique/>
+    <Customers/>
+
     </div>
 );}
