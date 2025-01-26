@@ -20,9 +20,9 @@ const Customers = () => {
   return (
     <div className="flex flex-col items-center py-8 w-full min-h-[50vh] bg-white">
       <h2 className="text-2xl font-bold mb-6">Customer's Say !!</h2>
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4 xxs:items-center xxs:justify-center xxs:w-full xs:justify-center xs:items-center xs:w-full sm:items-center sm:w-full sm:justify-center">
         {/* Left Arrow */}
-        <ChevronLeft className="cursor-pointer w-6 h-6" />
+        {/* <ChevronLeft className="cursor-pointer w-6 h-6" /> */}
         
         {/* Testimonials */}
         {testimonials.map((testimonial, index) => (
@@ -36,7 +36,7 @@ const Customers = () => {
         ))}
 
         {/* Right Arrow */}
-        <ChevronRight className="cursor-pointer w-6 h-6" />
+        {/* <ChevronRight className="cursor-pointer w-6 h-6" /> */}
       </div>
     </div>
   );
