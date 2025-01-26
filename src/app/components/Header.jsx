@@ -138,11 +138,11 @@ const Header = () => {
             width={90}
             height={90}
             alt="Logo"
-            className="transition-all ease-in-out duration-300"
+            className="transition-all ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12"
           />
-          <div className="flex flex-col items-start gap-1">
-          <h1 className="text-2xl text-blue-700">Policy Sansar</h1>
-          <h1 className="text-sm ">आपके संसार की सुरक्षा का भरोसा-पालिसी संसार</h1>
+          <div className="flex flex-col items-start gap-1  ">
+          <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm">Policy Sansar</h1>
+          <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1>
           </div>
         </Link1>
 

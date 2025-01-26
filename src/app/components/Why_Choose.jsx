@@ -13,17 +13,17 @@ const cardVariants = {
 
 const Why_Choose = () => {
   return (
-    <div className="w-full min-h-[100vh] bg-white relative flex flex-col items-center justify-evenly">
+    <div className="w-full min-h-[100vh] bg-white relative flex flex-col items-center justify-evenly xxs:min-h-[100vh] xs:min-h-[100vh] md:min-h-[100vh]">
       {/* Content Section */}
       <div className="p-8">
-        <h1 className="text-3xl font-bold text-center">
+        <h1 className="text-3xl font-bold text-center xxs:text-xl">
           Benefits of <span className="text-blue-700">Policy Sansar</span>
         </h1>
       </div>
 
       {/* Cards Section */}
-      <div className="w-full flex items-center gap-5 justify-center z-10">
-        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5">
+      <div className="w-full flex items-center gap-5 justify-center z-10 xxs:flex-col md:flex">
+        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full md:w-2/3">
           <Image src={callIcon} width={90} height={90} alt="callIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="text-2xl font-bold">24/7 Assistance</h1>
@@ -34,7 +34,7 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5">
+        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full md:w-2/3">
           <Image src={sheildIcon} width={90} height={90} alt="sheildIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="text-2xl font-bold">Quick Quotations</h1>
@@ -45,8 +45,8 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5">
-          <Image
+        <div className="bg-white w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full md:w-2/3">
+          <Image 
             src={quickQuoteIcon}
             width={90}
             height={90}
@@ -66,7 +66,7 @@ const Why_Choose = () => {
 
       {/* Background Image */}
       <div
-        className="absolute bottom-0 left-0 w-full h-2/3 bg-cover bg-no-repeat bg-center"
+        className="absolute bottom-0 left-0 w-full h-2/3 bg-cover bg-no-repeat bg-center xxs:hidden"
         style={{ backgroundImage: `url(${bgShape.src})` }}
       ></div>
     </div>

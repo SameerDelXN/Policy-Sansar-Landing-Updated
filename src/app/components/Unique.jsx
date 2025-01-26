@@ -33,7 +33,7 @@ const Unique = () => {
   });
 
   return (
-    <div className="w-full h-auto flex flex-col items-center gap-14 ">
+    <div className="w-full h-auto flex flex-col items-center gap-14 mt-12">
       <div className="w-full bg-white flex flex-col lg:flex-row items-center justify-between p-5 gap-10">
         <div className="flex flex-col items-start gap-14 w-full lg:w-2/4">
           {/* Title and Divider */}
