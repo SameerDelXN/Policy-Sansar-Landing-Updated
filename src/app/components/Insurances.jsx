@@ -10,25 +10,24 @@ import ArrowIcon from "../../../public/icons/arrow.png";
 
 const InsurancePlans = () => {
   const plans = [
-    { name: "General Insurance", img: GeneralImg, link: "/General" },
-    { name: "Health Insurance", img: HealthImg, link: "/Health" },
-    { name: "Life Insurance", img: LifeImg, link: "/life" },
-    { name: "Group Insurance", img: GroupImg, link: "/group" },
-    { name: "Financial Insurance", img: FinancialImg, link: "/financial" },
-    { name: "Wealth Insurance", img: WealthImg, link: "/wealth" },
+    { name: "General Insurance", img: GeneralImg, link: "/insurances/General" },
+    { name: "Health Insurance", img: HealthImg, link: "/insurances/Health" },
+    { name: "Life Insurance", img: LifeImg, link: "/insurances/Life" },
+    { name: "Group Insurance", img: GroupImg, link: "/insurances/Group" },
+    { name: "Financial Insurance", img: FinancialImg, link: "/insurances/Financial" },
+    { name: "Wealth Insurance", img: WealthImg, link: "/insurances/Wealth" },
   ];
 
   return (
-    
-    <div className="w-full min-h-[100vh] p-10 ">
-        <h2 className="text-center text-xl md:text-3xl font-medium mb-6">
-         Explore Our Insurance Plans
-       </h2>
-       <div className="flex flex-wrap justify-center gap-6 w-full">
+    <div className="w-full min-h-[100vh] p-10 flex flex-col items-center gap-10">
+      <h2 className="text-center text-xl md:text-3xl font-medium mb-6">
+        Explore Our Insurance Plans
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 xxs:grid-cols-1 xxs:gap-8 xs:grid-cols-2">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative w-96 h-96  border-2 bg-white border-black rounded-full p-3 group hover:p-0 transition-all duration-300"
+            className="relative lg:w-64 lg:h-64 border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto xxs:w-44 xxs:h-44"
           >
             <Link href={plan.link}>
               <div className="relative w-full h-full rounded-full overflow-hidden">
@@ -52,7 +51,7 @@ const InsurancePlans = () => {
                 </div>
               </div>
             </Link>
-            <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-white px-3 py-1 rounded-lg shadow-md">
+            <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-white px-3 py-1 rounded-lg shadow-md lg:w-24 xs:w-28  xxs:text-xs">
               {plan.name}
             </p>
           </div>

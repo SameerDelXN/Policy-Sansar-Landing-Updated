@@ -22,12 +22,12 @@ const Why_Choose = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="w-full lg:flex-row items-center gap-5 justify-center z-10 xxs:flex-col md:flex xxs:p-5  ">
+      <div className="w-full lg:flex-row items-center gap-5 justify-center z-10 xxs:flex xxs:flex-wrap  md:flex xxs:p-5 xs:flex xxs:gap-4 ">
         <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-2/3 md:w-2/3">
           <Image src={callIcon} width={90} height={90} alt="callIcon" />
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-2xl font-bold">24/7 Assistance</h1>
-            <p className="text-md text-center text-slate-500">
+            <h1 className="lg:text-2xl xs:text-xl  ">24/7 Assistance</h1>
+            <p className="lg:text-md  text-center text-slate-500">
               We&apos;re always here for you. Whether it&apos;s a query or support
               with claims, our team is just a call or message away, anytime.
             </p>
@@ -37,7 +37,7 @@ const Why_Choose = () => {
         <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-2/3 md:w-2/3">
           <Image src={sheildIcon} width={90} height={90} alt="sheildIcon" />
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-2xl font-bold">Quick Quotations</h1>
+            <h1 className="lg:text-2xl xs:text-xl">Quick Quotations</h1>
             <p className="text-md text-center text-slate-500">
               Discover the best insurance plans for you. Compare premiums and
               get accurate quotations in just a few clicks.
@@ -53,7 +53,7 @@ const Why_Choose = () => {
             alt="quickQuoteIcon"
           />
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-2xl text-center font-bold">
+            <h1 className="lg:text-2xl xs:text-xl">
               Instant Policy Approval
             </h1>
             <p className="text-md text-center text-slate-500">
