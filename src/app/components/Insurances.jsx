@@ -20,7 +20,7 @@ const InsurancePlans = () => {
 
   return (
     
-    <div className="w-full h-[100vh] p-10 ">
+    <div className="w-full min-h-[100vh] p-10 ">
         <h2 className="text-center text-xl md:text-3xl font-medium mb-6">
          Explore Our Insurance Plans
        </h2>

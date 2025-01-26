@@ -171,7 +171,7 @@ const GeneralInsurance = () => {
                   alt="carIcon"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold">Micro</h1>
+               <h1 className="text-lg font-bold">Monthly-Salary</h1>
                <p className="text-sm text-slate-500">Insurance</p>
                </div>
               </div>
@@ -183,7 +183,7 @@ const GeneralInsurance = () => {
                   alt="carIcon"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold">Rural-Health</h1>
+               <h1 className="text-lg font-bold">Surety</h1>
                <p className="text-sm text-slate-500">Insurance</p>
                </div>
               </div>
@@ -194,10 +194,11 @@ const GeneralInsurance = () => {
                   height={50}
                   alt="carIcon"
                 />
-               <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold">Crop</h1>
-               <p className="text-sm text-slate-500">Insurance</p>
-               </div>
+              <div className="flex flex-col items-center ">
+  <h1 className="text-lg font-bold">Banker&apos;s Guarantee</h1>
+  <p className="text-sm text-slate-500">Insurance</p>
+</div>
+
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Image
@@ -207,7 +208,7 @@ const GeneralInsurance = () => {
                   alt="carIcon"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold">Accident</h1>
+               <h1 className="text-lg font-bold">Income Loss</h1>
                <p className="text-sm text-slate-500">Insurance</p>
                </div>
               </div>

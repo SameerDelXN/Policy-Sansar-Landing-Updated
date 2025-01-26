@@ -94,7 +94,7 @@ const Header = () => {
     setShowLoginModal(false)
   }
   return (
-    <div className="w-full sticky top-0 z-10 bg-white">
+    <div className="w-full sticky top-0 z-20 bg-white">
         {showLoginModal && (
               <div
                 className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
@@ -221,7 +221,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/group"
+                  href="/insurances/Group"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">
@@ -233,7 +233,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/financial"
+                  href="/insurances/Financial"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">
@@ -245,7 +245,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/wealth"
+                  href="/insurances/Wealth"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">
@@ -277,8 +277,8 @@ const Header = () => {
           >
             Contact Us
           </Link1>
-          <div className="flex items-center gap-2"><button className="text-blue-700 border border-blue-700 p-3 rounded-lg w-32">Renew</button>
-          <button className="bg-blue-700 text-white p-3 rounded-lg w-32" onClick={()=>setShowLoginModal(true)}>Login</button></div>
+          <div className="flex items-center gap-2">
+          <button className="bg-blue-700 text-white p-3 rounded-lg w-32" onClick={()=>setShowLoginModal(true)}>Get Started</button></div>
         </div>
         
         {/* Mobile Menu */}
