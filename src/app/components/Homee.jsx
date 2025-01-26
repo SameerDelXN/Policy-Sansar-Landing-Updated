@@ -12,13 +12,14 @@ import goalIcon from "../../../public/icons/Flaticons/goal.png";
 import starIcon from "../../../public/icons/Flaticons/star.png";
 import { GrNext } from "react-icons/gr";
 import { MdArrowBackIosNew } from "react-icons/md";
-import Banner1 from "../../../public/images/banner/banner1.png";
+import Banner1 from "../../../public/images/banner/banner4.png";
 import Banner2 from "../../../public/images/banner/banner2.png";
 import Banner3 from "../../../public/images/banner/banner3.png";
+import Banner4 from "../../../public/images/banner/banner1.png";
 import Link from "next/link";
 
 const Homee = () => {
-  const banners = [Banner1, Banner2, Banner3];
+  const banners = [Banner1, Banner2, Banner3,Banner4];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-move the carousel every 5 seconds
