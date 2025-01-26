@@ -23,6 +23,6 @@ body {
 /* Tailwind Custom Utility */
 @layer utilities {
   .bg-custom-gradient {
-    background: linear-gradient(to left, #CEFCFF 0%, #D5F5F9 25%, #FFFFFF 100%);
+    background: linear-gradient(to left, #CEFCFF 0%, #D5F5F9 9%, #FFFFFF 100%);
   }
 }
