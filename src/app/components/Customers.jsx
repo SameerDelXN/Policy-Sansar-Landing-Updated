@@ -18,7 +18,7 @@ const testimonials = [
 
 const Customers = () => {
   return (
-    <div className="flex flex-col items-center py-8">
+    <div className="flex flex-col items-center py-8 w-full min-h-[50vh] bg-white">
       <h2 className="text-2xl font-bold mb-6">Customer's Say !!</h2>
       <div className="flex flex-wrap items-center gap-4">
         {/* Left Arrow */}
