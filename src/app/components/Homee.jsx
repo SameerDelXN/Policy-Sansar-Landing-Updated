@@ -44,7 +44,7 @@ const Homee = () => {
   return (
     <div className="w-full min-h-[85vh] flex flex-col items-center justify-evenly  lg:p-5 gap-5 xxs:p-3 xs:p-1 sm:p-1">
       {/* Moving Advertisement */}
-      <div className="relative lg:w-2/3 lg:h-36 bg-red-600 xxs:h-24 xs:h-24 rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
+      <div className="relative lg:w-2/3 lg:h-36  xxs:h-24 xs:h-24 rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
         <div
           className="flex transition-transform duration-500 ease-in-out w-full h-full"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
