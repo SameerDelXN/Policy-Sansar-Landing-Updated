@@ -98,7 +98,7 @@ const Header = () => {
     setShowLoginModal(true)
   }
   return (
-    <div className="w-full sticky top-0 z-20 bg-white">
+    <div className="w-full sticky top-0 z-20 bg-white h-[13vh]">
         {showLoginModal && (
               <div
                 className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 xxs:p-5"
@@ -131,7 +131,7 @@ const Header = () => {
                 </motion.div>
               </div>
             )}
-      <div className="w-full flex items-center justify-between px-4 py-2 lg:py-1 text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.1)] border-b border-gray-200">
+      <div className="w-full h-full flex items-center justify-between px-4 py-2 lg:py-1 text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.1)] border-b border-gray-200">
         {/* Logo Section */}
         <Link1
           href={"/"}

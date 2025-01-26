@@ -16,10 +16,12 @@ import Banner1 from "../../../public/images/banner/banner4.png";
 import Banner2 from "../../../public/images/banner/banner2.png";
 import Banner3 from "../../../public/images/banner/banner3.png";
 import Banner4 from "../../../public/images/banner/banner1.png";
+import handShakeIcon from "../../../public/icons/handshake.png";
+import coupleIcon from "../../../public/images/couple.png";
 import Link from "next/link";
 
 const Homee = () => {
-  const banners = [Banner1, Banner2, Banner3,Banner4];
+  const banners = [Banner1, Banner2, Banner3, Banner4];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-move the carousel every 5 seconds
@@ -41,16 +43,16 @@ const Homee = () => {
     );
   };
   function capitalizeFirstLetter(string) {
-    if (!string) return '';
+    if (!string) return "";
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  
+
   return (
-    <div className="w-full min-h-[85vh] flex flex-col items-center justify-evenly  lg:p-5 gap-5 xxs:p-3 xs:p-1 sm:p-1">
+    <div className="w-full min-h-[87vh] flex flex-col items-center justify-between xxs:justify-center xs:justify-evenly gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
       {/* Moving Advertisement */}
-      <div className="relative lg:w-2/3 lg:h-36  xxs:h-24 xs:h-24 rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
+      <div className="relative lg:w-4/5 lg:h-40   xxs:h-32  bg-red-600  xs:h-12 rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
         <div
-          className="flex transition-transform duration-500 ease-in-out w-full h-full"
+          className="flex transition-transform duration-500 ease-in-out w-full h-full "
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {banners.map((banner, index) => (
@@ -81,7 +83,7 @@ const Homee = () => {
       </div>
 
       {/* Insurance Options */}
-      <div className="lg:w-1/2 bg-white rounded-2xl border border-slate-100 shadow-md h-1/2 flex items-center flex-wrap p-3 xxs:w-full xs:w-full sm:w-full md:w-2/3 ">
+      {/* <div className="lg:w-1/2 bg-white rounded-2xl border border-slate-100 shadow-md h-1/2 flex items-center flex-wrap p-3 xxs:w-full xs:w-full sm:w-full md:w-2/3 ">
         {[{ icon: generalInsuranceIcon, title: "General" },
           { icon: healthInsuranceIcon, title: "Health" },
           { icon: lifeInsuranceIcon, title: "Life" },
@@ -103,7 +105,7 @@ const Homee = () => {
         ))}
       </div>
 
-      {/* Footer Section */}
+      Footer Section
       <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 ">
         {[{ icon: puzzleIcon, value: "100+", label: "Diverse Variety" },
           { icon: goalIcon, value: "100%", label: "Achievement Rate" },
@@ -117,6 +119,82 @@ const Homee = () => {
             </div>
           </div>
         ))}
+      </div> */}
+      <div className="w-5/6 bg-white flex flex-col  rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:w-full lg:w-5/6 xs:w-full ">
+        <div className="flex flex-col items-center gap-1 ">
+          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center">
+            The Insurance Partner
+          </h1>
+          <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm">
+            <p>You can</p>
+            <Image
+              src={handShakeIcon}
+              width={60}
+              height={60}
+              alt="handshakeIcon xxs:w-12 xxs:h-12"
+            />
+            <p>Rely On</p>
+          </div>
+          <p className="font-semibold text-xs text-slate-500 text-center">
+            Your One-Stop Insurance Shop for Life's Essentials
+          </p>
+        </div>
+        <div className="w-full flex items-center justify-center">
+        <div className="w-1/3 h-96 xxs:hidden lg:block xs:hidden ">
+            <Image
+              src={coupleIcon}
+              width={500}
+              height={500}
+              alt="couple"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-1/2 h-64 xxs:w-full lg:w-1/2 xs:w-full ">
+            <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
+              {[
+                { icon: generalInsuranceIcon, title: "General" },
+                { icon: healthInsuranceIcon, title: "Health" },
+                { icon: lifeInsuranceIcon, title: "Life" },
+                { icon: groupInsuranceIcon, title: "group" },
+                { icon: financialInsuranceIcon, title: "financial" },
+                { icon: wealthInsuranceIcon, title: "wealth" },
+              ].map(({ icon, title }, idx) => (
+                <Link
+                  href={`/insurances/${title}`}
+                  key={idx}
+                  className="flex flex-col w-1/3 items-center gap-2  hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl "
+                >
+                  <Image
+                    src={icon}
+                    width={480}
+                    height={480}
+                    alt={`${title} Insurance`}
+                    className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7"
+                  />
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-sm xxs:text-xs">{capitalizeFirstLetter(title)}</h1>
+                    <p className="text-xs text-slate-500">Insurance</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 lg:flex xxs:hidden ">
+        {[{ icon: puzzleIcon, value: "100+", label: "Diverse Variety" },
+          { icon: goalIcon, value: "100%", label: "Achievement Rate" },
+          { icon: starIcon, value: "4.9", label: "Customer Rating" }
+        ].map(({ icon, value, label }, idx) => (
+          <div key={idx} className="flex items-center gap-3 border border-slate-300 rounded-lg p-3">
+            <Image src={icon} width={25} height={25} alt={label} />
+            <div className="flex flex-col items-start xxs:items-center">
+              <h1 className="text-sm font-bold xxs:text-sm xs:text-sm sm:text-sm">{value}</h1>
+              <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs xxs:text-center">{label}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+          </div>
+         
+        </div>
       </div>
     </div>
   );
