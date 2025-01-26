@@ -13,9 +13,9 @@ const InsurancePlans = () => {
     { name: "General Insurance", img: GeneralImg, link: "/insurances/General" },
     { name: "Health Insurance", img: HealthImg, link: "/insurances/Health" },
     { name: "Life Insurance", img: LifeImg, link: "/insurances/Life" },
-    { name: "Group Insurance", img: GroupImg, link: "/insurances/Group" },
-    { name: "Financial Insurance", img: FinancialImg, link: "/insurances/Financial" },
-    { name: "Wealth Insurance", img: WealthImg, link: "/insurances/Wealth" },
+    { name: "Group Insurance", img: GroupImg, link: "/insurances/group" },
+    { name: "Financial Insurance", img: FinancialImg, link: "/insurances/financial" },
+    { name: "Wealth Insurance", img: WealthImg, link: "/insurances/wealth" },
   ];
 
   return (

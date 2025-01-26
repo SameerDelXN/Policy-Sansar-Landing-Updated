@@ -225,7 +225,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/Group"
+                  href="/insurances/group"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">
@@ -237,7 +237,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/Financial"
+                  href="/insurances/financial"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">
@@ -249,7 +249,7 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/Wealth"
+                  href="/insurances/wealth"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">

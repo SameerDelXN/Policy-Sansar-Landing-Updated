@@ -40,7 +40,11 @@ const Homee = () => {
       prevIndex === 0 ? banners.length - 1 : prevIndex - 1
     );
   };
-
+  function capitalizeFirstLetter(string) {
+    if (!string) return '';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
   return (
     <div className="w-full min-h-[85vh] flex flex-col items-center justify-evenly  lg:p-5 gap-5 xxs:p-3 xs:p-1 sm:p-1">
       {/* Moving Advertisement */}
@@ -81,9 +85,9 @@ const Homee = () => {
         {[{ icon: generalInsuranceIcon, title: "General" },
           { icon: healthInsuranceIcon, title: "Health" },
           { icon: lifeInsuranceIcon, title: "Life" },
-          { icon: groupInsuranceIcon, title: "Group" },
-          { icon: financialInsuranceIcon, title: "Financial" },
-          { icon: wealthInsuranceIcon, title: "Wealth" }
+          { icon: groupInsuranceIcon, title: "group" },
+          { icon: financialInsuranceIcon, title: "financial" },
+          { icon: wealthInsuranceIcon, title: "wealth" }
         ].map(({ icon, title }, idx) => (
           <Link
             href={`/insurances/${title}`}
@@ -92,7 +96,7 @@ const Homee = () => {
           >
             <Image src={icon} width={50} height={50} alt={`${title} Insurance`}  className="xxs:w-6 lg:w-12 xl:w-14"/>
             <div className="flex flex-col items-center">
-              <h1 className="lg:text-xl xxs:text-sm">{title}</h1>
+              <h1 className="lg:text-xl xxs:text-sm">{capitalizeFirstLetter(title)}</h1>
               <p className="lg:text-sm text-slate-500 xxs:text-xs">Insurance</p>
             </div>
           </Link>
