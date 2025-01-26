@@ -150,12 +150,14 @@ const Footer = () => {
               <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
             </div>
             <div className="flex items-center gap-3 w-full">
+            Registered office 
              <IoLocationSharp className="text-4xl"/> -{" "}
              <h1 className="text-sm sm:text-base">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
              </div>
             
              
              <div className="flex items-center gap-3 w-full">
+             Corporate office
              <IoLocationSharp className="text-3xl"/> -{" "}
              <h1 className="text-sm sm:text-base">104,1st Floor,A-Wing,Boomerang,Chandivali Farm Road,Andheri(E),Mumbai-40072</h1>
              </div>
