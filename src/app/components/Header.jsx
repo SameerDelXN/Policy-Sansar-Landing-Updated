@@ -93,11 +93,15 @@ const Header = () => {
   const handleCloseModal = ()=>{
     setShowLoginModal(false)
   }
+  const handleMobileBtnClick = ()=>{
+    setIsMenuOpen(false)
+    setShowLoginModal(true)
+  }
   return (
     <div className="w-full sticky top-0 z-20 bg-white">
         {showLoginModal && (
               <div
-                className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+                className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 xxs:p-5"
                 
               >
                 <motion.div
@@ -108,7 +112,7 @@ const Header = () => {
                 className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-2xl">
                  <div className="w-full flex items-start justify-between">
                             <div className="flex flex-col items-start gap-3">
-                            <h1 className="text-2xl font-semibold">Login to Policy Sansar</h1>
+                            <h1 className="lg:text-2xl font-semibold xxs:text-xl">Login to Policy Sansar</h1>
                             <hr className="w-64"/>
                             </div>
                             <button className="text-red-500 text-xl font-extrabold" onClick={handleCloseModal}><RxCross1 /></button>
@@ -116,12 +120,12 @@ const Header = () => {
                  <form className="w-full flex flex-col gap-4 items-end">
                   <input
                     placeholder="Enter Mobile Number"
-                    className="p-5 border border-slate-300 w-full rounded-lg outline-none"
+                    className="lg:p-5 border border-slate-300 w-full rounded-lg outline-none xxs:p-3"
                   />
                   <input
                     type="submit"
                     value="Login"
-                    className="p-5 bg-blue-700 text-white w-1/3 rounded-lg cursor-pointer"
+                    className="lg:p-5 bg-blue-700 text-white w-1/3 rounded-lg cursor-pointer xxs:p-3"
                   />
                  </form>
                 </motion.div>
@@ -131,7 +135,7 @@ const Header = () => {
         {/* Logo Section */}
         <Link1
           href={"/"}
-          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 w-1/3"
+          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 lg:w-1/3 xxs:w-3/4"
         >
           <Image
             src={Logo}
@@ -283,26 +287,35 @@ const Header = () => {
         
         {/* Mobile Menu */}
         <AnimatePresence>
+          
           {isMenuOpen && (
             <motion.div
               ref={menuRef}
-              className="fixed top-0 right-0 w-2/3 h-full bg-white shadow-lg z-20 flex flex-col items-start px-6 py-4 lg:hidden"
+              className="fixed top-0 right-0 w-2/3 h-full bg-white shadow-lg z-20 flex flex-col items-start  px-6 py-4 lg:hidden overflow-scroll"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={menuVariants}
             >
+              <div className="w-full flex items-center justify-center">
+                <Image
+                  src={Logo}
+                  width={120}
+                  height={120}
+                  alt="logo"
+                />
+              </div>
               <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/"
-                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
               >
                 Home
               </Link1>
               <div className="w-full text-left">
                 <button
                   onClick={toggleSubmenu}
-                  className="py-2 text-lg text-black border-b border-gray-200 w-full flex justify-between items-center"
+                  className="py-2 text-sm text-black border-b border-gray-200 w-full flex justify-between items-center"
                 >
                   Products
                   <IoIosArrowForward
@@ -314,71 +327,102 @@ const Header = () => {
                 {isSubmenuOpen && (
                   <div className="ml-4 mt-2">
                     <Link1
-                      onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/General"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      General Insurance
-                    </Link1>
-                    <Link1
-                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/Health"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      Health Insurance
-                    </Link1>
-                    <Link1
-                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/Life"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      Life Insurance
-                    </Link1>
-                    <Link1
-                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/group"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      Group Insurance
-                    </Link1>
-                    <Link1
-                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/financial"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      Financial Insurance
-                    </Link1>
-                    <Link1
-                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                      href="/insurances/wealth"
-                      className="block px-4 py-2 text-black hover:bg-gray-100"
-                    >
-                      Wealth Insurance
-                    </Link1>
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  href="/insurances/General"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
+                >
+                  <div className="flex items-center">
+                  <Image src={generalInsuranceIcon} width={15} height={15} alt="General Insurance" className="mr-2" />
+                  <h1 className="text-sm">General Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                 
+                </Link1>
+                <Link1
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  href="/insurances/Health"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
+                >
+                  <div className="flex items-center">
+                  <Image src={healthInsuranceIcon} width={15} height={15} alt="Health Insurance" className="mr-2" />
+                  <h1 className="text-sm">Health Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                  
+                </Link1>
+                <Link1
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  href="/insurances/Life"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                >
+                  <div className="flex items-center ">
+                  <Image src={lifeInsuranceIcon} width={15} height={15} alt="Life Insurance" className="mr-2" />
+                  <h1 className="text-sm">Life Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                 
+                </Link1>
+                <Link1
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  href="/insurances/Group"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                >
+                  <div className="flex items-center">
+                  <Image src={groupInsuranceIcon} width={15} height={15} alt="Group Insurance" className="mr-2" />
+                  <h1 className="text-sm">Group Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                 
+                </Link1>
+                <Link1
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  href="/insurances/Financial"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                >
+                  <div className="flex items-center">
+                  <Image src={financialInsuranceIcon} width={15} height={15} alt="Financial Insurance" className="mr-2" />
+                  <h1 className="text-sm">Financial Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                 
+                </Link1>
+                <Link1
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  href="/insurances/Wealth"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                >
+                  <div className="flex items-center">
+                  <Image src={wealthInsuranceIcon} width={15} height={15} alt="Wealth Insurance" className="mr-2" />
+                  <h1 className="text-sm">Wealth Insurance</h1>
+                  <IoIosArrowForward className="absolute right-4 text-sm" />
+                  </div>
+                  
+                </Link1>
                   </div>
                 )}
               </div>
               <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/Distribution"
-                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
               >
                 Process
               </Link1>
               <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/about-us"
-                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
               >
                 About Us
               </Link1>
               <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/contact"
-                className="py-2 text-lg text-black border-b border-gray-200 w-full text-left"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
               >
                 Contact Us
               </Link1>
+              <button onClick={handleMobileBtnClick} className="bg-blue-700 text-white p-2 text-sm w-full rounded-lg">Get Started</button>
             </motion.div>
           )}
         </AnimatePresence>
