@@ -48,11 +48,11 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full min-h-[87vh] flex flex-col items-center justify-between xxs:justify-center xs:justify-evenly gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
+    <div className="w-full h-[87vh] flex flex-col items-center justify-between xxs:justify-start xs:justify-start gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
       {/* Moving Advertisement */}
-      <div className="relative lg:w-4/5 lg:h-40   xxs:h-32  bg-red-600  xs:h-12 rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
+      <div className="relative lg:w-4/5 lg:h-40    xxs:h-32    xs:h-32  rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
         <div
-          className="flex transition-transform duration-500 ease-in-out w-full h-full "
+          className="flex transition-transform duration-500 ease-in-out w-full h-full bg-blue-700 "
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {banners.map((banner, index) => (
@@ -63,7 +63,7 @@ const Homee = () => {
                 layout="responsive"
                 width={100}
                 height={36}
-                className="rounded-2xl bg-cover w-full h-full object-cover"
+                className="rounded-2xl bg-cover w-full h-full object-cover xs:object-cover"
               />
             </div>
           ))}
@@ -120,7 +120,7 @@ const Homee = () => {
           </div>
         ))}
       </div> */}
-      <div className="w-5/6 bg-white flex flex-col  rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:w-full lg:w-5/6 xs:w-full ">
+      <div className="w-5/6  bg-white flex flex-col   rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:h-3/4 xxs:justify-evenly xxs:w-full lg:w-5/6 xs:w-full ">
         <div className="flex flex-col items-center gap-1 ">
           <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center">
             The Insurance Partner
@@ -139,7 +139,7 @@ const Homee = () => {
             Your One-Stop Insurance Shop for Life's Essentials
           </p>
         </div>
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center ">
         <div className="w-1/3 h-96 xxs:hidden lg:block xs:hidden ">
             <Image
               src={coupleIcon}
@@ -149,7 +149,7 @@ const Homee = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-1/2 h-64 xxs:w-full lg:w-1/2 xs:w-full ">
+          <div className="w-1/2 h-64 xxs:w-full lg:w-1/2 xs:w-full  ">
             <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
               {[
                 { icon: generalInsuranceIcon, title: "General" },
@@ -169,22 +169,22 @@ const Homee = () => {
                     width={480}
                     height={480}
                     alt={`${title} Insurance`}
-                    className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7"
+                    className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7 xs:w-9 xs:h-9"
                   />
                   <div className="flex flex-col items-center">
-                    <h1 className="text-sm xxs:text-xs">{capitalizeFirstLetter(title)}</h1>
+                    <h1 className="text-sm xxs:text-xs xs:text-sm">{capitalizeFirstLetter(title)}</h1>
                     <p className="text-xs text-slate-500">Insurance</p>
                   </div>
                 </Link>
               ))}
             </div>
-            <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 lg:flex xxs:hidden ">
+            <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 lg:flex  xs:hidden xxs:hidden  ">
         {[{ icon: puzzleIcon, value: "100+", label: "Diverse Variety" },
           { icon: goalIcon, value: "100%", label: "Achievement Rate" },
           { icon: starIcon, value: "4.9", label: "Customer Rating" }
         ].map(({ icon, value, label }, idx) => (
-          <div key={idx} className="flex items-center gap-3 border border-slate-300 rounded-lg p-3">
-            <Image src={icon} width={25} height={25} alt={label} />
+          <div key={idx} className="flex items-center gap-3 border border-slate-300 rounded-lg p-3 xxs:flex-col">
+            <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5" />
             <div className="flex flex-col items-start xxs:items-center">
               <h1 className="text-sm font-bold xxs:text-sm xs:text-sm sm:text-sm">{value}</h1>
               <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs xxs:text-center">{label}</p>
