@@ -58,7 +58,7 @@ const GeneralInsurance = () => {
             transition={{ duration: 0.5 }} // Duration of the animation
           className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl xxs:p-4 xxs:w-5/6 ">
            <div className="w-full flex items-center justify-between">
-                      <h1 className="text-xl font-semibold">React out for  <span></span>Health Insurance</h1>
+                      <h1 className="text-xl font-semibold">React out for  <span></span>Life Insurance</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
             <form className="w-full flex flex-col gap-4">
@@ -124,7 +124,7 @@ const GeneralInsurance = () => {
     <span className="lg:text-5xl font-bold xxs:text-2xl">L</span>ife Insurance
   </h1>
   <p className="w-2/3 xxs:w-full xxs:text-sm lg:text-xl">
-  Health insurance provides financial protection against medical expenses, including hospitalization, surgeries, and treatments for illnesses or injuries. It ensures that individuals and families can access necessary healthcare services without significant financial strain, offering coverage for a range of medical needs and emergencies.
+  Life insurance provides financial protection against medical expenses, including hospitalization, surgeries, and treatments for illnesses or injuries. It ensures that individuals and families can access necessary healthcare services without significant financial strain, offering coverage for a range of medical needs and emergencies.
 </p>
 </div>
 
@@ -190,7 +190,7 @@ const GeneralInsurance = () => {
               </div>
             </div>
           </div> */}
-           <div className="flex flex-col gap-5 p-8">
+           <div className="flex flex-col gap-5 p-6">
           <div className="flex flex-col items-start gap-3">
             <h1 className="text-2xl font-bold">Why <span className="text-blue-700">Life</span> Insurance?</h1>
             <hr className="w-64"/>

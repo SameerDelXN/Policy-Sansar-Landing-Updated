@@ -174,7 +174,7 @@ const Footer = () => {
               Registered office </h1>
            
              {/* <IoLocationSharp className="text-4xl"/> -{" "} */}
-             <h1 className="text-sm sm:text-base xxs:xs">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
+             <h1 onClick={() => window.open("https://maps.app.goo.gl/qDDFFVQkVke94YA59", '_blank', 'noopener,noreferrer')} className="cursor-pointer text-sm sm:text-base xxs:xs underline">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
              </div>
             
              
@@ -182,7 +182,7 @@ const Footer = () => {
              <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice2 className="text-lg"/>
               Corporate office </h1>
              {/* <IoLocationSharp className="text-3xl"/> -{" "} */}
-             <h1 className="text-sm sm:text-base xxs:xs">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road,Andheri East,Mumbai-40072</h1>
+             <h1  onClick={() => window.open("https://maps.app.goo.gl/waCc29mgzyJsvb7eA", '_blank', 'noopener,noreferrer')} className="cursor-pointer text-sm sm:text-base xxs:xs underline">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road,Andheri East,Mumbai-40072</h1>
              </div>
             
           </div>

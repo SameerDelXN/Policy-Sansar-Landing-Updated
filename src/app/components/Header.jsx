@@ -12,8 +12,13 @@ import healthInsuranceIcon from "../../../public/icons/Flaticons/healthInsurance
 import groupInsuranceIcon from "../../../public/icons/Flaticons/groupInsurance.png";
 import financialInsuranceIcon from "../../../public/icons/Flaticons/financialInsurance.png";
 import wealthInsuranceIcon from "../../../public/icons/Flaticons/wealthInsurance.png";
-
-
+import tagLine1 from "../../../public/tagline/tagline1.png"
+import tagLine2 from "../../../public/tagline/tagline2.png"
+import tagLine3 from "../../../public/tagline/tagline3.png"
+import tagLine4 from "../../../public/tagline/tagline4.png"
+import tagLine5 from "../../../public/tagline/tagline5.png"
+import tagLine6 from "../../../public/tagline/tagline6.png"
+import tagLine7 from "../../../public/tagline/tagline7.png"
 import { RxCross1 } from "react-icons/rx";
 const Header = () => {
   const [logoSize, setLogoSize] = useState(120); // Initial logo size in px
@@ -148,7 +153,8 @@ const Header = () => {
           />
           <div className="flex flex-col items-start gap-1  ">
           <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm">Policy Sansar</h1>
-          <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1>
+          {/* <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1> */}
+          <Image src={tagLine7} width={1920} height={1080} className="w-full h-10 object-contain"/>
           </div>
         </Link1>
 
