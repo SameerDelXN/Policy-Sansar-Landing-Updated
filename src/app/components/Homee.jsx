@@ -48,7 +48,7 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full min-h-[87vh] flex flex-col items-center justify-between xxs:justify-start xs:justify-start gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
+    <div className="w-full   xxs:h-[80vh] xs:h-[80vh]  lg:h-[100vh]   flex flex-col items-center justify-between xxs:justify-center xs:justify-center  gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
       {/* Moving Advertisement */}
       <div className="relative lg:w-4/5 lg:h-40    xxs:h-32    xs:h-32  rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
         <div
@@ -120,9 +120,9 @@ const Homee = () => {
           </div>
         ))}
       </div> */}
-      <div className="w-5/6  bg-white flex flex-col   rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:h-3/4 lg:h-5/6 xxs:justify-evenly xxs:w-full lg:w-5/6 xs:w-full ">
+      <div className="w-5/6  bg-white flex flex-col   rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full lg:w-5/6 xs:w-full  ">
         <div className="flex flex-col items-center gap-1 ">
-          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center">
+          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl">
             The Insurance Partner
           </h1>
           <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm">
@@ -178,15 +178,15 @@ const Homee = () => {
                 </Link>
               ))}
             </div>
-            <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 lg:flex  xs:hidden xxs:hidden  ">
+            <div className="w-full flex items-center justify-center lg:gap-10 xxs:gap-3 xs:gap-3 sm:gap-2 lg:flex  xs:flex xxs:hidden   ">
         {[{ icon: puzzleIcon, value: "100+", label: "Diverse Variety" },
           { icon: goalIcon, value: "100%", label: "Achievement Rate" },
           { icon: starIcon, value: "4.9", label: "Customer Rating" }
         ].map(({ icon, value, label }, idx) => (
-          <div key={idx} className="flex items-center gap-3 border border-slate-300 rounded-lg p-3  lg:flex">
+          <div key={idx} className="flex items-center gap-3 border border-slate-300 rounded-lg p-3    xs:w-1/3 xs:flex-col lg:flex-row">
             <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5" />
             <div className="flex flex-col items-start xxs:items-center">
-              <h1 className="text-sm font-bold xxs:text-sm xs:text-sm sm:text-sm">{value}</h1>
+              <h1 className="text-sm font-bold xxs:text-sm xs:text-xs sm:text-sm">{value}</h1>
               <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs xxs:text-center">{label}</p>
             </div>
           </div>
