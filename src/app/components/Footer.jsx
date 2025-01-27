@@ -125,19 +125,19 @@ const Footer = () => {
               Contact Us
             </Link1>
             <Link1
-              href={"/contact"}
+              href={"/privacy-policy"}
               className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Privacy Policy
             </Link1>
             <Link1
-              href={"/contact"}
+              href={"/terms-and-conditions"}
               className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm text-end"
             >
               Terms & Conditions
             </Link1>
             <Link1
-              href={"/contact"}
+              href={"/grievance-policy"}
               className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
             >
               Grievance Policy

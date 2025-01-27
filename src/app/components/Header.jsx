@@ -12,6 +12,8 @@ import healthInsuranceIcon from "../../../public/icons/Flaticons/healthInsurance
 import groupInsuranceIcon from "../../../public/icons/Flaticons/groupInsurance.png";
 import financialInsuranceIcon from "../../../public/icons/Flaticons/financialInsurance.png";
 import wealthInsuranceIcon from "../../../public/icons/Flaticons/wealthInsurance.png";
+
+
 import { RxCross1 } from "react-icons/rx";
 const Header = () => {
   const [logoSize, setLogoSize] = useState(120); // Initial logo size in px
@@ -424,28 +426,7 @@ const Header = () => {
               >
                 Contact Us
               </Link1>
-              <Link1
-              onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                href="/contact"
-                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
-              >
-                Privacy Policy
-              </Link1>
-              <Link1
-              onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                href="/contact"
-                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
-              >
-                Terms & conditions
-              </Link1>
-              <Link1
-              onClick={()=>setIsMenuOpen(!isMenuOpen)}
-                href="/contact"
-                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
-              >
-                
-Grievance Policy
-              </Link1>
+             
              </div>
               <button onClick={handleMobileBtnClick} className="bg-blue-700 text-white p-2 text-sm w-full rounded-lg">Get Started</button>
             </motion.div>
