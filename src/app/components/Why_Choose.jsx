@@ -23,7 +23,7 @@ const Why_Choose = () => {
 
       {/* Cards Section */}
       <div className="w-full lg:flex-row items-center gap-5 justify-center z-10 xxs:flex xxs:flex-wrap  md:flex xxs:p-5 xs:flex xxs:gap-4 ">
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-2/3 md:w-2/3">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-full md:w-2/3">
           <Image src={callIcon} width={90} height={90} alt="callIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="lg:text-2xl xs:text-xl  ">24/7 Assistance</h1>
@@ -34,7 +34,7 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-2/3 md:w-2/3">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-full md:w-2/3">
           <Image src={sheildIcon} width={90} height={90} alt="sheildIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="lg:text-2xl xs:text-xl">Quick Quotations</h1>
@@ -45,7 +45,7 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-2/3 md:w-2/3">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-96 rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-full xs:w-full md:w-2/3">
           <Image 
             src={quickQuoteIcon}
             width={90}

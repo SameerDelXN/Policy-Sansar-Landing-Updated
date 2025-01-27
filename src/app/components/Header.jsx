@@ -291,21 +291,23 @@ const Header = () => {
           {isMenuOpen && (
             <motion.div
               ref={menuRef}
-              className="fixed top-0 right-0 w-2/3 h-full bg-white shadow-lg z-20 flex flex-col items-start  px-6 py-4 lg:hidden overflow-scroll"
+              className="fixed top-0 right-0 w-2/3 h-full p-5 bg-white shadow-2xl border rounded-bl-3xl border-slate-200 rounded-tl-3xl z-20 flex flex-col items-start justify-between gap-10 px-6 py-4 lg:hidden overflow-scroll"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={menuVariants}
+              
             >
               <div className="w-full flex items-center justify-center">
                 <Image
                   src={Logo}
-                  width={120}
-                  height={120}
+                  width={480}
+                  height={480}
                   alt="logo"
                 />
               </div>
-              <Link1
+             <div className="flex flex-col items-start gap-4 w-full">
+             <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 href="/"
                 className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
@@ -325,7 +327,7 @@ const Header = () => {
                   />
                 </button>
                 {isSubmenuOpen && (
-                  <div className="ml-4 mt-2">
+                  <div className="ml-4 mt-2  xxs:ml-1">
                     <Link1
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   href="/insurances/General"
@@ -333,7 +335,7 @@ const Header = () => {
                 >
                   <div className="flex items-center">
                   <Image src={generalInsuranceIcon} width={15} height={15} alt="General Insurance" className="mr-2" />
-                  <h1 className="text-sm">General Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">General Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                  
@@ -345,7 +347,7 @@ const Header = () => {
                 >
                   <div className="flex items-center">
                   <Image src={healthInsuranceIcon} width={15} height={15} alt="Health Insurance" className="mr-2" />
-                  <h1 className="text-sm">Health Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">Health Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                   
@@ -357,7 +359,7 @@ const Header = () => {
                 >
                   <div className="flex items-center ">
                   <Image src={lifeInsuranceIcon} width={15} height={15} alt="Life Insurance" className="mr-2" />
-                  <h1 className="text-sm">Life Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">Life Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                  
@@ -369,7 +371,7 @@ const Header = () => {
                 >
                   <div className="flex items-center">
                   <Image src={groupInsuranceIcon} width={15} height={15} alt="Group Insurance" className="mr-2" />
-                  <h1 className="text-sm">Group Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">Group Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                  
@@ -381,7 +383,7 @@ const Header = () => {
                 >
                   <div className="flex items-center">
                   <Image src={financialInsuranceIcon} width={15} height={15} alt="Financial Insurance" className="mr-2" />
-                  <h1 className="text-sm">Financial Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">Financial Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                  
@@ -393,7 +395,7 @@ const Header = () => {
                 >
                   <div className="flex items-center">
                   <Image src={wealthInsuranceIcon} width={15} height={15} alt="Wealth Insurance" className="mr-2" />
-                  <h1 className="text-sm">Wealth Insurance</h1>
+                  <h1 className="text-sm xxs:text-xs xs:text-sm">Wealth Insurance</h1>
                   <IoIosArrowForward className="absolute right-4 text-sm" />
                   </div>
                   
@@ -422,6 +424,29 @@ const Header = () => {
               >
                 Contact Us
               </Link1>
+              <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                href="/contact"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
+              >
+                Privacy Policy
+              </Link1>
+              <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                href="/contact"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
+              >
+                Terms & conditions
+              </Link1>
+              <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                href="/contact"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
+              >
+                
+Grievance Policy
+              </Link1>
+             </div>
               <button onClick={handleMobileBtnClick} className="bg-blue-700 text-white p-2 text-sm w-full rounded-lg">Get Started</button>
             </motion.div>
           )}
