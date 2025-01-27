@@ -139,17 +139,18 @@ const Homee = () => {
             Your One-Stop Insurance Shop for Life's Essentials
           </p>
         </div>
-        <div className="w-full flex items-center justify-center ">
-        <div className="w-1/3 h-96 xxs:hidden lg:block xs:hidden ">
+        <div className="w-full flex items-start justify-center ">
+        <div className="w-1/3 h-96  xxs:hidden lg:block xs:hidden ">
             <Image
               src={coupleIcon}
               width={500}
               height={500}
               alt="couple"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
-          <div className="w-1/2 h-64 xxs:w-full lg:w-1/2 xs:w-full  ">
+          <div className="w-1/2 h-96 xxs:h-64 xs:h-96 xxs:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
+
             <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
               {[
                 { icon: generalInsuranceIcon, title: "General" },
