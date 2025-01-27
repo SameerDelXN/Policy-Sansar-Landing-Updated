@@ -12,6 +12,8 @@ import CoreValue from "../components/CoreValue";
 import AnimatedHeader from '../components/AnimatedHeader.jsx';
 import { IoMdCall } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
+import LinkedInIcon from "../../../public/icons/linkedin.png"
+import Link from "next/link";
 
 const Experts = () => {
   const { ref: visionRef, inView: visionInView } = useInView({ triggerOnce: true });
@@ -23,19 +25,22 @@ const Experts = () => {
       name: "Mr. Vinod Tongar - CEO",
       description:
         "Mr. Vinod Tongar, the CEO of Policy Sansar Insurance Broking Pvt.Ltd., is a distinguished leader with over 25 years of exemplary experience in the life and general insurance industry. His association includes HDFC Life, ICICI Prudential, IndiaFirst Life, Liberty General Insurance in his long carrier in the Industry. Renowned for his visionary leadership and strategic management acumen, he has consistently driven innovation, operational excellence, and sustainable growth throughout his career. Mr.Tongar possesses a deep understanding of the complexities of the insurance landscape, enabling him to craft customer-centric solutions and build strong, enduring relationships with stakeholders. As the driving force behind Policy Sansar, he is committed to fostering a culture of excellence, empowering his team, and redefining industry standards to deliver unparalleled value to clients. His inspiring leadership continues to position Policy Sansar as a trusted and transformative force in the insurance broking sector.",
+      linkedIn : "https://www.linkedin.com/in/vinod-t-41082314/"
     },
     {
       img: Person2,
       name: "Mr. H. J. Vesukar - CFO",
       description:
         "Mr. H. J. Vesukar the CFO and Director of Policy Sansar Insurance Broking Pvt. Ltd. is a highly accomplished banking professional with over 35 years of extensive experience in the financial services sector. He is Retired General manager of Regional rural Bank and was associated as CFO with Marine Group companies post his retirement. Throughout his distinguished career, he has demonstrated exceptional expertise in areas such as retail banking, credit management, operational efficiency, and customer relationship management. Known for his strategic vision and leadership, Mr.Vesukar has successfully spearheaded numerous initiatives aimed at driving growth, optimizing processes and enhancing customer satisfaction. His deep understanding of banking operations and dedication to excellence have earned him a reputation as a trusted and innovative leader in the industry.",
-    },
+      linkedIn:"https://www.linkedin.com/in/vesurkar-vesukar-436711108?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      },
     {
       img: Person3,
       name: "Mr. Ajaykumar Phate - CMO",
       description:
-        "Mr. Ajaykumar Phate the Chief Marketing Officer of Policy Sansar Insurance Broking Pvt. Ltd is a seasoned professional withover 30 years of extensive experience in the life insurance industry. He was associated with HDFC Life, IndiaFirst and Met Life and is Known for his deep expertise in risk assessment, policy management, and customer-centric solutions, he has consistently demonstrated a strong ability to navigate the complexities of the insurance landscape. Throughout his career, Ajaykumar has been instrumental in driving business growth, building lasting client relationships, and fostering operational excellence. His commitment to delivering tailored insurance solutions and his profound understanding of industry trends make him a trusted leader in the field."
-    },
+        "Mr. Ajaykumar Phate the Chief Marketing Officer of Policy Sansar Insurance Broking Pvt. Ltd is a seasoned professional withover 30 years of extensive experience in the life insurance industry. He was associated with HDFC Life, IndiaFirst and Met Life and is Known for his deep expertise in risk assessment, policy management, and customer-centric solutions, he has consistently demonstrated a strong ability to navigate the complexities of the insurance landscape. Throughout his career, Ajaykumar has been instrumental in driving business growth, building lasting client relationships, and fostering operational excellence. His commitment to delivering tailored insurance solutions and his profound understanding of industry trends make him a trusted leader in the field.",
+      linkedIn : "https://www.linkedin.com/in/ajaykumar-phate-3a44a522a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      },
   ];
 
   return (
@@ -74,10 +79,10 @@ const Experts = () => {
             Our company website is under development:{" "}
             <a href="https://www.policysansar.com" className=" font-semibold underline">www.policysansar.com</a>. We plan to launch our <b >app by May 2025</b>.
           </p>
-          <div className="mt-4">
-           <div className="flex items-center gap-5"> <p className="text-lg font-semibold flex items-center gap-1"><span><IoMdCall className="text-2xl"/></span>Contact Us</p>
-           <p className="text-xl font-bold text-[#164574]">+91 9644170004</p></div>
-            <button className="mt-3 px-6 py-2 bg-[#164574] text-white rounded-md hover:bg-[#123c60] transition">
+          <div className=" flex lg:flex-row items-center w-full justify-between xxs:flex-col xxs:gap-2">
+           <div className="flex items-center gap-5"> <p className="lg:text-lg xxs:text-sm font-semibold flex items-center gap-1 "><span><IoMdCall className="lg:text-2xl xxs:text-sm"/></span>Contact Us</p>
+           <p className="lg:text-xl xxs:text-sm font-bold text-[#164574]">+91 9644170004</p></div>
+            <button className="xxs:w-full lg:w-56 px-6 py-2 bg-[#164574] text-white rounded-md hover:bg-[#123c60] transition">
               Call Our Experts
             </button>
           </div>
@@ -85,54 +90,73 @@ const Experts = () => {
       </div>
 
       {/* Team Section */}
-      <div className=" flex flex-col items-center gap-8 px-8  ">
+      <div className=" flex flex-col items-center gap-8  ">
         <h2 className="text-3xl font-bold text-[#164574]">Meet Our Experts</h2>
         {/* <h2 className="text-[#164574]  font-bold text-3xl">
         <AnimatedHeader text="Meet Our Experts"  className="!text-3xl  "/>
         </h2> */}
 
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className={`relative w-full  md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
-              index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
-            }`}
-          >
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-start">{member.name}</h3>
-              <p className="text-gray-700 mt-4 text-justify">{member.description}</p>
-            </div>
+{teamMembers.map((member, index) => (
+  <div
+    key={index}
+    className={`relative w-full md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
+      index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
+    }`}
+  >
+    <div className="flex-1">
+      <h3 className="text-xl font-semibold text-start">{member.name}</h3>
+      <p className="text-gray-700 mt-4 text-justify">{member.description}</p>
+    </div>
 
-            <div className="relative flex-1 w-full md:h-full">
-              {/* Decorative Background Shapes */}
-              <div className="absolute inset-0 w-full h-full -z-10">
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-500 rounded-full opacity-30 blur-lg"></div>
-                <div className="absolute bottom-6 right-6 w-32 h-32 bg-indigo-400 rounded-full opacity-30 blur-lg"></div>
-              </div>
+    <div className="relative flex-1 w-full md:h-full">
+      {/* Decorative Background Shapes */}
+      <div className="absolute inset-0 w-full h-full -z-10">
+        <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-500 rounded-full opacity-30 blur-lg"></div>
+        <div className="absolute bottom-6 right-6 w-32 h-32 bg-indigo-400 rounded-full opacity-30 blur-lg"></div>
+      </div>
 
-              <div className="w-full flex items-center justify-center">
-              <Image
-                width={400}
-                height={400}
-                src={member.img}
-                alt={member.name}
-                className="object-cover  rounded-full shadow-lg border-4 border-white"
-              />
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="relative w-full flex items-center justify-center">
+        <Image
+          width={400}
+          height={400}
+          src={member.img}
+          alt={member.name}
+          className="object-cover rounded-full shadow-lg border-4 border-white xxs:w-2/3 lg:w-2/3"
+        />
+
+        {/* LinkedIn Logo */}
+        <Link
+          href={member.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute lg:bottom-14 lg:right-24 xxs:bottom-2 xxs:right-14"
+        >
+        <div className="border border-[#009AE5] p-1 rounded-full"> <div className="border border-[#009AE5] p-1 rounded-full">
+         <div className="border-2 border-[#009AE5] p-0.5 rounded-full"> <Image
+            src={LinkedInIcon} // Replace with the actual path to your LinkedIn logo
+            alt="LinkedIn"
+            width={720}
+            height={720}
+            className="rounded-full shadow-md lg:w-16 xxs:w-8"
+          /></div>
+         </div></div>
+        </Link>
+      </div>
+    </div>
+  </div>
+))}
+
       </div>
 
     
  {/* Vision & Mission Section */}
  <div
-        className="relative w-full xl:h-96 2xl:h-96 md:h-[40rem] xxs:min-h-[24rem] bg-cover bg-center xxs:p-3 xs:p-3 sm:p-3"
+        className="relative w-full xl:h-96 2xl:h-96 md:h-[40rem] xxs:min-h-[24rem] bg-cover bg-center xxs:p-3 xs:p-3 sm:p-3 "
         style={{ backgroundImage: `url(${aboutcover.src})` }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 text-white w-full h-full px-8">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 xxs:gap-4 text-white w-full h-full ">
           {/* Vision Card */}
           <motion.div
             ref={visionRef}

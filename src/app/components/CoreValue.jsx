@@ -27,7 +27,7 @@ const CoreValue = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div ref={ref} className="flex flex-col items-center gap-10 mt-12 p-6 w-full overflow-hidden">
+    <div ref={ref} className="flex flex-col items-center gap-10  p-6 w-full overflow-hidden">
       <AnimatedHeader text="Our Core Values" />
       <motion.div
         className="flex flex-wrap items-center gap-4 justify-center"

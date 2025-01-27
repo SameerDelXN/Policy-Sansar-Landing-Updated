@@ -5,6 +5,7 @@ import { IoCallSharp, IoMailOpenSharp, IoLocationSharp } from "react-icons/io5";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useInView } from "react-intersection-observer"; // Importing useInView
 import Link1 from "next/link";
+import { HiMiniBuildingOffice ,HiMiniBuildingOffice2} from "react-icons/hi2";
 import Image from "next/image";
 import FooterLogo from "../../../public/icons/footerLogo.png"
 const Footer = () => {
@@ -62,7 +63,7 @@ const Footer = () => {
             {/* PRODUCT LINKS */}
 
           <div className="flex items-start xs:justify-between xs:w-full xxs:w-full gap-8 xxs:justify-between ">
-          <div className="flex flex-col items-start gap-5">
+          <div className="flex flex-col items-start gap-5 xxs:w-1/2">
               <h1 className="text-xl font-bold">Products</h1>
               <ul className="text-md flex flex-col gap-3 xxs:text-sm">
                 <li><Link1 href={"/insurances/General"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">General Inusrance</Link1></li>
@@ -89,6 +90,7 @@ const Footer = () => {
                 <li>Securityy</li>
               </ul>
             </div> */}
+           
             <div className="flex flex-col items-start gap-5 xs:w-1/2 xs:items-end sm:w-1/2 xxs:items-end xxs:w-1/2">
             <h1 className="text-xl font-bold xs:items-end">Quick Links</h1>
             <div
@@ -122,6 +124,24 @@ const Footer = () => {
             >
               Contact Us
             </Link1>
+            <Link1
+              href={"/contact"}
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+            >
+              Privacy Policy
+            </Link1>
+            <Link1
+              href={"/contact"}
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm text-end"
+            >
+              Terms & Conditions
+            </Link1>
+            <Link1
+              href={"/contact"}
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+            >
+              Grievance Policy
+            </Link1>
           </div>
             </div>
           
@@ -143,21 +163,24 @@ const Footer = () => {
               Contact
             </h1>
             <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full">
-              <IoCallSharp className="text-lg"/> - <h1 className="text-sm sm:text-base">+91 9644170004</h1>
+              <IoCallSharp className="text-lg"/><h1 className="text-sm sm:text-base">+91 9644170004</h1>
             </div>
             <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full">
-              <IoMailOpenSharp className="text-lg"/> -{" "}
+              <IoMailOpenSharp className="text-lg"/>
               <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
             </div>
-            <div className="flex items-center gap-3 w-full ">
-            Registered office 
+            <div className="flex items-start gap-3 w-full flex-col  ">
+              <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice className="text-lg"/>
+              Registered office </h1>
+           
              {/* <IoLocationSharp className="text-4xl"/> -{" "} */}
              <h1 className="text-sm sm:text-base xxs:xs">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
              </div>
             
              
-             <div className="flex items-center gap-3 w-full">
-             Corporate office
+             <div className="flex items-start gap-3 w-full flex-col ">
+             <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice2 className="text-lg"/>
+              Corporate office </h1>
              {/* <IoLocationSharp className="text-3xl"/> -{" "} */}
              <h1 className="text-sm sm:text-base xxs:xs">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road,Andheri East,Mumbai-40072</h1>
              </div>
