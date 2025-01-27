@@ -1,13 +1,18 @@
 import React from "react";
 import terms from "../../../public/coverimg/terms.png"
+import termscover from "../../../public/coverimg/banner.png"
 import Image from "next/image";
 const page = () => {
   return (
     <div className="w-full h-auto flex flex-col gap-5 p-5">
-    <div className="w-full lg:h-72 xxs:44 bg-[#E6ECFF] shadow-md border border-slate-200 rounded-3xl p-8 flex flex-col justify-center items-start gap-4">
-        <h1 className="lg:text-4xl font-semibold text-gray-800 xxs:text-2xl">Privacy Policy</h1>
-        <hr className="lg:w-48 border-t-2 border-black xxs:w-32" />
-      </div>
+       <div className="w-full h-56 bg-black p-6 relative ">
+              <Image src={termscover} layout="fill" objectFit="cover" alt="about-us"  />
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+              <div className="absolute inset-0 flex items-center pl-16 text-white ">
+                <h1 className="text-2xl font-bold">Privacy Policy</h1>
+      
+              </div>
+            </div>
      
       <div className="flex flex-col items-start gap-10 lg:p-8 xxs:p-0">
       <div className="bg-gray-50 lg:p-6 rounded-lg shadow-md xxs:p-6 ">
