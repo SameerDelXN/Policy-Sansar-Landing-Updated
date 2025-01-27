@@ -1,22 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import HealthImg from "../../../../public/insurance/health-insurance.jpeg";
-import VehicleImg from "../../../../public/insurance/car-insurance.jpeg";
-import HomeImg from "../../../../public/insurance/home-insurance.jpeg";
-import travelImg from "../../../../public/insurance/travel-insurance.jpeg";
+
 import bgImage from "../../../../public/icons/bgImages/bgImage.png"
-import carIcon from "../../../../public/icons/carIcon.png"
-import bikeIcon from "../../../../public/icons/bikeIcon.png"
-import homeIcon from "../../../../public/icons/homeIcon.png"
-import travelIcon from "../../../../public/icons/travelIcon.png"
+
 import instantPolicyIcon from "../../../../public/icons/Flaticons/instantPolicy.png"
 import claimTrackingIcon from "../../../../public/icons/Flaticons/claimTracking.png"
 import supportIcon from "../../../../public/icons/Flaticons/247Icon.png"
 import securePaymentIcon from "../../../../public/icons/Flaticons/securePayment.png"
 import {toast,Toaster} from "react-hot-toast"
-import { RxCross1 } from "react-icons/rx";
 import { motion } from "framer-motion";
+import { RxCross1 } from "react-icons/rx";
 const GeneralInsurance = () => {
   const [showModal, setShowModal] = useState(true); // Initially show the modal
   const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
@@ -42,8 +36,7 @@ const GeneralInsurance = () => {
       firstName &&
       lastName &&
       mobileNumber &&
-      annualIncome &&
-      insuranceType &&
+      
       mobileNumber.match(/^[0-9]{10}$/) // Ensure mobile number is 10 digits
     );
   };
@@ -51,11 +44,11 @@ const GeneralInsurance = () => {
     setShowModal(true);
   }
   return (
-    <div className="w-full h-auto p-10 ">
+    <div className="w-full h-auto p-10 xxs:p-2">
       <Toaster/>
       {showModal && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+          className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 "
           
         >
           <motion.div
@@ -63,9 +56,9 @@ const GeneralInsurance = () => {
             animate={{ opacity: 1, y: 0 }} // Animate to its final position
             exit={{  y: 100,opacity:0 }} // Exit animation
             transition={{ duration: 0.5 }} // Duration of the animation
-          className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl">
+          className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl xxs:p-4 xxs:w-5/6 ">
            <div className="w-full flex items-center justify-between">
-                      <h1 className="text-xl font-semibold">Get in touch</h1>
+                      <h1 className="text-xl font-semibold">React out for  <span></span>Health Insurance</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
             <form className="w-full flex flex-col gap-4">
@@ -74,14 +67,14 @@ const GeneralInsurance = () => {
                   required
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="First Name"
                 />
                 <input
                   required
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="Last Name"
                 />
               </div>
@@ -92,55 +85,34 @@ const GeneralInsurance = () => {
                 pattern="^[0-9]{10}$"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
-                className="border border-slate-300 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                 placeholder="Mobile Number"
               />
+               <input
+                required
+                type="email"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
+                placeholder="Email address"
+              />
 
-              <div className="flex items-center justify-between w-full gap-4">
-                <select
-                  required
-                  value={annualIncome}
-                  onChange={(e) => setAnnualIncome(e.target.value)}
-                  className="border border-slate-300 p-4 rounded-lg w-full bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-50"
-                >
-                  <option value="">Select Annual Income</option>
-                  <option value="1-2 lac">1-2 Lac</option>
-                  <option value="2-5 lac">2-5 Lac</option>
-                  <option value="5-10 lac">5-10 Lac</option>
-                  <option value="10-20 lac">10-20 Lac</option>
-                  <option value="20+ lac">20+ Lac</option>
-                </select>
-
-                <select
-                  required
-                  value={insuranceType}
-                  onChange={(e) => setInsuranceType(e.target.value)}
-                  className="border border-slate-300 p-4 rounded-lg w-full bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-50"
-                >
-                  <option value="">Select Insurance Type</option>
-                  <option value="Health">Health Insurance</option>
-                  <option value="Vehicle">Vehicle Insurance</option>
-                  <option value="Home">Home Insurance</option>
-                  <option value="Travel">Travel Insurance</option>
-                </select>
-              </div>
+             
 
               <input
                 onClick={handleContinueClick}
                 type="submit"
                 value="Continue"
                 disabled={!isFormValid()} // Disable button if form is not valid
-                className={`p-4 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
+                className={`lg:p-4 xxs:p-3 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
               />
             </form>
           </motion.div>
         </div>
       )}
       <div>
-      <div className="bg-white w-full h-[150vh] rounded-2xl flex shadow-lg border border-slate-300">
+      <div className="bg-white w-full  lg:h-[150vh] xxs:h-[137vh] xs:h-[120vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="w-1/2 h-full rounded-tl-2xl rounded-bl-2xl text-white pt-24 pl-10 flex flex-col items-start gap-2 bg-opacity-30 backdrop-blur-2xl"
+  className="lg:w-1/2 lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
   style={{
     backgroundImage: `url(${bgImage.src})`, // Setting the imported background image
     backgroundSize: 'cover', // Ensure the image covers the entire container
@@ -148,73 +120,151 @@ const GeneralInsurance = () => {
     backgroundRepeat: 'no-repeat', // Ensure the background doesn't repeat
   }}
 >
-  <h1 className="text-4xl">
-    <span className="text-5xl font-bold">L</span>ife Insurance
+  <h1 className="lg:text-4xl xxs:text-xl">
+    <span className="lg:text-5xl font-bold xxs:text-2xl">L</span>ife Insurance
   </h1>
-  <p className="w-2/3">
-  Life insurance is a crucial financial tool that ensures the security and well-being of your loved ones in case of any unforeseen events. It provides financial assistance, covering outstanding debts, daily expenses, and future needs like education and retirement.  </p>
+  <p className="w-2/3 xxs:w-full xxs:text-sm lg:text-xl">
+  Health insurance provides financial protection against medical expenses, including hospitalization, surgeries, and treatments for illnesses or injuries. It ensures that individuals and families can access necessary healthcare services without significant financial strain, offering coverage for a range of medical needs and emergencies.
+</p>
 </div>
 
-          <div className="w-1/2  flex flex-col  justify-evenly">
-          <div className="flex flex-col gap-5 p-8">
+          <div className="lg:w-1/2  flex flex-col  lg:justify-evenly xxs:justify-end  xxs:w-full ">
+          {/* <div className="flex flex-col gap-5 lg:p-8 xxs:p-4">
+          <div className="flex flex-col items-start gap-3">
+            <h1 className="lg:text-2xl font-semibold  xxs:text-sm ">Types of <span className="text-blue-700">Health</span> Insurance</h1>
+            <hr className="w-64"/>
+            
+            </div>
+            <div className="w-full flex flex-wrap items-center justify-evenly">
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={carIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold xxs:text-sm">Car</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={bikeIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold xxs:text-sm">Bike</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={homeIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold xxs:text-sm">Home</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               </div>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={travelIcon}
+                  width={50}
+                  height={50}
+                  alt="carIcon"
+                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                />
+               <div className="flex flex-col items-center ">
+               <h1 className="text-lg font-bold xxs:text-sm">Travel</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               </div>
+              </div>
+            </div>
+          </div> */}
+           <div className="flex flex-col gap-5 p-8">
           <div className="flex flex-col items-start gap-3">
             <h1 className="text-2xl font-bold">Why <span className="text-blue-700">Life</span> Insurance?</h1>
             <hr className="w-64"/>
             
             </div>
-           <h1 className="text-xl">At Policy Sansar, we understand the importance of financial stability for your family. Our life insurance plans offer flexible coverage options, ensuring your loved ones are protected at every stage of life.</h1>
-          </div>
-          <div className="flex flex-col gap-5 p-8 w-full">
+           <h1 className="text-xl">
+           At Policy Sansar, we understand the importance of securing your family’s future. Our life insurance plans offer flexible coverage options, providing financial protection for your loved ones in the event of an unexpected loss, ensuring their well-being and peace of mind.
+</h1></div>
+          <div className="flex flex-col gap-5 lg:p-8 w-full xxs:p-4">
           <div className="flex flex-col items-start gap-3 ">
-            <h1 className="text-2xl font-bold">Top Features of <span className="text-blue-700">Life</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-bold xxs:text-sm">Top Features of <span className="text-blue-700">Life</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
-            <div className="w-full flex flex-wrap items-center justify-center gap-3 ">
-              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+            <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={instantPolicyIcon}
-                    width={90}
-                    height={90}
+                    width={480}
+                    height={480}
                     alt="Instant Policy Icon"
+                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="text-3xl text-center ">Term Life Policies</h1>
-                  <p className="text-center text-slate-500">Compare different term life insurance policies for long-term protection.</p>
+                  <h1 className="lg:text-3xl text-center xxs:text-sm">Personalized Health Plans</h1>
+                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">customized health insurance plans based on user needs and medical history.
+
+</p>
               </div>
-              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={claimTrackingIcon}
-                    width={90}
-                    height={90}
+                    width={480}
+                    height={480}
                     alt="Instant Policy Icon"
+                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="text-3xl text-center ">Whole Life Coverage</h1>
-                  <p className="text-center text-slate-500">Offer whole life policies that cover the user for their entire lifetime.</p>
+                  <h1 className="lg:text-3xl text-center xxs:text-sm">Cashless Hospitalization
+                  </h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">cashless treatment options at a wide network of hospitals.
+
+</p>
               </div>
-              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={supportIcon}
-                    width={90}
-                    height={90}
+                    width={480}
+                    height={480}
                     alt="Instant Policy Icon"
+                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="text-3xl text-center ">Accidental Death Benefit</h1>
-                  <p className="text-center text-slate-500">Provide additional coverage in case of accidental death.</p>
+                  <h1 className="lg:text-3xl text-center xxs:text-sm ">Free Health Check-up
+                  </h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provide free annual health check-ups with selected health plans.
+
+</p>
               </div>
-              <div className="w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={securePaymentIcon}
-                    width={90}
-                    height={90}
+                    width={480}
+                    height={480}
                     alt="Instant Policy Icon"
+                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="text-3xl text-center ">Loyalty Bonuses</h1>
-                  <p className="text-center text-slate-500">Offer bonuses or discounts for renewing life insurance plans annually.</p>
+                  <h1 className="lg:text-3xl text-center xxs:text-sm">Family Floater Plan
+                  </h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Allow users to cover their entire family under a single health plan.
+
+.</p>
               </div>
             </div>
           </div>
         <div className="p-3 w-full">
-        <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 ">Enquire Now</button>
+        <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 xxs:p-2 ">Enquire Now</button>
         </div>
           </div>
         </div>

@@ -64,9 +64,9 @@ const Customers = () => {
   height={50}
   className="w-16 h-16 rounded-full  mx-auto" // Larger size for testing
 />
-<div className="flex justify-between"><span className="font-semibold text-sm">{` ${testimonial.name}`}</span>
-<span className="font-normal text-sm">{`- ${testimonial.date}`}</span></div>
-          
+<div className="flex flex-col justify-between"></div>
+          <span className="font-semibold text-sm">{` ${testimonial.name}`}</span>
+              <span className="font-semibold text-sm">{`- ${testimonial.date}`}</span>
 
 
             </motion.div>
