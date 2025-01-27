@@ -143,8 +143,8 @@ const Homee = () => {
         <div className="w-1/3 h-96  xxs:hidden lg:block xs:hidden ">
             <Image
               src={coupleIcon}
-              width={500}
-              height={500}
+              width={1920}
+              height={1080}
               alt="couple"
               className="w-full h-full object-contain"
             />
@@ -167,13 +167,13 @@ const Homee = () => {
                 >
                   <Image
                     src={icon}
-                    width={480}
-                    height={480}
+                    width={1920}
+                    height={1080}
                     alt={`${title} Insurance`}
                     className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7 xs:w-9 xs:h-9"
                   />
                   <div className="flex flex-col items-center">
-                    <h1 className="text-sm xxs:text-xs xs:text-sm">{capitalizeFirstLetter(title)}</h1>
+                    <h1 className="lg:text-lg xxs:text-xs xs:text-sm">{capitalizeFirstLetter(title)}</h1>
                     <p className="text-xs text-slate-500">Insurance</p>
                   </div>
                 </Link>
