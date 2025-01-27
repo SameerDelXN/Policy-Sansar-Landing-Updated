@@ -1,15 +1,19 @@
 import React from "react";
-import terms from "../../../public/coverimg/terms.png";
+import graveance from "../../../public/coverimg/graveance.png";
 import Image from "next/image";
 
 const page = () => {
   return (
     <div className="w-full h-auto flex flex-col lg:gap-10 xxs:gap-5 p-6 bg-gray-50">
       {/* Header Section */}
-      <div className="w-full lg:h-72 xxs:h-44 bg-[#E6ECFF] shadow-md border border-slate-200 rounded-3xl p-8 flex flex-col justify-center items-start gap-4">
-        <h1 className="lg:text-4xl xxs:text-2xl font-semibold text-gray-800">Grievance Policy</h1>
-        <hr className="lg:w-48 xxs:w-32 border-t-2 border-black" />
-      </div>
+      <div className="w-full h-56 bg-black p-6 relative ">
+                       <Image src={graveance} layout="fill" objectFit="cover" alt="about-us"  />
+                       <div className="absolute inset-0 bg-black opacity-40"></div>
+                       <div className="absolute inset-0 flex items-center pl-16 text-white ">
+                         <h1 className="text-2xl font-bold">Grievance</h1>
+               
+                       </div>
+                     </div>
 
       {/* Content Section */}
       <div className="bg-white shadow-md border border-gray-200 rounded-3xl p-8 text-gray-700 space-y-4 leading-relaxed">
