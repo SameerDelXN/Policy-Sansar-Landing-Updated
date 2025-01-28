@@ -30,8 +30,11 @@ const Customers = () => {
         const contentWidth = containerRef.current.scrollWidth;
 
         if (contentWidth > containerWidth) { // Only animate if content overflows
-          await controls.start({ x: `-${contentWidth - containerWidth}px`, transition: { duration: 20, ease: "linear", repeat: Infinity } });
-        }
+          await controls.start({
+            x: [0, -(contentWidth - containerWidth)], 
+            transition: { duration: 60, ease: "linear", repeat: Infinity }
+          });
+                  }
       }
     };
 
@@ -39,8 +42,8 @@ const Customers = () => {
   }, []);
   
   return (
-    <div className="w-full bg-[#E6ECFF] py-12  h-[75vh] flex flex-col items-center justify-start  "> {/* overflow-hidden hides scrollbar */}
-      <h2 className="text-2xl font-bold text-center text-black mb-8 ">Customer's Say !!</h2>
+    <div className="w-full  bg-[#E6ECFF] h-[500px]   flex flex-col items-center justify-start gap-4 "> {/* overflow-hidden hides scrollbar */}
+      <h2 className="text-2xl font-bold text-center text-black mt-12   ">Customer's Say !!</h2>
       <div className="relative w-full " ref={containerRef}> {/* Added relative positioning */}
         <motion.div
           className="inline-flex gap-6 px-6 absolute left-0 top-0" // Absolute positioning for animation
@@ -67,9 +70,6 @@ const Customers = () => {
 <div className="flex flex-col justify-between"></div>
 <div className="flex  justify-between"> <span className="font-semibold text-sm">{` ${testimonial.name}`}</span>
 <span className="font-semibold text-sm">{`- ${testimonial.date}`}</span></div>
-         
-
-
             </motion.div>
           ))}
         </motion.div>
