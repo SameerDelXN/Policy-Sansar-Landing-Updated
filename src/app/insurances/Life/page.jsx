@@ -2,8 +2,15 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
-import bgImage from "../../../../public/icons/bgImages/bgImage.png"
-
+import bgImage from "../../../../public/images/happyFamily.jpg"
+import PersonalizedIcon from "../../../../public/icons/personalized.png"
+import CashlessIcon from "../../../../public/icons/cashless.png"
+import FreeHealthIcon from "../../../../public/icons/freeHealth.png"
+import MatureIcon from "../../../../public/icons/mature.png"
+import WealthIcon from "../../../../public/icons/wealth-acc.png"
+import IncomeReplaceIcon from "../../../../public/icons/replace.png"
+import DeathBenefitIcon from "../../../../public/icons/deathBenefit.png"
+import familyFloaterIcon from "../../../../public/icons/familyFloater.png"
 import instantPolicyIcon from "../../../../public/icons/Flaticons/instantPolicy.png"
 import claimTrackingIcon from "../../../../public/icons/Flaticons/claimTracking.png"
 import supportIcon from "../../../../public/icons/Flaticons/247Icon.png"
@@ -112,12 +119,12 @@ const GeneralInsurance = () => {
       <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh]  xxs:h-[153vh] xs:h-[133vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2  lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
+  className="lg:w-1/2 lg:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
   style={{
-    backgroundImage: `url(${bgImage.src})`, // Setting the imported background image
-    backgroundSize: 'cover', // Ensure the image covers the entire container
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage.src})`,
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat', // Ensure the background doesn't repeat
+    backgroundRepeat: 'no-repeat',
   }}
 >
   <h1 className="lg:text-4xl xxs:text-xl">
@@ -209,56 +216,56 @@ const GeneralInsurance = () => {
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
               <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
-                    src={instantPolicyIcon}
+                    src={MatureIcon}
                     width={480}
                     height={480}
-                    alt="Instant Policy Icon"
+                    alt="Maturity Benefit Icon"
                     className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Personalized Health Plans</h1>
-                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">customized health insurance plans based on user needs and medical history.
+                  <h1 className="lg:text-2xl text-center xxs:text-sm">Maturity Benefit</h1>
+                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">Some plans (like endowment or whole life insurance) offer payouts at the end of the policy term if the policyholder survives.
 
 </p>
               </div>
               <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
-                    src={claimTrackingIcon}
+                    src={WealthIcon}
                     width={480}
                     height={480}
-                    alt="Instant Policy Icon"
+                    alt="Wealth Icon"
                     className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Cashless Hospitalization
+                  <h1 className="lg:text-2xl text-center xxs:text-sm">Wealth Accumulation
                   </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">cashless treatment options at a wide network of hospitals.
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Combines protection with investment, allowing policyholders to build wealth over time.
 
 </p>
               </div>
               <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
-                    src={supportIcon}
+                    src={IncomeReplaceIcon}
                     width={480}
                     height={480}
-                    alt="Instant Policy Icon"
+                    alt="Income Replace Icon"
                     className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm ">Free Health Check-up
+                  <h1 className="lg:text-2xl text-center xxs:text-sm ">Income Replacement
                   </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provide free annual health check-ups with selected health plans.
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provides a regular income stream to beneficiaries after the policyholder's death.
 
 </p>
               </div>
               <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
-                    src={securePaymentIcon}
+                    src={DeathBenefitIcon}
                     width={480}
                     height={480}
-                    alt="Instant Policy Icon"
+                    alt="Death Benefit Icon"
                     className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Family Floater Plan
+                  <h1 className="lg:text-2xl text-center xxs:text-sm">Death Benefit
                   </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Allow users to cover their entire family under a single health plan.
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provides a lump-sum payment to the beneficiary upon the policyholder’s death.
 
 .</p>
               </div>

@@ -2,7 +2,11 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
-import bgImage from "../../../../public/icons/bgImages/bgImage.png"
+import bgImage from "../../../../public/images/HealthInsurace.jpg"
+import PersonalizedIcon from "../../../../public/icons/personalized.png"
+import CashlessIcon from "../../../../public/icons/cashless.png"
+import FreeHealthIcon from "../../../../public/icons/freeHealth.png"
+import familyFloaterIcon from "../../../../public/icons/familyFloater.png"
 
 import instantPolicyIcon from "../../../../public/icons/Flaticons/instantPolicy.png"
 import claimTrackingIcon from "../../../../public/icons/Flaticons/claimTracking.png"
@@ -112,14 +116,15 @@ const GeneralInsurance = () => {
       <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh]  xxs:h-[153vh] xs:h-[133vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2 lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
+  className="lg:w-1/2 lg:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
   style={{
-    backgroundImage: `url(${bgImage.src})`, // Setting the imported background image
-    backgroundSize: 'cover', // Ensure the image covers the entire container
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage.src})`,
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat', // Ensure the background doesn't repeat
+    backgroundRepeat: 'no-repeat',
   }}
 >
+
   <h1 className="lg:text-4xl xxs:text-xl">
     <span className="lg:text-5xl font-bold xxs:text-2xl">H</span>ealth Insurance
   </h1>
@@ -204,63 +209,63 @@ const GeneralInsurance = () => {
             <hr className="w-64"/>
             
             </div>
-            <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
-                  <Image
-                    src={instantPolicyIcon}
-                    width={480}
-                    height={480}
-                    alt="Instant Policy Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
-                  />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Personalized Health Plans</h1>
-                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">customized health insurance plans based on user needs and medical history.
-
-</p>
-              </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
-                  <Image
-                    src={claimTrackingIcon}
-                    width={480}
-                    height={480}
-                    alt="Instant Policy Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
-                  />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Cashless Hospitalization
-                  </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">cashless treatment options at a wide network of hospitals.
-
-</p>
-              </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
-                  <Image
-                    src={supportIcon}
-                    width={480}
-                    height={480}
-                    alt="Instant Policy Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
-                  />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm ">Free Health Check-up
-                  </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provide free annual health check-ups with selected health plans.
-
-</p>
-              </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
-                  <Image
-                    src={securePaymentIcon}
-                    width={480}
-                    height={480}
-                    alt="Instant Policy Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
-                  />
-                  <h1 className="lg:text-3xl text-center xxs:text-sm">Family Floater Plan
-                  </h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Allow users to cover their entire family under a single health plan.
-
-.</p>
-              </div>
-            </div>
+           <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
+                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+                           <Image
+                             src={PersonalizedIcon}
+                             width={480}
+                             height={480}
+                             alt="Personalized Icon"
+                             className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                           />
+                           <h1 className="lg:text-2xl text-center xxs:text-sm">Personalized Health Plans</h1>
+                           <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">customized health insurance plans based on user needs and medical history.
+         
+         </p>
+                       </div>
+                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+                           <Image
+                             src={CashlessIcon}
+                             width={480}
+                             height={480}
+                             alt="Cashless Icon"
+                             className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                           />
+                           <h1 className="lg:text-2xl text-center xxs:text-sm">Cashless Hospitalization
+                           </h1>
+                           <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">cashless treatment options at a wide network of hospitals.
+         
+         </p>
+                       </div>
+                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+                           <Image
+                             src={FreeHealthIcon}
+                             width={480}
+                             height={480}
+                             alt="FreeHealth Icon"
+                             className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                           />
+                           <h1 className="lg:text-2xl text-center xxs:text-sm ">Free Health Check-up
+                           </h1>
+                           <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Provide free annual health check-ups with selected health plans.
+         
+         </p>
+                       </div>
+                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+                           <Image
+                             src={familyFloaterIcon}
+                             width={480}
+                             height={480}
+                             alt="Family Icon"
+                             className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                           />
+                           <h1 className="lg:text-2xl text-center xxs:text-sm">Family Floater Plan
+                           </h1>
+                           <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Allow users to cover their entire family under a single health plan.
+         
+         .</p>
+                       </div>
+                     </div>
           </div>
         <div className="p-3 w-full">
         <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 xxs:p-2 ">Enquire Now</button>

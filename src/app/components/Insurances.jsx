@@ -37,7 +37,7 @@ const InsurancePlans = () => {
                   layout="fill"
                   className="object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-blue-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-black/90 rounded-full p-3">
                     <Image
