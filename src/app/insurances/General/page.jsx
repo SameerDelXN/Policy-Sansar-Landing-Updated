@@ -18,13 +18,42 @@ import {toast,Toaster} from "react-hot-toast"
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 const GeneralInsurance = () => {
+  const [formData, setFormData] = useState({ fname: "",lname:"", email: "", mobile: "" });
   const [showModal, setShowModal] = useState(true); // Initially show the modal
   const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
   const [insuranceType, setInsuranceType] = useState(""); // Track the selected insurance type
   const [firstName, setFirstName] = useState(""); // Track the first name input
   const [lastName, setLastName] = useState(""); // Track the last name input
   const [mobileNumber, setMobileNumber] = useState(""); // Track the mobile number input
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/form-data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
+      const data = await response.json();
+      if (data.success) {
+        setShowModal(false);
+    toast("We will get back to you soon...",{
+      icon:"😊"
+    })
+      } else {
+        toast.error("Something went wrong!");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred.");
+    }
+  };
   const handleContinueClick = () => {
     setShowModal(false);
     toast("We will get back to you soon...",{
@@ -67,36 +96,42 @@ const GeneralInsurance = () => {
                       <h1 className="text-xl font-semibold">Get in touch for  <span></span>General Insurance</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
-            <form className="w-full flex flex-col gap-4">
+            <form className="w-full flex flex-col gap-4" >
               <div className="flex items-center justify-between w-full gap-4">
                 <input
                   required
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  name="fname"
+                  value={formData.fname}
+                  onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="First Name"
                 />
                 <input
                   required
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  name="lname"
+                  value={formData.lname}
+                  onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="Last Name"
                 />
               </div>
 
               <input
+              name="mobile"
                 required
                 type="tel"
                 pattern="^[0-9]{10}$"
-                value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
+                value={formData.mobile}
+                onChange={handleChange}
                 className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                 placeholder="Mobile Number"
               />
                <input
+               name="email"
                 required
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                 placeholder="Email address"
               />
@@ -104,11 +139,11 @@ const GeneralInsurance = () => {
              
 
               <input
-                onClick={handleContinueClick}
+                onClick={handleSubmit}
                 type="submit"
                 value="Continue"
-                disabled={!isFormValid()} // Disable button if form is not valid
-                className={`lg:p-4 xxs:p-3 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
+                
+                className={`lg:p-4 xxs:p-3 rounded-lg text-white cursor-pointer bg-blue-700`}
               />
             </form>
           </motion.div>
