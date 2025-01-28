@@ -131,7 +131,7 @@ const Footer = () => {
             </Link1>
             <Link1
               href={"/privacy-policy"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm text-end"
             >
               Privacy Policy
             </Link1>
@@ -143,7 +143,7 @@ const Footer = () => {
             </Link1>
             <Link1
               href={"/grievance-policy"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm text-end"
             >
               Grievance Policy
             </Link1>
