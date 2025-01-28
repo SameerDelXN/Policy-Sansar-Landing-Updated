@@ -27,7 +27,7 @@ const page = () => {
         </p>
         <div className="space-y-2 text-justify">
           <p>
-            <span className="font-semibold">Grievance Redressal Officer (GRO):</span> Sample Name
+            <span className="font-semibold">Grievance Redressal Officer (GRO):</span> Mr.Vinod Tongar
           </p>
           <p>
             <span className="font-semibold">Address:(Registered Office ) : </span> 3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018
