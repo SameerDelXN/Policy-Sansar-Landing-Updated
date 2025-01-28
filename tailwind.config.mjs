@@ -32,6 +32,8 @@ export default {
         lg: '1024px', // Large devices like laptops
         xl: '1280px', // Extra large devices like desktops
         desktopxl: '1536px', // Extra extra large screens
+        desktop2xl:'1920px',
+        desktop3xl:'2560px'
       },
     },
   },

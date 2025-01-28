@@ -39,9 +39,9 @@ const Customers = () => {
   }, []);
   
   return (
-    <div className="w-full bg-[#E6ECFF] py-12 overflow-hidden h-[75vh]  flex flex-col items-center justify-start  "> {/* overflow-hidden hides scrollbar */}
-      <h2 className="text-2xl font-bold text-center text-black mb-8">Customer's Say !!</h2>
-      <div className="relative w-full" ref={containerRef}> {/* Added relative positioning */}
+    <div className="w-full bg-[#E6ECFF] py-12  h-[75vh] flex flex-col items-center justify-start  "> {/* overflow-hidden hides scrollbar */}
+      <h2 className="text-2xl font-bold text-center text-black mb-8 ">Customer's Say !!</h2>
+      <div className="relative w-full " ref={containerRef}> {/* Added relative positioning */}
         <motion.div
           className="inline-flex gap-6 px-6 absolute left-0 top-0" // Absolute positioning for animation
           style={{ width: "fit-content" }} // Important: Set width to fit content

@@ -109,10 +109,10 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-      <div className="bg-white w-full  lg:h-[150vh] xxs:h-[137vh] xs:h-[120vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh] desktopxl:h-[120vh] xxs:h-[140vh] xs:h-[125vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2 lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
+  className="lg:w-1/2  lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
   style={{
     backgroundImage: `url(${bgImage.src})`, // Setting the imported background image
     backgroundSize: 'cover', // Ensure the image covers the entire container
@@ -128,7 +128,7 @@ const GeneralInsurance = () => {
 </p>
 </div>
 
-          <div className="lg:w-1/2  flex flex-col  lg:justify-evenly xxs:justify-end  xxs:w-full ">
+          <div className="lg:w-1/2  flex flex-col  lg:justify-between xxs:justify-end  xxs:w-full ">
           {/* <div className="flex flex-col gap-5 lg:p-8 xxs:p-4">
           <div className="flex flex-col items-start gap-3">
             <h1 className="lg:text-2xl font-semibold  xxs:text-sm ">Types of <span className="text-blue-700">Health</span> Insurance</h1>
@@ -190,13 +190,14 @@ const GeneralInsurance = () => {
               </div>
             </div>
           </div> */}
+           <div className="flex flex-col items-start">
            <div className="flex flex-col gap-5 p-6">
           <div className="flex flex-col items-start gap-3">
-            <h1 className="text-2xl font-bold">Why <span className="text-blue-700">Life</span> Insurance?</h1>
+            <h1 className="lg:text-2xl font-bold xxs:text-sm">Why <span className="text-blue-700">Life</span> Insurance?</h1>
             <hr className="w-64"/>
             
             </div>
-           <h1 className="text-xl">
+           <h1 className="lg:text-xl xxs:text-sm">
            At Policy Sansar, we understand the importance of securing your family’s future. Our life insurance plans offer flexible coverage options, providing financial protection for your loved ones in the event of an unexpected loss, ensuring their well-being and peace of mind.
 </h1></div>
           <div className="flex flex-col gap-5 lg:p-8 w-full xxs:p-4">
@@ -206,7 +207,7 @@ const GeneralInsurance = () => {
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={instantPolicyIcon}
                     width={480}
@@ -219,7 +220,7 @@ const GeneralInsurance = () => {
 
 </p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={claimTrackingIcon}
                     width={480}
@@ -233,7 +234,7 @@ const GeneralInsurance = () => {
 
 </p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={supportIcon}
                     width={480}
@@ -247,7 +248,7 @@ const GeneralInsurance = () => {
 
 </p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={securePaymentIcon}
                     width={480}
@@ -263,6 +264,7 @@ const GeneralInsurance = () => {
               </div>
             </div>
           </div>
+           </div>
         <div className="p-3 w-full">
         <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 xxs:p-2 ">Enquire Now</button>
         </div>
