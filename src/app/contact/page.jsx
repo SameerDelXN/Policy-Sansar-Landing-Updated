@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import mailicon from "../../../public/icons/mail.png";
-import callicon from "../../../public/icons/call.png";
+import mailicon from "../../../public/icons/Flaticons/mail.png";
+import callicon from "../../../public/icons/Flaticons/callI.png";
 import AnimatedHeader from '../components/AnimatedHeader';
 import callbanner from '../../../public/coverimg/call.png';
 
@@ -26,19 +26,19 @@ const Contact = () => {
         <div className="flex lg:flex-col xxs:flex-col xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full justify-between gap-6 sm:gap-12">
 
           {/* Map Section */}
-          <div className="w-full lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2 h-auto bg-blue-300 rounded-2xl p-6 sm:p-10 flex flex-col items-start justify-between">
-            <div className="text-white">
-              <p className="text-xl sm:text-3xl font-bold">Contact Us</p>
+          <div className="w-full lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2 h-auto bg-[#E6ECFF] rounded-2xl p-6 sm:p-10 flex flex-col items-start justify-between">
+            <div className="">
+              <p className="text-xl sm:text-3xl font-bold">Visit Policy Sansar</p>
               <p className="text-sm sm:text-base pt-2 sm:pt-4">Let's Build a Conversation - Contact Us Today.</p>
             </div>
 
             {/* Email & Mobile Number */}
-            <div className="flex lg:flex-row md:items-center xl:flex md:justify-between md:w-full gap-3 md:gap-6 p-2 xxs:flex-col">
-              <div className="flex gap-2">
+            <div className=" xxs:flex-col gap-4  pt-4 pb-4 justify-start  flex xs:flex-row xs:justify-between  w-full ">
+              <div className="flex items-center gap-2">
                 <Image width={25} height={25} src={mailicon} alt="Email Icon" />
                 <p className="text-xs sm:text-base">po@policysansar.com</p>
               </div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <Image width={25} height={25} src={callicon} alt="Phone Icon" />
                 <p className="text-xs sm:text-base">
                   <span>+91 </span> <span>9644170004</span>

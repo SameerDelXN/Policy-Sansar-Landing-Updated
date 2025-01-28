@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaXTwitter, FaLinkedinIn, FaFacebook, FaInstagram } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedinIn, FaFacebook, FaInstagram ,FaYoutube} from "react-icons/fa6";
 import { IoCallSharp, IoMailOpenSharp, IoLocationSharp } from "react-icons/io5";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useInView } from "react-intersection-observer"; // Importing useInView
@@ -8,6 +8,7 @@ import Link1 from "next/link";
 import { HiMiniBuildingOffice ,HiMiniBuildingOffice2} from "react-icons/hi2";
 import Image from "next/image";
 import FooterLogo from "../../../public/icons/footerLogo.png"
+
 const Footer = () => {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
@@ -43,18 +44,22 @@ const Footer = () => {
           </h1>
          
           <div className="flex items-center gap-3">
-            <div className="p-3 rounded-full  border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full  border border-x-2 border-y-2 border-white hover:border-blue-500 hover:bg-blue-500 hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaXTwitter />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-blue-500 hover:bg-blue-500 hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaLinkedinIn />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-blue-500 hover:bg-blue-500 hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaFacebook />
             </div>
-            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-[#1D951B] hover:bg-[#1D951B] hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-blue-500 hover:bg-blue-500 hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
               <FaInstagram />
             </div>
+            <div className="p-3 rounded-full border border-x-2 border-y-2 border-white hover:border-blue-500 hover:bg-blue-500 hover:-translate-y-1 transition-all ease-in-out duration-300 cursor-pointer xxs:text-sm xs:text-sm sm:text-sm xxs:p-2 xs:p-2 sm:p-2">
+              <FaYoutube />
+            </div>
+
           </div>
          </div>
          
@@ -66,12 +71,12 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-5 xxs:w-1/2">
               <h1 className="text-xl font-bold">Products</h1>
               <ul className="text-md flex flex-col gap-3 xxs:text-sm">
-                <li><Link1 href={"/insurances/General"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">General Inusrance</Link1></li>
-                <li><Link1 href={"/insurances/Health"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Health Insurance</Link1></li>
-                <li><Link1 href={"/insurances/Life"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Life Insurance</Link1></li>
-                <li><Link1 href={"/insurances/group"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Group Insurance</Link1></li>
-                <li><Link1 href={"/insurances/financial"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Financial Insurance</Link1></li>
-                <li><Link1 href={"/insurances/wealth"} className="hover:text-[#1D951B] transition-all ease-in-out duration-300">Wealth Insurance</Link1></li>
+                <li><Link1 href={"/insurances/General"} className="hover:text-blue-500 transition-all ease-in-out duration-300">General Inusrance</Link1></li>
+                <li><Link1 href={"/insurances/Health"} className="hover:text-blue-500 transition-all ease-in-out duration-300">Health Insurance</Link1></li>
+                <li><Link1 href={"/insurances/Life"} className="hover:text-blue-500 transition-all ease-in-out duration-300">Life Insurance</Link1></li>
+                <li><Link1 href={"/insurances/group"} className="hover:text-blue-500 transition-all ease-in-out duration-300">Group Insurance</Link1></li>
+                <li><Link1 href={"/insurances/financial"} className="hover:text-blue-500 transition-all ease-in-out duration-300">Financial Insurance</Link1></li>
+                <li><Link1 href={"/insurances/wealth"} className="hover:text-blue-500 transition-all ease-in-out duration-300">Wealth Insurance</Link1></li>
               </ul>
             </div>
             {/* <div className="flex flex-col items-start gap-5">
@@ -101,44 +106,44 @@ const Footer = () => {
             
             <Link1
               href={"/"}
-              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               Home
             </Link1>
            
             <Link1
               href={"/Distribution"}
-              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               Process
             </Link1>
             <Link1
               href={"/about-us"}
-              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer  transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               About Us
             </Link1>
             <Link1
               href={"/contact"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               Contact Us
             </Link1>
             <Link1
               href={"/privacy-policy"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               Privacy Policy
             </Link1>
             <Link1
               href={"/terms-and-conditions"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm text-end"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm text-end"
             >
               Terms & Conditions
             </Link1>
             <Link1
               href={"/grievance-policy"}
-              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-[#1D951B] xxs:text-sm xs:text-sm sm:text-sm"
+              className="cursor-pointer transition-all ease-in-out duration-300 hover:text-blue-500 xxs:text-sm xs:text-sm sm:text-sm"
             >
               Grievance Policy
             </Link1>
@@ -174,7 +179,7 @@ const Footer = () => {
               Registered office </h1>
            
              {/* <IoLocationSharp className="text-4xl"/> -{" "} */}
-             <h1 onClick={() => window.open("https://maps.app.goo.gl/qDDFFVQkVke94YA59", '_blank', 'noopener,noreferrer')} className="cursor-pointer text-sm sm:text-base xxs:xs underline">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
+             <h1  onClick={() => window.open("https://maps.app.goo.gl/qDDFFVQkVke94YA59", '_blank', 'noopener,noreferrer')} className="text-sm sm:text-base xxs:xs hover:text-blue-500 transition-all ease-in-out duration-300  underline">3rd Floor,Plot No.264/265,Vaswani Chamber,Dr.Annie Besant Road,Worli Colony,Mumbai-400018</h1>
              </div>
             
              
@@ -182,7 +187,7 @@ const Footer = () => {
              <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice2 className="text-lg"/>
               Corporate office </h1>
              {/* <IoLocationSharp className="text-3xl"/> -{" "} */}
-             <h1  onClick={() => window.open("https://maps.app.goo.gl/waCc29mgzyJsvb7eA", '_blank', 'noopener,noreferrer')} className="cursor-pointer text-sm sm:text-base xxs:xs underline">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road,Andheri East,Mumbai-40072</h1>
+                 <h1  onClick={() => window.open("https://maps.app.goo.gl/waCc29mgzyJsvb7eA", '_blank', 'noopener,noreferrer')}className="text-sm sm:text-base xxs:xs hover:text-blue-500 underline transition-all ease-in-out duration-300 ">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road,Andheri East,Mumbai-40072</h1>
              </div>
             
           </div>
