@@ -109,7 +109,7 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-      <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh]  xxs:h-[153vh] xs:h-[125vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh]  xxs:h-[153vh] xs:h-[133vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
   className="lg:w-1/2  lg:h-full bg-slate-200 lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-30 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
