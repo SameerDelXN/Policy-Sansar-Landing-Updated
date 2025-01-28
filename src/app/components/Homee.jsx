@@ -122,10 +122,10 @@ const Homee = () => {
       </div> */}
       <div className="w-5/6  bg-white flex flex-col   rounded-2xl shadow-lg border border-slate-200  p-5 h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
         <div className="flex flex-col items-center gap-1 ">
-          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl desktop3xl:text-7xl">
+          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl desktop3xl:text-7xl desktop2xl:text-3xl">
             The Insurance Partner
           </h1>
-          <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm desktop3xl:text-2xl">
+          <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm  desktop3xl:text-2xl">
             <p>You can</p>
             <Image
               src={handShakeIcon}
@@ -170,11 +170,11 @@ const Homee = () => {
                     width={1920}
                     height={1080}
                     alt={`${title} Insurance`}
-                    className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7 xs:w-9 xs:h-9 desktopxl:w-16 desktopxl:h-16 desktop3xl:w-28 desktop3xl:h-28"
+                    className="lg:w-10 lg:h-10 xxs:w-7 xxs:h-7 xs:w-9 xs:h-9   desktop3xl:w-28 desktop3xl:h-28"
                   />
                   <div className="flex flex-col items-center">
                     <h1 className="lg:text-lg xxs:text-xs xs:text-sm desktopxl:text-xl desktop3xl:text-3xl">{capitalizeFirstLetter(title)}</h1>
-                    <p className="text-xs text-slate-500 desktopxl:text-sm desktop3xl:text-xl">Insurance</p>
+                    <p className="text-xs text-slate-500  desktop3xl:text-xl">Insurance</p>
                   </div>
                 </Link>
               ))}

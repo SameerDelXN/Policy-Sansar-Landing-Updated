@@ -24,7 +24,7 @@ const Our_Partners = () => {
   ];
 
   return (
-    <div className=" w-full lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop3xl:justify-evenly overflow-hidden px-4 xxs:h-[25vh] xs:h-[25vh]">
+    <div className=" w-full mt-12 lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop3xl:justify-evenly overflow-hidden px-4 xxs:h-[25vh] xs:h-[25vh]">
       <AnimatedHeader text="Our Partners" className="text-4xl" />
       <div className="relative overflow-hidden w-full">
         <div className="flex animate-scroll gap-4 sm:gap-6 md:gap-8">
