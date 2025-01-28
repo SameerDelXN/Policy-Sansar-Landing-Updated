@@ -123,7 +123,7 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-      <div className="bg-white w-full  lg:h-[150vh] xxs:h-[130vh] xs:h-[120vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full desktop2xl:h-[100vh] lg:h-[150vh] xxs:h-[145vh] xs:h-[123vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
   className="lg:w-1/2 lg:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
@@ -156,11 +156,11 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Monthly Salary Icon"
-                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                  className="xxs:w-6 xxs:h-8 lg:w-14 lg:h-14 "
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Monthly-Salary</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold xxs:text-sm xs:text-xs">Salary</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs xs:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -172,8 +172,8 @@ const GeneralInsurance = () => {
                   className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Surety</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold xxs:text-sm xs:text-xs">Surety</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs xs:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -185,8 +185,8 @@ const GeneralInsurance = () => {
                   className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Banker's Gurantee</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold xxs:text-sm xs:text-xs">Gurantee</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs xs:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -198,8 +198,8 @@ const GeneralInsurance = () => {
                   className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Income Loss</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold xxs:text-sm xs:text-xs">Income Loss</h1>
+               <p className="text-sm text-slate-500 xxs:text-xs xs:text-xs">Insurance</p>
                </div>
               </div>
             </div>
@@ -211,49 +211,49 @@ const GeneralInsurance = () => {
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 xxs:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={InvestmentProtectionIcon}
                     width={480}
                     height={480}
                     alt="Investment Protection Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="xxs:w-8 xxs:h-8 xs:w-12 xs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Investment Protection</h1>
-                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">Offers coverage for market-linked investments against significant downturns or specific risks.</p>
+                  <h1 className="lg:text-2xl text-center xxs:text-xs xs:text-sm ">Investment Protection</h1>
+                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">Offers coverage for market-linked investments </p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 xxs:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={SuretyBondIcon}
                     width={480}
                     height={480}
                     alt="Surety Bond Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="xxs:w-8 xxs:h-8 xs:w-12 xs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Surety Bonds</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Guarantees project completion or payment obligations, typically for contractors.</p>
+                  <h1 className="lg:text-2xl text-center xxs:text-xs xs:text-sm ">Surety Bonds</h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Guarantees project completion for contractors.</p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 xxs:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={LiabilityProtectionIcon}
                     width={480}
                     height={480}
                     alt="Liability Protection Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="xxs:w-8 xxs:h-8 xs:w-12 xs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm ">Liability Protection</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Covers legal costs and compensation in cases of financial liabilities or lawsuits.</p>
+                  <h1 className="lg:text-2xl text-center xxs:text-xs xs:text-sm  ">Liability Protection</h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Covers legal costs and compensation in  liabilities.</p>
               </div>
-              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 xxs:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
                   <Image
                     src={MortgageIcon}
                     width={480}
                     height={480}
                     alt="Mortgage Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="xxs:w-8 xxs:h-8 xs:w-12 xs:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Mortgage Insurance</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">EEnsures home loan repayments are made if the borrower encounters financial challenges.</p>
+                  <h1 className="lg:text-2xl text-center xxs:text-xs xs:text-sm ">Mortgage Insurance</h1>
+                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs ">Ensures home loan repayments are made.</p>
               </div>
             </div>
           </div>
