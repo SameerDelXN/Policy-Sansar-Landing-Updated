@@ -48,7 +48,7 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full   xxs:h-[80vh] xs:h-[80vh]  lg:h-[100vh]   flex flex-col items-center justify-between xxs:justify-center xs:justify-center  gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
+    <div className="w-full   xxs:h-[90vh] xs:h-[90vh]  lg:h-[100vh]   flex flex-col items-center justify-between xxs:justify-center xs:justify-center  gap-2    lg:p-3  xxs:p-3  xs:p-2 sm:p-1">
       {/* Moving Advertisement */}
       <div className="relative lg:w-4/5 lg:h-40    xxs:h-32    xs:h-32  rounded-2xl overflow-hidden   xxs:w-full xs:w-full sm:w-full">
         <div
