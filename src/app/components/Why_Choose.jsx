@@ -16,7 +16,7 @@ const Why_Choose = () => {
     <div className="w-full min-h-[600px]  bg-white relative flex flex-col items-center justify-evenly xl:justify-center xl:gap-5   overflow-hidden">
       {/* Content Section */}
       <div className="p-8">
-        <h1 className="lg:text-3xl font-bold text-center phone:text-xl">
+        <h1 className="lg:text-3xl font-medium text-center phone:text-xl">
           Benefits of <span className="text-blue-700">Policy Sansar</span>
         </h1>
       </div>
