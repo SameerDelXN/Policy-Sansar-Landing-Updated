@@ -1,17 +1,89 @@
 "use client";
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 import mailicon from "../../../public/icons/Flaticons/mail.png";
 import callicon from "../../../public/icons/Flaticons/callI.png";
-import AnimatedHeader from '../components/AnimatedHeader';
-import callbanner from '../../../public/coverimg/call.png';
-
+import AnimatedHeader from "../components/AnimatedHeader";
+import callbanner from "../../../public/coverimg/call.png";
+import { Toaster,toast } from "react-hot-toast";
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    mobile: "",
+    insuranceType: "Enquiry",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    const { fname, lname, email, mobile } = formData;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const mobileRegex = /^[0-9]{10}$/;
+
+    if (!fname.trim() || !lname.trim()) {
+      toast.error("First and Last name are required.");
+      return false;
+    }
+    if (!emailRegex.test(email)) {
+      toast.error("Invalid email format.");
+      return false;
+    }
+    if (!mobileRegex.test(mobile)) {
+      toast.error("Mobile number must be 10 digits.");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    setLoading(true);
+    try {
+      const response = await fetch("/api/form-data", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        toast.success("We will get back to you soon! 😊");
+        setFormData({
+          fname: "",
+          lname: "",
+          email: "",
+          mobile: "",
+          insuranceType: "Enquiry",
+        });
+      } else {
+        toast.error("Something went wrong!");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden w-full h-[150vh] mb-12 ">
       {/* Hero Section */}
+      <Toaster />
       <div className="relative w-full h-56 bg-black">
-        <Image src={callbanner} layout="fill" objectFit="cover" alt="Call Banner" />
+        <Image
+          src={callbanner}
+          layout="fill"
+          objectFit="cover"
+          alt="Call Banner"
+        />
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex items-center px-6 sm:px-16 text-white">
           <h1 className="text-xl sm:text-3xl font-bold">Contact Us</h1>
@@ -19,17 +91,23 @@ const Contact = () => {
       </div>
 
       {/* Main Contact Section */}
-      <div name="contact" className="h-auto flex flex-col items-center justify-center gap-12 p-6 sm:p-10 bg-white">
+      <div
+        name="contact"
+        className="h-full w-full flex flex-col items-center justify-center gap-12 p-6 sm:p-10 bg-white"
+      >
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
-        <div className="flex lg:flex-col xxs:flex-col xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full justify-between gap-6 sm:gap-12">
-
+        <div className="flex  h-full lg:flex-col xxs:flex-col xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
           {/* Map Section */}
-          <div className="w-full lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2 h-auto bg-[#E6ECFF] rounded-2xl p-6 sm:p-10 flex flex-col items-start justify-between">
+          <div className="w-full h-3/4 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 flex flex-col items-start ">
             <div className="">
-              <p className="text-xl sm:text-3xl font-bold">Visit Policy Sansar</p>
-              <p className="text-sm sm:text-base pt-2 sm:pt-4">Let's Build a Conversation - Contact Us Today.</p>
+              <p className="text-xl sm:text-3xl font-bold">
+                Visit Policy Sansar
+              </p>
+              <p className="text-sm sm:text-base pt-2 sm:pt-4">
+                Let's Build a Conversation - Contact Us Today.
+              </p>
             </div>
 
             {/* Email & Mobile Number */}
@@ -47,11 +125,17 @@ const Contact = () => {
             </div>
 
             {/* Google Map */}
-            <div className="w-full space-y-4">
+            <div className="w-full space-y-4 h-1/3 ">
               {/* First Location */}
               <div
-                className="w-full h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden cursor-pointer"
-                onClick={() => window.open("https://maps.app.goo.gl/qDDFFVQkVke94YA59", '_blank', 'noopener,noreferrer')}
+                className="w-full  h-full relative rounded-2xl overflow-hidden bg-red-600 cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/qDDFFVQkVke94YA59",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
               >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8653856063793!2d72.89023277493088!3d19.113560550792815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92d5e58cdc9%3A0x94c2dec7f68a1d1b!2z4KSs4KWB4KSu4KSw4KSB4KSXIOCkrOCkv-CksuCljeCkoeCkv-CkguCklw!5e0!3m2!1shi!2sin!4v1737356266212!5m2!1shi!2sin"
@@ -65,8 +149,14 @@ const Contact = () => {
 
               {/* Second Location */}
               <div
-                className="w-full h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden cursor-pointer"
-                onClick={() => window.open("https://maps.app.goo.gl/waCc29mgzyJsvb7eA", '_blank', 'noopener,noreferrer')}
+                className="w-full h-full  relative rounded-2xl overflow-hidden cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/waCc29mgzyJsvb7eA",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
               >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1753228734137!2d72.81877477492861!3d19.01199455397927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf3304e7b959%3A0x86db87def27be600!2z4KS14KWA4KS14KSw4KWN4KSVIOCkteCkvuCkuOCkteCkvuCkqOClgCDgpJrgpYjgpILgpKzgpLDgpY3gpLg!5e0!3m2!1shi!2sin!4v1737356362283!5m2!1shi!2sin"
@@ -81,9 +171,9 @@ const Contact = () => {
           </div>
 
           {/* Google Form Embed Section */}
-          <div className="bg-white w-full lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-auto p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
+          <div className="bg-white w-full  lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-3/4 p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
             <p className="text-xl sm:text-2xl font-bold">Get in Touch</p>
-            <iframe
+            {/* <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfA_lb0gzs4Pk2k_8gN0atWHIXCb6820M_AUCw5T6G_y7QM4A/viewform?embedded=true"
               width="100%"
               height="600px"
@@ -91,7 +181,54 @@ const Contact = () => {
               title="Contact Form" // Added title for accessibility
             >
               Loading…
-            </iframe>
+            </iframe> */}
+            <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
+              <input
+                required
+                value={formData.fname}
+                name="fname"
+                onChange={handleChange}
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                placeholder="First Name"
+              />
+              <input
+                required
+                value={formData.lname}
+                name="lname"
+                onChange={handleChange}
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                placeholder="Last Name"
+              />
+
+              <input
+                required
+                type="tel"
+                pattern="^[0-9]{10}$"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                placeholder="Mobile Number"
+              />
+              <input
+                name="email"
+                required
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                placeholder="Email address"
+              />
+
+              <input
+                type="submit"
+                value={loading ? "Submitting..." : "Continue"}
+                className={`p-4 rounded-lg text-white cursor-pointer bg-blue-700 ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                disabled={loading}
+              />
+            </form>
           </div>
         </div>
       </div>

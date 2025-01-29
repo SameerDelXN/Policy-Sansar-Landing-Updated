@@ -25,41 +25,65 @@ const GeneralInsurance = () => {
   const [firstName, setFirstName] = useState(""); // Track the first name input
   const [lastName, setLastName] = useState(""); // Track the last name input
   const [mobileNumber, setMobileNumber] = useState(""); // Track the mobile number input
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/form-data", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setShowModal(false);
-    toast("We will get back to you soon...",{
-      icon:"😊"
-    })
-      } else {
-        toast.error("Something went wrong!");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred.");
-    }
-  };
-  const handleContinueClick = () => {
-    setShowModal(false);
-    toast("We will get back to you soon...",{
-      icon:"😊"
-    })
-  };
+  const [loading, setLoading] = useState(false);
+ 
+   const handleChange = (e) => {
+     const { name, value } = e.target;
+     setFormData({ ...formData, [name]: value });
+   };
+ 
+   const validateForm = () => {
+     const { fname, lname, email, mobile } = formData;
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     const mobileRegex = /^[0-9]{10}$/;
+ 
+     if (!fname.trim() || !lname.trim()) {
+       toast.error("First and Last name are required.");
+       return false;
+     }
+     if (!emailRegex.test(email)) {
+       toast.error("Invalid email format.");
+       return false;
+     }
+     if (!mobileRegex.test(mobile)) {
+       toast.error("Mobile number must be 10 digits.");
+       return false;
+     }
+     return true;
+   };
+ 
+   const handleSubmit = async (e) => {
+     e.preventDefault();
+     if (!validateForm()) return;
+ 
+     setLoading(true);
+     try {
+       const response = await fetch("/api/form-data", {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify(formData),
+       });
+ 
+       const data = await response.json();
+       if (data.success) {
+        setShowModal(false)
+         toast.success("We will get back to you soon! 😊");
+         setFormData({
+           fname: "",
+           lname: "",
+           email: "",
+           mobile: "",
+           insuranceType: "Enquiry",
+         });
+       } else {
+         toast.error("Something went wrong!");
+       }
+     } catch (error) {
+       toast.error("An error occurred. Please try again.");
+     } finally {
+       setLoading(false);
+     }
+   };
   const handleCloseModal = ()=>{
     setShowModal(false)
   }
@@ -96,7 +120,7 @@ const GeneralInsurance = () => {
                       <h1 className="text-xl font-semibold">Reach out for <span className="text-blue-700">General Insurance</span> !</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
-                      <form className="w-full flex flex-col gap-4">
+                      <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="flex items-center justify-between w-full gap-4">
                 <input
                   required
@@ -136,11 +160,13 @@ const GeneralInsurance = () => {
                 placeholder="Email address"
               />
 
-              <input
-                onClick={handleSubmit}
+<input
                 type="submit"
-                value="Continue"
-                className={`lg:p-4 phone:p-3 rounded-lg text-white cursor-pointer bg-blue-700`}
+                value={loading ? "Submitting..." : "Continue"}
+                className={`p-4 rounded-lg text-white cursor-pointer bg-blue-700 ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                disabled={loading}
               />
             </form>
           </motion.div>
