@@ -44,7 +44,7 @@ const GeneralInsurance = () => {
  
    const validateForm = () => {
      const { fname, lname, email, mobile } = formData;
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     const emailRegex = /^[^\s@]+@gmail\.com$/;
      const mobileRegex = /^[0-9]{10}$/;
  
      if (!fname.trim() || !lname.trim()) {

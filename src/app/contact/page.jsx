@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=" w-full h-[150vh] phone:min-h-[150vh] mb-12  ">
+    <div className=" w-full h-[150vh] phone:min-h-[200vh] phone:mb-3  ">
       {/* Hero Section */}
       <Toaster />
       <div className="relative w-full h-56 bg-black ">
@@ -99,9 +99,9 @@ const Contact = () => {
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
-        <div className="flex   h-full phone:h-3/4 lg:flex-col phone:flex-col  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
+        <div className="flex   h-full phone:h-full lg:flex-col phone:flex-col  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
           {/* Map Section */}
-          <div className="w-full h-3/4  lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start ">
+          <div className="w-full h-2/3 phone:justify-start phone:h-1/2 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start justify-evenly ">
             <div className="">
               <p className="text-xl sm:text-3xl font-bold">
                 Visit Policy Sansar
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
 
             {/* Email & Mobile Number */}
-            <div className=" phone:flex  gap-4  pt-4 pb-4 justify-start phone:justify-center   flex xs:flex-row xs:justify-between  w-full ">
+            <div className=" phone:flex  gap-4  pt-4 pb-4  phone:justify-center justify-between   flex xs:flex-row xs:justify-between  w-full ">
               <div className="flex items-center gap-2 phone:flex-col">
                 <Image width={25} height={25} src={mailicon} alt="Email Icon" />
                 <p className="text-xs sm:text-base">po@policysansar.com</p>
@@ -126,10 +126,13 @@ const Contact = () => {
             </div>
 
             {/* Google Map */}
-            <div className="w-full space-y-4 h-1/3 phone:h-1/4 ">
+            <div className="w-full flex items-center gap-2 h-2/3  phone:h-full phone:flex-col">
               {/* First Location */}
+              <div className="flex flex-col items-center  justify-center gap-5 w-1/2 phone:w-full h-full bg-white p-2 rounded-lg shadow-xl border border-slate-300">
+             <div className="flex flex-col gap-2 items-center "> <h1 className="text-xl font-bold phone:text-sm">Corporate Office</h1>
+             <p className="text-center phone:text-xs">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road, Andheri East, Mumbai-40072</p></div>
               <div
-                className="w-full  h-full relative rounded-2xl overflow-hidden  cursor-pointer"
+                className="w-full  h-2/3 relative rounded-2xl overflow-hidden phone:rounded-sm  cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/qDDFFVQkVke94YA59",
@@ -147,10 +150,16 @@ const Contact = () => {
                   title="First Location Map" // Added title for accessibility
                 />
               </div>
+              </div>
+             
 
               {/* Second Location */}
-              <div
-                className="w-full h-full  relative rounded-2xl overflow-hidden cursor-pointer"
+              <div className="flex flex-col items-center  justify-center gap-5 w-1/2 phone:w-full h-full bg-white p-2 rounded-lg shadow-xl border border-slate-300">
+             <div className="flex flex-col gap-2 items-center "> <h1 className="text-xl font-bold phone:text-sm">Registered Office</h1>
+             <p className="text-center phone:text-xs">3rd Floor, Plot No.264/265, Vaswani Chamber,
+             Dr.Annie Besant Road, Worli Colony, Mumbai-400018</p></div>
+             <div
+                className="w-full h-full  relative rounded-2xl phone:rounded-sm overflow-hidden cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/waCc29mgzyJsvb7eA",
@@ -168,11 +177,13 @@ const Contact = () => {
                   title="Second Location Map" // Added title for accessibility
                 />
               </div>
+              </div>
+             
             </div>
           </div>
 
           {/* Google Form Embed Section */}
-          <div className="bg-white w-full  lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-3/4 p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
+          <div className="bg-white w-full phone:h-1/3  lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-2/3 p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
             <p className="text-xl sm:text-2xl font-bold">Get in Touch</p>
             {/* <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfA_lb0gzs4Pk2k_8gN0atWHIXCb6820M_AUCw5T6G_y7QM4A/viewform?embedded=true"
