@@ -24,7 +24,7 @@ const Our_Partners = () => {
   ];
 
   return (
-    <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop2xl:justify-evenly overflow-hidden px-4 phone:h-[25vh] ">
+    <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center phone:justify-center gap-5 desktop2xl:justify-evenly overflow-hidden px-4 phone:h-[40vh] ">
       {/* <AnimatedHeader text="Our Partners" className="text-4xl" /> */}
       <h2 className="text-center text-xl md:text-3xl font-medium mb-6 desktop2xl:text-5xl ">
         Our Partners
