@@ -105,7 +105,7 @@ const Header = () => {
     setShowLoginModal(true)
   }
   return (
-    <div className="w-full sticky top-0 z-20 bg-white lg:h-[13vh] xxs:h-[8vh] ">
+    <div className="w-full sticky top-0 z-20 bg-white  lg:h-[17vh] desktopxl:h-[13vh] md2:h-[13vh] phone:h-[8vh] ">
         {showLoginModal && (
               <div
                 className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 xxs:p-5"
@@ -146,15 +146,15 @@ const Header = () => {
         >
           <Image
             src={Logo}
-            width={90}
-            height={90}
+            width={1920}
+            height={1080}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12"
+            className="transition-all ease-in-out duration-300 phone:w-12  desktopxl:w-24 laptop:w-24"
           />
           <div className="flex flex-col items-start gap-1  ">
-          <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm">Policy Sansar</h1>
+          <h1 className="lg:text-2xl text-blue-700 phone:text-sm ">Policy Sansar</h1>
           {/* <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1> */}
-          <Image src={tagLine7} width={1920} height={1080} className="w-full lg:h-8 object-contain xxs:h-5"/>
+          <Image src={tagLine7} width={1920} height={1080} className="w-full lg:h-8 object-contain phone:h-5"/>
           </div>
         </Link1>
 

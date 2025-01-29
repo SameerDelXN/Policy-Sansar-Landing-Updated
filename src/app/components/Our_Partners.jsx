@@ -24,16 +24,16 @@ const Our_Partners = () => {
   ];
 
   return (
-    <div className=" w-full mt-12 lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop3xl:justify-evenly overflow-hidden px-4 xxs:h-[25vh] xs:h-[25vh]">
+    <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop3xl:justify-evenly overflow-hidden px-4 phone:h-[25vh] ">
       <AnimatedHeader text="Our Partners" className="text-4xl" />
       <div className="relative overflow-hidden w-full">
         <div className="flex animate-scroll gap-4 sm:gap-6 md:gap-8">
           {partners.concat(partners).map((partner, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-36 sm:w-40 md:w-48 text-center bg-white rounded-2xl"
+              className="flex-shrink-0 w-36 phone:w-24 md:w-48 text-center bg-white rounded-2xl"
             >
-              <div className="relative w-full h-28 sm:h-32 md:h-36">
+              <div className="relative w-full h-28  md:h-36">
                 <Image
                   src={partner.img}
                   alt={partner.name}

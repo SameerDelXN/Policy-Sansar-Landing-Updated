@@ -16,14 +16,14 @@ const Why_Choose = () => {
     <div className="w-full min-h-[600px]  bg-white relative flex flex-col items-center justify-evenly xl:justify-center xl:gap-5   overflow-hidden">
       {/* Content Section */}
       <div className="p-8">
-        <h1 className="lg:text-3xl font-bold text-center xxs:text-xl">
+        <h1 className="lg:text-3xl font-bold text-center phone:text-xl">
           Benefits of <span className="text-blue-700">Policy Sansar</span>
         </h1>
       </div>
 
       {/* Cards Section */}
-      <div className="w-full lg:flex-row items-center gap-5 justify-center z-10 xxs:flex xxs:flex-wrap  md:flex xxs:p-5 xs:flex xxs:gap-4 ">
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 xxs:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-3/4 xs:w-2/3 md:w-2/3">
+      <div className="w-full lg:flex-row items-center gap-5 justify-center z-10 phone:flex phone:flex-wrap  md:flex phone:p-5 xs:flex phone:gap-4 ">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-80 phone:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 phone:w-3/4 xs:w-2/3 md:w-2/3">
           <Image src={callIcon} width={90} height={90} alt="callIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="lg:text-2xl xs:text-xl  ">24/7 Assistance</h1>
@@ -34,7 +34,7 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 xxs:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-3/4 xs:w-2/3 md:w-2/3">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-80 phone:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 phone:w-3/4 xs:w-2/3 md:w-2/3">
           <Image src={sheildIcon} width={90} height={90} alt="sheildIcon" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="lg:text-2xl xs:text-xl text-center">Quick Quotations</h1>
@@ -45,7 +45,7 @@ const Why_Choose = () => {
           </div>
         </div>
 
-        <div className="bg-white lg:w-1/4 shadow-2xl h-96 xxs:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 xxs:w-3/4 xs:w-2/3 md:w-2/3">
+        <div className="bg-white lg:w-1/4 shadow-2xl h-80 phone:h-80  rounded-2xl border border-slate-200 flex flex-col items-center justify-evenly p-5 phone:w-3/4 xs:w-2/3 md:w-2/3">
           <Image 
             src={quickQuoteIcon}
             width={90}

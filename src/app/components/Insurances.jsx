@@ -19,15 +19,15 @@ const InsurancePlans = () => {
   ];
 
   return (
-    <div className="w-full min-h-[100vh] p-10 flex flex-col items-center justify-center gap-10 xxs:p-2">
+    <div className="w-full min-h-[100vh] phone:min-h-[87vh] p-10 flex flex-col items-center justify-center gap-10  phone:p-2 phone:gap-4  ">
       <h2 className="text-center text-xl md:text-3xl font-medium mb-6 desktop3xl:text-5xl">
         Explore Our Insurance Plans
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 xxs:grid-cols-2 xxs:gap-3 xs:grid-cols-2 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 phone:grid-cols-2 phone:gap-3 xs:grid-cols-2 ">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative lg:w-64 lg:h-64 desktop3xl:w-96 desktop3xl:h-96  border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto xxs:w-40 xxs:h-40 xs:w-44 xs:h-44 xl:w-72 xl:h-72"
+            className="relative laptop:w-64 laptop:h-64 desktop3xl:w-96 desktop3xl:h-96  border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto phone:w-44 phone:h-44 xs:w-44 xs:h-44 xl:w-72 xl:h-72"
           >
             <Link href={plan.link}>
               <div className="relative w-full h-full rounded-full overflow-hidden">

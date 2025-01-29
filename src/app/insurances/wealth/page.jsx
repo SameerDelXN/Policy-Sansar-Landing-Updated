@@ -54,7 +54,7 @@ const GeneralInsurance = () => {
     setShowModal(true);
   }
   return (
-    <div className="w-full h-auto p-10 xxs:p-2">
+    <div className="w-full h-auto p-10 phone:p-2">
       <Toaster/>
       {showModal && (
         <div
@@ -66,7 +66,7 @@ const GeneralInsurance = () => {
             animate={{ opacity: 1, y: 0 }} // Animate to its final position
             exit={{  y: 100,opacity:0 }} // Exit animation
             transition={{ duration: 0.5 }} // Duration of the animation
-          className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl xxs:p-4 xxs:w-5/6 ">
+          className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl phone:p-4 phone:w-5/6 ">
            <div className="w-full flex items-center justify-between">
                       <h1 className="text-xl font-semibold">Reach out for  <span></span>Wealth Insurance</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
@@ -77,14 +77,14 @@ const GeneralInsurance = () => {
                   required
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                   placeholder="First Name"
                 />
                 <input
                   required
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                   placeholder="Last Name"
                 />
               </div>
@@ -95,13 +95,13 @@ const GeneralInsurance = () => {
                 pattern="^[0-9]{10}$"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
-                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                 placeholder="Mobile Number"
               />
                <input
                 required
                 type="email"
-                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                 placeholder="Email address"
               />
 
@@ -112,17 +112,17 @@ const GeneralInsurance = () => {
                 type="submit"
                 value="Continue"
                 disabled={!isFormValid()} // Disable button if form is not valid
-                className={`lg:p-4 xxs:p-3 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
+                className={`lg:p-4 phone:p-3 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
               />
             </form>
           </motion.div>
         </div>
       )}
       <div>
-      <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh] xxs:h-[135vh]  xs:h-[120vh]  rounded-2xl xxs:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full  laptop:h-[190vh] md2:h-[150vh] desktop2xl:h-[100vh] phone:min-h-[145vh]  xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2 lg:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col xxs:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl xxs:w-full xxs:rounded-bl-none xxs:rounded-tr-2xl xxs:p-10"
+  className="lg:w-1/2 laptop:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage.src})`,
     backgroundSize: 'cover',
@@ -130,19 +130,19 @@ const GeneralInsurance = () => {
     backgroundRepeat: 'no-repeat',
   }}
 >
-  <h1 className="lg:text-4xl xxs:text-xl">
-    <span className="lg:text-5xl font-bold xxs:text-2xl">W</span>ealth Insurance
+  <h1 className="lg:text-4xl phone:text-xl">
+    <span className="lg:text-5xl font-bold phone:text-2xl">W</span>ealth Insurance
   </h1>
-  <p className="w-2/3 xxs:w-full xxs:text-sm lg:text-xl">
+  <p className="w-2/3 phone:w-full phone:text-sm lg:text-xl">
   Wealth insurance provides financial protection against risks that may impact an individual wealth, including market fluctuations, investment losses, and unforeseen financial emergencies. It ensures that individuals and families can preserve and grow their wealth.
 </p>
 </div>
 
-          <div className="lg:w-1/2  flex flex-col  lg:justify-between xxs:justify-end  xxs:w-full ">
+          <div className="lg:w-1/2  flex flex-col  lg:justify-between phone:justify-end  phone:w-full ">
          <div className="flex flex-col items-start w-full">
-         <div className="flex flex-col gap-5 lg:p-8 xxs:p-4 w-full">
+         <div className="flex flex-col gap-5 lg:p-8 phone:p-4 w-full">
           <div className="flex flex-col items-start gap-3">
-            <h1 className="lg:text-2xl font-semibold  xxs:text-sm ">Types of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-semibold  phone:text-sm ">Types of <span className="text-blue-700">Wealth</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
@@ -153,11 +153,11 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Ulip Icon"
-                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">ULIP's</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold phone:text-sm">ULIP's</h1>
+               <p className="text-sm text-slate-500 phone:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -166,11 +166,11 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Endowment Icon"
-                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Endowment</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold phone:text-sm">Endowment</h1>
+               <p className="text-sm text-slate-500 phone:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -179,11 +179,11 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Pension Icon"
-                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Pension</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold phone:text-sm">Pension</h1>
+               <p className="text-sm text-slate-500 phone:text-xs">Insurance</p>
                </div>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -192,71 +192,71 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Child Icon"
-                  className="xxs:w-8 xxs:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
                 />
                <div className="flex flex-col items-center ">
-               <h1 className="text-lg font-bold xxs:text-sm">Child</h1>
-               <p className="text-sm text-slate-500 xxs:text-xs">Insurance</p>
+               <h1 className="text-lg font-bold phone:text-sm">Child</h1>
+               <p className="text-sm text-slate-500 phone:text-xs">Insurance</p>
                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 lg:p-8 w-full xxs:p-4">
+          <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
           <div className="flex flex-col items-start gap-3 ">
-            <h1 className="lg:text-2xl font-bold xxs:text-sm">Top Features of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-bold phone:text-sm">Top Features of <span className="text-blue-700">Wealth</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={GuranteeIcon}
                     width={480}
                     height={480}
                     alt="Gurantee Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Guaranteed Returns</h1>
-                  <p className="lg:text-sm text-center text-slate-500 xxs:text-xs">Provides assured payouts at maturity, ensuring financial stability.</p>
+                  <h1 className="lg:text-2xl text-center phone:text-sm">Guaranteed Returns</h1>
+                  <p className="lg:text-sm text-center text-slate-500 phone:text-xs">Provides assured payouts at maturity, ensuring financial stability.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={BenefitIcon}
                     width={480}
                     height={480}
                     alt="Tax Benefit Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Tax Benefits</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Offers tax deductions on premiums paid under Section 80C of the Income Tax Act.</p>
+                  <h1 className="lg:text-2xl text-center phone:text-sm">Tax Benefits</h1>
+                  <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Offers tax deductions on premiums paid under Section 80C of the Income Tax Act.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={WithdrawIcon}
                     width={480}
                     height={480}
                     alt="Withdraw Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm ">Partial Withdrawals</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Allows withdrawals after a specific period to meet financial needs.</p>
+                  <h1 className="lg:text-2xl text-center phone:text-sm ">Partial Withdrawals</h1>
+                  <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Allows withdrawals after a specific period to meet financial needs.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 xxs:w-36 xxs:h-48 xxs:shadow-md xxs:border xxs:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={LoanIcon}
                     width={480}
                     height={480}
                     alt="Loan Icon"
-                    className="xxs:w-12 xxs:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
                   />
-                  <h1 className="lg:text-2xl text-center xxs:text-sm">Loan Facility</h1>
-                  <p className="text-center lg:text-sm text-slate-500 xxs:text-xs">Enables policyholders to borrow against the policy during emergencies.</p>
+                  <h1 className="lg:text-2xl text-center phone:text-sm">Loan Facility</h1>
+                  <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Enables policyholders to borrow against the policy during emergencies.</p>
               </div>
             </div>
           </div>
          </div>
         <div className="p-3 w-full">
-        <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 xxs:p-2 ">Enquire Now</button>
+        <button onClick={handleEnquireClick} className="text-blue-700 w-full p-3 rounded-lg border-x-2 border-y-2 border-blue-700 phone:p-2 ">Enquire Now</button>
         </div>
           </div>
         </div>

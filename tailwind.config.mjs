@@ -25,15 +25,20 @@ export default {
         foreground: "var(--foreground)",
       },
       screens: {
-        xxs:'320px',
-        xs: '405px',  // Extra small screens, e.g., small phones
-        sm: '640px',  // Small devices like phones
-        md: '768px',  // Medium devices like tablets
-        lg: '1024px', // Large devices like laptops
-        xl: '1280px', // Extra large devices like desktops
-        desktopxl: '1536px', // Extra extra large screens
-        desktop2xl:'1920px',
-        desktop3xl:'2560px'
+        // xxs:'320px',
+        // xs: '405px',  // Extra small screens, e.g., small phones
+        // sm: '640px',  // Small devices like phones
+        // md: '768px',  // Medium devices like tablets
+        // lg: '1024px', // Large devices like laptops
+        // xl: '1280px', // Extra large devices like desktops
+        // desktopxl: '1536px', // Extra extra large screens
+        // desktop2xl:'1920px',
+        // desktop3xl:'2560px'/
+       
+          phone: {'min':'320px','max':'767px'},
+          laptop: {'min':'768px','max':'1280px'},
+          desktop: {'min':'1281px','max':'1366px'},
+          desktopxl: {'min':'1367px','max':'1920px'},
       },
     },
   },
