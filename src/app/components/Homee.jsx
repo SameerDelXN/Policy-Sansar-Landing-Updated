@@ -134,7 +134,7 @@ const Homee = () => {
           { icon: goalIcon, value: "100%", label: "Achievement Rate" },
           { icon: starIcon, value: "4.9", label: "Customer Rating" }
         ].map(({ icon, value, label }, idx) => (
-          <div key={idx} className="flex items-center gap-3  border border-slate-300 rounded-lg p-3 desktop3xl:p-6   xs:w-1/3 phone:flex-col  phone:items-center lg:flex-row">
+          <div key={idx} className="flex items-center gap-3  border border-slate-300 rounded-lg p-3 desktopxl:w-1/3 laptop:w-1/3 phone:flex-col  phone:items-center lg:flex-row">
             <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5 desktop3xl:w-14" />
             <div className="flex flex-col items-start phone:items-center ">
               <h1 className="text-sm font-bold xxs:text-sm xs:text-xs sm:text-sm">{value}</h1>
