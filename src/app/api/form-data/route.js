@@ -2,7 +2,7 @@ import { google } from "googleapis";
 
 export async function POST(req) {
   try {
-    const { fname,lname,mobile,email } = await req.json(); // Parse the form data from the request body
+    const { fname,lname,mobile,email,insuranceType } = await req.json(); // Parse the form data from the request body
 
     // Load the service account key
     const auth = new google.auth.GoogleAuth({
@@ -18,7 +18,7 @@ export async function POST(req) {
 
     // Add data to Google Sheet
     const spreadsheetId = process.env.GOOGLE_SHEET_ID; // Your Sheet ID
-    const range = "Sheet1!A:C"; // Update based on your sheet structure
+    const range = `${insuranceType}!A:C`; // Update based on your sheet structure
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,

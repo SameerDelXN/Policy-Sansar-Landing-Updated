@@ -26,13 +26,43 @@ import {toast,Toaster} from "react-hot-toast"
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 const GeneralInsurance = () => {
+  const [formData, setFormData] = useState({ fname: "",lname:"", email: "", mobile: "",insuranceType:"Financial" });
   const [showModal, setShowModal] = useState(true); // Initially show the modal
   const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
   const [insuranceType, setInsuranceType] = useState(""); // Track the selected insurance type
   const [firstName, setFirstName] = useState(""); // Track the first name input
   const [lastName, setLastName] = useState(""); // Track the last name input
-  const [mobileNumber, setMobileNumber] = useState(""); // Track the mobile number input
-
+  const [mobileNumber, setMobileNumber] = useState("");
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  }; // Track the mobile number input
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await fetch("/api/form-data", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        const data = await response.json();
+        if (data.success) {
+          setShowModal(false);
+      toast("We will get back to you soon...",{
+        icon:"😊"
+      })
+        } else {
+          toast.error("Something went wrong!");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("An error occurred.");
+      }
+    };
+  
   const handleContinueClick = () => {
     setShowModal(false);
     toast("We will get back to you soon...",{
@@ -72,22 +102,24 @@ const GeneralInsurance = () => {
             transition={{ duration: 0.5 }} // Duration of the animation
           className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl phone:p-4 phone:w-5/6 ">
            <div className="w-full flex items-center justify-between">
-                      <h1 className="text-xl font-semibold">Reach out for <span></span>Financial Insurance</h1>
+                      <h1 className="text-xl font-semibold">Reach out for <span className="text-blue-700">Financial Insurance</span> !</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
-            <form className="w-full flex flex-col gap-4">
+                      <form className="w-full flex flex-col gap-4">
               <div className="flex items-center justify-between w-full gap-4">
                 <input
                   required
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  value={formData.fname}
+                  name="fname"
+                  onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                   placeholder="First Name"
                 />
                 <input
                   required
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  value={formData.lname}
+                  name="lname"
+                  onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                   placeholder="Last Name"
                 />
@@ -97,26 +129,27 @@ const GeneralInsurance = () => {
                 required
                 type="tel"
                 pattern="^[0-9]{10}$"
-                value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
                 className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                 placeholder="Mobile Number"
               />
-               <input
+                <input
+               name="email"
                 required
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
                 placeholder="Email address"
               />
 
-             
-
               <input
-                onClick={handleContinueClick}
+                onClick={handleSubmit}
                 type="submit"
                 value="Continue"
-                disabled={!isFormValid()} // Disable button if form is not valid
-                className={`lg:p-4 phone:p-3 rounded-lg text-white cursor-pointer ${isFormValid() ? "bg-blue-700" : "bg-gray-400"}`}
+                className={`lg:p-4 phone:p-3 rounded-lg text-white cursor-pointer bg-blue-700`}
               />
             </form>
           </motion.div>
