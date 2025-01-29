@@ -18,35 +18,35 @@ const page = () => {
       <div className="lg:px-4 lg:py-6 xxs:px-1 xxs:py-1 ">
   <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">1. Description of Services</h1>
   <p className="text-justify leading-relaxed text-gray-700 ">
-    In the Site, Policy SansarLife provides users with access to information primarily about Financial and Insurance products and services, 
+    In the Site, Policy Sansar provides users with access to information primarily about Financial and Insurance products and services, 
     including but not restricted to General Insurance, Life Insurance products, and related services (including but not limited to renewals) 
     (the "Service"). You are responsible for obtaining access to the Site, and that access may involve third-party fees (such as Internet 
     service provider or airtime charges). In addition, you must provide and are responsible for all equipment necessary to access the Site.
   </p>
   <p className="text-justify leading-relaxed text-gray-700 mt-4 g:text-md">
     By making use of this site, and furnishing your personal/contact details, you hereby agree that you are interested in availing and 
-    purchasing the Service(s) that you have selected. You hereby agree that Policy SansarLife may contact you either electronically or through 
+    purchasing the Service(s) that you have selected. You hereby agree that Policy Sansar may contact you either electronically or through 
     phone, to understand your interest in the selected products and Service(s) (like renewals, reminders, etc.) and to fulfill your demand.
   </p>
   <p className="text-justify leading-relaxed text-gray-700 mt-4">
-    You also agree that Policy SansarLife reserves the right to make your details available to its affiliates and partners, and you may be 
+    You also agree that Policy Sansar reserves the right to make your details available to its affiliates and partners, and you may be 
     contacted by the affiliates and partners for information and for sales through email, telephone, and/or SMS. You agree to receive 
-    promotional materials and/or special offers from Policy SansarLife through email or SMS.
+    promotional materials and/or special offers from Policy Sansar through email or SMS.
   </p>
 </div>
 
 <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
   <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">2. License and Site Access</h1>
   <p className=" text-justify leading-relaxed text-gray-700">
-    Policy SansarLife grants you a limited license to access and make personal use of the Site and the Service. This license does not include any 
+    Policy Sansar grants you a limited license to access and make personal use of the Site and the Service. This license does not include any 
     downloading or copying of any kind of information for the benefit of another individual, vendor, or any other third party; caching, 
     unauthorized hypertext links to the Site, and the framing of any Content available through the Site; uploading, posting, or transmitting 
     any content that you do not have a right to make available (such as the intellectual property of another party); uploading, posting, or 
     transmitting any material that contains software viruses or any other computer code, files, or programs designed to interrupt, destroy, 
     or limit the functionality of any computer software or hardware or telecommunications equipment; any action that imposes or may impose 
-    (in Policy SansarLife's sole discretion) an unreasonable or disproportionately large load on Policy SansarLife's infrastructure; or any use of 
-    data mining, robots, or similar data gathering and extraction tools. You may not bypass any measures used by Policy SansarLife to prevent 
-    or restrict access to the Site. Any unauthorized use by you shall terminate the permission or license granted to you by Policy SansarLife. 
+    (in Policy Sansar's sole discretion) an unreasonable or disproportionately large load on Policy Sansar's infrastructure; or any use of 
+    data mining, robots, or similar data gathering and extraction tools. You may not bypass any measures used by Policy Sansar to prevent 
+    or restrict access to the Site. Any unauthorized use by you shall terminate the permission or license granted to you by Policy Sansar. 
     By using the Site, you agree not to:
   </p>
   <ul className="list-disc list-inside mt-4 text-gray-700 text-lg leading-relaxed">
@@ -77,7 +77,7 @@ const page = () => {
       <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">3. Eligibility</h1>
         <p className="text-justify leading-relaxed text-gray-700">
           The Service is not available to minors under the age of 18 or to any
-          users suspended or removed from the system by Policy SansarLife for any
+          users suspended or removed from the system by Policy Sansar for any
           reason. Users may not have more than one active account. Additionally,
           users are prohibited from selling, trading, or otherwise transferring
           their accounts to another party. If you do not qualify, you may not
@@ -98,9 +98,9 @@ const page = () => {
           agree to provide true, accurate, current and complete information
           about yourself as prompted by the Site. If you provide any information
           that is untrue, inaccurate, not current or incomplete (or becomes
-          untrue, inaccurate, not current or incomplete), or Policy SansarLife has
+          untrue, inaccurate, not current or incomplete), or Policy Sansar has
           reasonable grounds to suspect that such information is untrue,
-          inaccurate, not current or incomplete, Policy SansarLife has the right to
+          inaccurate, not current or incomplete, Policy Sansar has the right to
           suspend or terminate your account and refuse any and all current or
           future use of the Site (or any portion thereof). If you use the Site,
           you are responsible for maintaining the confidentiality of your
@@ -108,8 +108,8 @@ const page = () => {
           agree to accept responsibility for all activities that occur under
           your account or password. Because of this, we strongly recommend that
           you exit from your account at the end of each session. You agree to
-          notify Policy SansarLife immediately of any unauthorized use of your
-          account or any other breach of security. Policy SansarLife reserves the
+          notify Policy Sansar immediately of any unauthorized use of your
+          account or any other breach of security. Policy Sansar reserves the
           right to refuse service, terminate accounts, or remove or edit content
           in its sole discretion. Notwithstanding the above, we retain the right
           at our sole discretion to deny access to anyone to the Site and the
@@ -132,11 +132,11 @@ const page = () => {
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="text-2xl font-semibold">5. Submitted Content</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          Policy SansarLife does not claim ownership of any materials you make
-          available through the Site. At Policy SansarLife's sole discretion, such
+          Policy Sansar does not claim ownership of any materials you make
+          available through the Site. At Policy Sansar's sole discretion, such
           materials may be included in the Service in whole or in part or in a
           modified form. With respect to such materials you submit or make
-          available for inclusion on the Site, you grant Policy SansarLife a
+          available for inclusion on the Site, you grant Policy Sansar a
           perpetual, irrevocable, non-terminable, worldwide, royalty-free and
           non-exclusive license to use, copy, distribute, publicly display,
           modify, create derivative works, and sublicense such materials or any
@@ -187,30 +187,30 @@ const page = () => {
           inaccuracies relating to the information and description of the
           content, products, and services we expressly reserves the right to
           correct any pricing errors on the site and/or on pending reservations
-          made under an incorrect price. Policy SansarLife makes no representation
+          made under an incorrect price. Policy Sansar makes no representation
           about the suitability of the information, Software, products, and
           services contained on this site for any purpose, and the inclusion or
           offering of any products or services on this site does not constitute
           any endorsement or recommendation of such products or services. All
           such information, software, products, and services are provided "AS
-          IS" without warranty of any kind. Policy SansarLife disclaims all
+          IS" without warranty of any kind. Policy Sansar disclaims all
           warranties and conditions that this site, its services or any email
-          sent from Policy SansarLife, its affiliates, and/or their respective or
+          sent from Policy Sansar, its affiliates, and/or their respective or
           associated service providers are free of viruses or other harmful
-          components. Policy SansarLife hereby disclaims all warranties and
+          components. Policy Sansar hereby disclaims all warranties and
           conditions with regard to this information, software, products, and
           services, including all implied warranties and conditions of
           merchantability, fitness for a particular purpose, title, and no
           infringement. The service providers providing services on this site
-          are independent affiliates and Policy SansarLife are not liable for the
+          are independent affiliates and Policy Sansar are not liable for the
           acts, errors, omissions, representations, warranties, breaches or
           negligence of any such service providers or for any personal injuries,
           death, property damage, or other damages or expenses resulting
-          therefore. Policy SansarLife and its affiliates have no liability and will
+          therefore. Policy Sansar and its affiliates have no liability and will
           make no refund in the event of any delay, cancellation, strike, force
           majeure or other causes beyond their direct control, and they have no
           responsibility for any additional expense omissions delays or acts of
-          any government or authority. In no event shall Policy SansarLife and/or
+          any government or authority. In no event shall Policy Sansar and/or
           its affiliates be liable for any direct, indirect, punitive,
           incidental, special, or consequential damages arising out of, or in
           any way connected with, your access to, display of or use of this site
@@ -220,7 +220,7 @@ const page = () => {
           sites, products, and services obtained through this site; or otherwise
           arising out of the access to, display of or use of this site) whether
           based on a theory of negligence, contract, tort, strict liability, or
-          otherwise, and even if Policy SansarLife and/or its affiliates their
+          otherwise, and even if Policy Sansar and/or its affiliates their
           respective service providers have been advised of the possibility of
           such damages.
         </p>
@@ -257,7 +257,7 @@ const page = () => {
           Please note such deduction is at the sole discretion of the insurer.
           All payments with respect to refunds as stated under this paragraph 1
           shall be the sole responsibility of the insurer per the rules and
-          regulations laid down by the IRDAI. You understand that Policy SansarLife
+          regulations laid down by the IRDAI. You understand that Policy Sansar
           has tied up with RBI authorized payment gateways to allow you to make
           online payments towards your insurance premium amount and is only
           acting as a mere facilitator and providing its assistance to its
@@ -334,7 +334,7 @@ const page = () => {
   (iv) You declare that you consent to the insurance company seeking medical information from any doctor or hospital who/which at any time has attended on the person to be insured/proposer or from any past or present employer concerning anything which affects the physical or mental health of the person to be insured/proposer and seeking information from any insurer to whom an application for insurance on the person to be insured/proposer has been made for the purpose of underwriting the proposal and/or claim settlement.
 </p>
 <p className="text-justify leading-relaxed text-gray-700">
-  (v) You authorize the Policy SansarLife/insurance Broking company to share information pertaining to your proposal including the medical records of the insured/proposer for the sole purpose of underwriting the proposal and/or claims settlement and with any Governmental and/or Regulatory authority.
+  (v) You authorize the Policy Sansar/insurance Broking company to share information pertaining to your proposal including the medical records of the insured/proposer for the sole purpose of underwriting the proposal and/or claims settlement and with any Governmental and/or Regulatory authority.
 </p>
 <p className="text-justify leading-relaxed text-gray-700">
   (vi) You consent to and authorize any of the insurance company’s authorized representatives not being direct employees of the company to seek medical information required for the purpose of policy issuance or claim settlement under this policy from any hospital/medical practitioner that you or any person proposed to be insured/insured has attended or may attend in future concerning any disease or illness or injury.
@@ -405,8 +405,8 @@ const page = () => {
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">10. License Disclaimer</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          Nothing on any Policy SansarLife website shall be construed as conferring
-          any license under any of Policy SansarLife's or any third party's
+          Nothing on any Policy Sansar website shall be construed as conferring
+          any license under any of Policy Sansar's or any third party's
           intellectual property rights, whether by estoppel, implication, or
           otherwise.
         </p>
@@ -414,7 +414,7 @@ const page = () => {
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">11. Local Laws</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          Policy SansarLife controls and operates this Website from its headquarters
+          Policy Sansar controls and operates this Website from its headquarters
           in Mumbai, India and makes no representation that the materials on the
           website are appropriate or available for use in other locations. If
           you use this Website from other locations, you are responsible for
@@ -430,33 +430,33 @@ const page = () => {
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">12. Limitation of Liability</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          You expressly understand and agree that Policy SansarLife and its
+          You expressly understand and agree that Policy Sansar and its
           subsidiaries, affiliates, officers, employees, agents, partners and
           licensors shall not be liable to you for any direct, indirect,
           incidental, special, consequential or exemplary damages, including,
           but not limited to, damages for loss of profits, goodwill, use, data
-          or other intangible losses (even if Policy SansarLife has been advised of
+          or other intangible losses (even if Policy Sansar has been advised of
           the possibility of such damages), resulting from use of the site,
           content or any related services. If, despite the limitation above,
-          Policy SansarLife or its Affiliates are found liable for any loss or
+          Policy Sansar or its Affiliates are found liable for any loss or
           damage which arises out of or in any way connected with any of the
-          occurrences described above, then the liability of Policy SansarLife
+          occurrences described above, then the liability of Policy Sansar
           and/or Its Affiliates will in no event exceed, in the aggregate, the
-          greater of (a) the service fees you paid to Policy SansarLife in
+          greater of (a) the service fees you paid to Policy Sansar in
           connection with such transaction(s) on this Site, or (b) Rupees One
           Hundred only (INR 100) The limitation of liability reflects the
           allocation of risk between the parties. The limitations specified in
           this section will survive and apply even if any limited remedy
           specified in these terms is found to have failed of its essential
           purpose. The limitations of liability provided in these terms inure to
-          the benefit of Policy SansarLife, Its affiliates, and/or their respective
+          the benefit of Policy Sansar, Its affiliates, and/or their respective
           service providers.
         </p>
        </div>
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">13. Indemnity</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          You agree to indemnify and hold Policy SansarLife (and its officers,
+          You agree to indemnify and hold Policy Sansar (and its officers,
           directors, agents, subsidiaries, joint ventures, and employees)
           harmless from any and against any claims, causes of action, demands,
           recoveries, losses, damages, fines, penalties or other costs or
@@ -469,9 +469,9 @@ const page = () => {
        <div className="lg:px-4 lg:py-6 xxs:px-2 xxs:py-3 ">
        <h1 className="lg:text-2xl font-semibold mb-4 xxs:text-lg">14. Electronic Communication</h1>
         <p className="text-justify leading-relaxed text-gray-700">
-          When you use the Site or send emails to Policy SansarLife, you are
-          communicating with Policy SansarLife electronically. You consent to
-          receive communications from Policy SansarLife electronically. Riskfree
+          When you use the Site or send emails to Policy Sansar, you are
+          communicating with Policy Sansar electronically. You consent to
+          receive communications from Policy Sansar electronically. Riskfree
           Life may communicate with you by email or by posting notices on the
           Site or by phone or usually available means of communication. You
           agree that all agreements, notices, disclosures and other
