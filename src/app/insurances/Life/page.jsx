@@ -42,14 +42,15 @@ const GeneralInsurance = () => {
        toast.error("First and Last name are required.");
        return false;
      }
+     if (!mobileRegex.test(mobile)) {
+      toast.error("Mobile number must be 10 digits.");
+      return false;
+    }
      if (!emailRegex.test(email)) {
        toast.error("Invalid email format.");
        return false;
      }
-     if (!mobileRegex.test(mobile)) {
-       toast.error("Mobile number must be 10 digits.");
-       return false;
-     }
+    
      return true;
    };
  
@@ -124,7 +125,7 @@ const GeneralInsurance = () => {
                       <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="flex items-center justify-between w-full gap-4">
                 <input
-                  required
+                  
                   value={formData.fname}
                   name="fname"
                   onChange={handleChange}
@@ -132,7 +133,6 @@ const GeneralInsurance = () => {
                   placeholder="First Name"
                 />
                 <input
-                  required
                   value={formData.lname}
                   name="lname"
                   onChange={handleChange}
@@ -142,7 +142,6 @@ const GeneralInsurance = () => {
               </div>
 
               <input
-                required
                 type="tel"
                 pattern="^[0-9]{10}$"
                 name="mobile"
@@ -153,7 +152,6 @@ const GeneralInsurance = () => {
               />
                 <input
                name="email"
-                required
                 type="email"
                 value={formData.email}
                 onChange={handleChange}

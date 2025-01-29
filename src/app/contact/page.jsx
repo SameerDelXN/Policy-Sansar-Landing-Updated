@@ -30,14 +30,15 @@ const Contact = () => {
       toast.error("First and Last name are required.");
       return false;
     }
-    if (!emailRegex.test(email)) {
-      toast.error("Invalid email format.");
-      return false;
-    }
     if (!mobileRegex.test(mobile)) {
       toast.error("Mobile number must be 10 digits.");
       return false;
     }
+    if (!emailRegex.test(email)) {
+      toast.error("Invalid email format.");
+      return false;
+    }
+    
     return true;
   };
 
@@ -74,10 +75,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="overflow-hidden w-full h-[150vh] mb-12 ">
+    <div className=" w-full h-[150vh] phone:min-h-[150vh] mb-12  ">
       {/* Hero Section */}
       <Toaster />
-      <div className="relative w-full h-56 bg-black">
+      <div className="relative w-full h-56 bg-black ">
         <Image
           src={callbanner}
           layout="fill"
@@ -93,14 +94,14 @@ const Contact = () => {
       {/* Main Contact Section */}
       <div
         name="contact"
-        className="h-full w-full flex flex-col items-center justify-center gap-12 p-6 sm:p-10 bg-white"
+        className="h-full  phone:h-full w-full flex flex-col items-center justify-center phone:justify-start gap-12   p-6 sm:p-10 bg-white"
       >
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
-        <div className="flex  h-full lg:flex-col xxs:flex-col xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
+        <div className="flex   h-full phone:h-3/4 lg:flex-col phone:flex-col  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
           {/* Map Section */}
-          <div className="w-full h-3/4 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 flex flex-col items-start ">
+          <div className="w-full h-3/4  lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start ">
             <div className="">
               <p className="text-xl sm:text-3xl font-bold">
                 Visit Policy Sansar
@@ -111,12 +112,12 @@ const Contact = () => {
             </div>
 
             {/* Email & Mobile Number */}
-            <div className=" xxs:flex-col gap-4  pt-4 pb-4 justify-start  flex xs:flex-row xs:justify-between  w-full ">
-              <div className="flex items-center gap-2">
+            <div className=" phone:flex  gap-4  pt-4 pb-4 justify-start phone:justify-center   flex xs:flex-row xs:justify-between  w-full ">
+              <div className="flex items-center gap-2 phone:flex-col">
                 <Image width={25} height={25} src={mailicon} alt="Email Icon" />
                 <p className="text-xs sm:text-base">po@policysansar.com</p>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 phone:flex-col">
                 <Image width={25} height={25} src={callicon} alt="Phone Icon" />
                 <p className="text-xs sm:text-base">
                   <span>+91 </span> <span>9644170004</span>
@@ -125,10 +126,10 @@ const Contact = () => {
             </div>
 
             {/* Google Map */}
-            <div className="w-full space-y-4 h-1/3 ">
+            <div className="w-full space-y-4 h-1/3 phone:h-1/4 ">
               {/* First Location */}
               <div
-                className="w-full  h-full relative rounded-2xl overflow-hidden bg-red-600 cursor-pointer"
+                className="w-full  h-full relative rounded-2xl overflow-hidden  cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/qDDFFVQkVke94YA59",
@@ -184,7 +185,6 @@ const Contact = () => {
             </iframe> */}
             <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
-                required
                 value={formData.fname}
                 name="fname"
                 onChange={handleChange}
@@ -192,7 +192,6 @@ const Contact = () => {
                 placeholder="First Name"
               />
               <input
-                required
                 value={formData.lname}
                 name="lname"
                 onChange={handleChange}
@@ -201,7 +200,6 @@ const Contact = () => {
               />
 
               <input
-                required
                 type="tel"
                 pattern="^[0-9]{10}$"
                 name="mobile"
@@ -212,7 +210,6 @@ const Contact = () => {
               />
               <input
                 name="email"
-                required
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -223,7 +220,7 @@ const Contact = () => {
               <input
                 type="submit"
                 value={loading ? "Submitting..." : "Continue"}
-                className={`p-4 rounded-lg text-white cursor-pointer bg-blue-700 ${
+                className={`p-4 rounded-lg text-white cursor-pointer phone:p-2 bg-blue-700 ${
                   loading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 disabled={loading}

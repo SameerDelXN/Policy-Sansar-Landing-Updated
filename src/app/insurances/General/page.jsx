@@ -14,17 +14,12 @@ import instantPolicyIcon from "../../../../public/icons/Flaticons/instantPolicy.
 import claimTrackingIcon from "../../../../public/icons/Flaticons/claimTracking.png"
 import supportIcon from "../../../../public/icons/Flaticons/247Icon.png"
 import securePaymentIcon from "../../../../public/icons/Flaticons/securePayment.png"
-import {toast,Toaster} from "react-hot-toast"
+import { Toaster ,toast} from "react-hot-toast";
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 const GeneralInsurance = () => { 
   const [formData, setFormData] = useState({ fname: "",lname:"", email: "", mobile: "",insuranceType:"General" });
   const [showModal, setShowModal] = useState(true); // Initially show the modal
-  const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
-  const [insuranceType, setInsuranceType] = useState(""); // Track the selected insurance type
-  const [firstName, setFirstName] = useState(""); // Track the first name input
-  const [lastName, setLastName] = useState(""); // Track the last name input
-  const [mobileNumber, setMobileNumber] = useState(""); // Track the mobile number input
   const [loading, setLoading] = useState(false);
  
    const handleChange = (e) => {
@@ -41,14 +36,15 @@ const GeneralInsurance = () => {
        toast.error("First and Last name are required.");
        return false;
      }
+     if (!mobileRegex.test(mobile)) {
+      toast.error("Mobile number must be 10 digits.");
+      return false;
+    }
      if (!emailRegex.test(email)) {
        toast.error("Invalid email format.");
        return false;
      }
-     if (!mobileRegex.test(mobile)) {
-       toast.error("Mobile number must be 10 digits.");
-       return false;
-     }
+    
      return true;
    };
  
@@ -104,12 +100,13 @@ const GeneralInsurance = () => {
   }
   return (
     <div className="w-full h-auto p-10 phone:p-2">
-      <Toaster/>
+        <Toaster/>
       {showModal && (
         <div
           className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 "
           
         >
+          
           <motion.div
             initial={{ opacity: 0, y: -100 }} // Start above the screen
             animate={{ opacity: 1, y: 0 }} // Animate to its final position
@@ -123,7 +120,6 @@ const GeneralInsurance = () => {
                       <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="flex items-center justify-between w-full gap-4">
                 <input
-                  required
                   value={formData.fname}
                   name="fname"
                   onChange={handleChange}
@@ -131,7 +127,6 @@ const GeneralInsurance = () => {
                   placeholder="First Name"
                 />
                 <input
-                  required
                   value={formData.lname}
                   name="lname"
                   onChange={handleChange}
@@ -141,7 +136,6 @@ const GeneralInsurance = () => {
               </div>
 
               <input
-                required
                 type="tel"
                 pattern="^[0-9]{10}$"
                 name="mobile"
@@ -152,7 +146,6 @@ const GeneralInsurance = () => {
               />
                 <input
                name="email"
-                required
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
