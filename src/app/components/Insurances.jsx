@@ -19,11 +19,11 @@ const InsurancePlans = () => {
   ];
 
   return (
-    <div className="w-full min-h-[100vh] phone:min-h-[87vh] desktop2xl:min-h-[90vh]  p-10 flex flex-col items-center justify-center gap-10  phone:p-2 phone:gap-4  ">
+    <div className="w-full min-h-[100vh] phone:min-h-[87vh] desktop2xl:min-h-[90vh]  p-10 flex flex-col items-center justify-center gap-10  phone:p-1 phone:gap-4  ">
       <h2 className="text-center text-xl md:text-3xl font-medium mb-6 desktop2xl:text-5xl ">
         Explore Our Insurance Plans
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 phone:grid-cols-2 phone:gap-3 xs:grid-cols-2 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 phone:grid-cols-2 phone:gap-1 xs:grid-cols-2 ">
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -51,7 +51,7 @@ const InsurancePlans = () => {
                 </div>
               </div>
             </Link>
-            <p className="desktop3xl:text-2xl desktop3xl:w-56 desktop3xl:flex desktop3xl:items-center desktop3xl:justify-center desktop3xl:h-24 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-white px-3 py-1 rounded-lg shadow-md lg:w-24 xs:w-28  xxs:text-xs">
+            <p className="desktop3xl:text-2xl desktop3xl:w-56 desktop3xl:flex desktop3xl:items-center desktop3xl:justify-center desktop3xl:h-24 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-[#E6ECFF] px-3 py-1 rounded-lg shadow-md lg:w-24 xs:w-28  xxs:text-xs">
               {plan.name}
             </p>
           </div>

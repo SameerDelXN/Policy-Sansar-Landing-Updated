@@ -161,7 +161,7 @@ const Footer = () => {
             </div>
             </div>
             <div className="flex items-start gap-3 w-full flex-col  ">
-              <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice className="text-lg"/>
+              <h1 className="flex items-center gap-1 text-xl font-bold"> <HiMiniBuildingOffice className="text-lg "/>
               Registered office </h1>
            
              {/* <IoLocationSharp className="text-4xl"/> -{" "} */}
@@ -170,7 +170,7 @@ const Footer = () => {
             
              
              <div className="flex items-start gap-3 w-full flex-col ">
-             <h1 className="flex items-center gap-1"> <HiMiniBuildingOffice2 className="text-lg"/>
+             <h1 className="flex items-center gap-1 text-xl font-bold"> <HiMiniBuildingOffice2 className="text-lg"/>
               Corporate office </h1>
              {/* <IoLocationSharp className="text-3xl"/> -{" "} */}
                  <h1  onClick={() => window.open("https://maps.app.goo.gl/waCc29mgzyJsvb7eA", '_blank', 'noopener,noreferrer')}className="text-sm sm:text-base xxs:xs hover:text-blue-500 underline transition-all ease-in-out duration-300 ">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road, Andheri East, Mumbai-40072</h1>
