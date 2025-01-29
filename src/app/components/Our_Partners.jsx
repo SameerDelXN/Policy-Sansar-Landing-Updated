@@ -27,7 +27,7 @@ const Our_Partners = () => {
     <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop2xl:justify-evenly overflow-hidden px-4 phone:h-[25vh] ">
       {/* <AnimatedHeader text="Our Partners" className="text-4xl" /> */}
       <h2 className="text-center text-xl md:text-3xl font-medium mb-6 desktop2xl:text-5xl ">
-        Explore Our Insurance Plans
+        Our Partners
       </h2>
       <div className="relative overflow-hidden w-full">
         <div className="flex animate-scroll gap-4 sm:gap-6 md:gap-8">
