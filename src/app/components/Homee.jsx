@@ -48,9 +48,9 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-between phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
+    <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktop2xl:h-[100vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-between phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
       {/* Moving Advertisement */}
-      <div className="relative laptop:w-4/5 laptop:h-40 desktopxl:w-4/5    phone:h-1/4     rounded-2xl overflow-hidden   phone:w-full">
+      <div className="relative laptop:w-4/5 laptop:h-40 desktop2xl:w-5/6 desktopxl:w-5/6    phone:h-1/4     rounded-2xl overflow-hidden   phone:w-full">
         <div
           className="flex transition-transform duration-500 ease-in-out w-full h-full bg-blue-700 "
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -70,12 +70,12 @@ const Homee = () => {
       </div>
 
       
-      <div className="w-5/6   bg-white flex flex-col justify-evenly desktopxl:h-3/4    phone:justify-evenly phone:h-2/3   phone:w-full rounded-2xl shadow-lg border border-slate-200  p-5  h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
+      <div className="w-5/6   bg-white flex flex-col justify-evenly desktopxl:h-3/4 desktop2xl:h-4/5    phone:justify-evenly phone:h-2/3   phone:w-full rounded-2xl shadow-lg border border-slate-200  p-5  h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
         <div className="flex flex-col items-center  gap-1 ">
-          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl desktop3xl:text-7xl desktop2xl:text-3xl phone:text-2xl">
+          <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl desktop2xl:text-7xl phone:text-2xl">
             The Insurance Partner
           </h1>
-          <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm  desktop3xl:text-2xl">
+          <div className="flex items-center gap-2 font-semibold lg:text-lg xxs:text-sm  desktop2xl:text-2xl">
             <p>You can</p>
             <Image
               src={handShakeIcon}
@@ -85,12 +85,12 @@ const Homee = () => {
             />
             <p>Rely On</p>
           </div>
-          <p className="font-semibold text-xs text-slate-500 text-center desktop3xl:text-xl">
+          <p className="font-semibold text-xs text-slate-500 text-center desktop2xl:text-xl">
             Your One-Stop Insurance Shop for Life's Essentials
           </p>
         </div>
-        <div className="w-full flex items-start justify-center   laptop:h-2/3 desktopxl:h-2/3    h-full phone:h-1/2 ">
-        <div className="w-1/3 h-96 laptop:h-full   phone:hidden lg:block xs:hidden desktopxl:h-full ">
+        <div className="w-full flex items-start justify-center   laptop:h-2/3 desktopxl:h-2/3    h-full  phone:h-1/2 ">
+        <div className="w-1/3 h-96 desktop2xl:h-full laptop:h-full   phone:block lg:block xs:hidden desktopxl:h-full ">
             <Image
               src={coupleIcon}
               width={1920}
@@ -99,7 +99,7 @@ const Homee = () => {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="w-1/2 h-96 desktopxl:h-full   laptop:h-full   phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
+          <div className="w-1/2 h-96 desktop2xl:h-full desktopxl:h-full   laptop:h-full    phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
 
             <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
               {[
@@ -113,18 +113,18 @@ const Homee = () => {
                 <Link
                   href={`/insurances/${title}`}
                   key={idx}
-                  className="flex flex-col w-1/3 items-center gap-2  hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl desktop3xl:p-10"
+                  className="flex flex-col w-1/3 items-center gap-2  hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl desktop2xl:p-10"
                 >
                   <Image
                     src={icon}
                     width={1920}
                     height={1080}
                     alt={`${title} Insurance`}
-                    className="lg:w-10 lg:h-10 phone:w-7 phone:h-7 xs:w-9 xs:h-9   desktop3xl:w-28 desktop3xl:h-28"
+                    className="lg:w-10 lg:h-10 phone:w-7 phone:h-7 xs:w-9 xs:h-9   desktop2xl:w-28 desktop2xl:h-28"
                   />
                   <div className="flex flex-col items-center">
-                    <h1 className="lg:text-lg xxs:text-xs xs:text-sm desktopxl:text-xl desktop3xl:text-3xl">{capitalizeFirstLetter(title)}</h1>
-                    <p className="text-xs text-slate-500  desktop3xl:text-xl">Insurance</p>
+                    <h1 className="lg:text-lg xxs:text-xs xs:text-sm desktopxl:text-xl desktop2xl:text-3xl">{capitalizeFirstLetter(title)}</h1>
+                    <p className="text-xs text-slate-500  desktop2xl:text-xl">Insurance</p>
                   </div>
                 </Link>
               ))}
@@ -135,7 +135,7 @@ const Homee = () => {
           { icon: starIcon, value: "4.9", label: "Customer Rating" }
         ].map(({ icon, value, label }, idx) => (
           <div key={idx} className="flex items-center gap-3  border border-slate-300 rounded-lg p-3 desktopxl:w-1/3 laptop:w-1/3 phone:flex-col  phone:items-center lg:flex-row">
-            <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5 desktop3xl:w-14" />
+            <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5 desktop2xl:w-14" />
             <div className="flex flex-col items-start phone:items-center ">
               <h1 className="text-sm font-bold xxs:text-sm xs:text-xs sm:text-sm">{value}</h1>
               <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs phone:text-center">{label}</p>

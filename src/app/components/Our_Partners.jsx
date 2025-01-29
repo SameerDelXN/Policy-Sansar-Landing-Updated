@@ -24,14 +24,17 @@ const Our_Partners = () => {
   ];
 
   return (
-    <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop3xl:justify-evenly overflow-hidden px-4 phone:h-[25vh] ">
-      <AnimatedHeader text="Our Partners" className="text-4xl" />
+    <div className=" w-full mt-12 phone:mt-4  lg:h-[50vh] bg-white flex flex-col items-center justify-center gap-5 desktop2xl:justify-evenly overflow-hidden px-4 phone:h-[25vh] ">
+      {/* <AnimatedHeader text="Our Partners" className="text-4xl" /> */}
+      <h2 className="text-center text-xl md:text-3xl font-medium mb-6 desktop2xl:text-5xl ">
+        Explore Our Insurance Plans
+      </h2>
       <div className="relative overflow-hidden w-full">
         <div className="flex animate-scroll gap-4 sm:gap-6 md:gap-8">
           {partners.concat(partners).map((partner, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-36 phone:w-24 md:w-48 text-center bg-white rounded-2xl"
+              className="flex-shrink-0 w-36 phone:w-24 md:w-48 text-center bg-white  desktop2xl:w-72"
             >
               <div className="relative w-full h-28  md:h-36">
                 <Image

@@ -39,6 +39,7 @@ export default {
           laptop: {'min':'768px','max':'1280px'},
           desktop: {'min':'1281px','max':'1366px'},
           desktopxl: {'min':'1367px','max':'1920px'},
+          desktop2xl: {'min':'1921px','max':'2560px'},
       },
     },
   },
@@ -49,3 +50,5 @@ export default {
     scrollbar: ['rounded'], // Enable rounded scrollbars
   },
 };
+
+

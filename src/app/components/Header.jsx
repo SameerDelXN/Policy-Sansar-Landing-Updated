@@ -105,7 +105,7 @@ const Header = () => {
     setShowLoginModal(true)
   }
   return (
-    <div className="w-full sticky top-0 z-20 bg-white  lg:h-[17vh] desktopxl:h-[13vh] md2:h-[13vh] phone:h-[8vh] ">
+    <div className="w-full sticky top-0 z-20 bg-white  lg:h-[17vh] desktop2xl:h-[10vh] desktopxl:h-[13vh] md2:h-[13vh] phone:h-[8vh] ">
         {showLoginModal && (
               <div
                 className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 xxs:p-5"
@@ -149,7 +149,7 @@ const Header = () => {
             width={1920}
             height={1080}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 phone:w-12  desktopxl:w-24 laptop:w-24"
+            className="transition-all ease-in-out duration-300 phone:w-12  desktopxl:w-24 laptop:w-24 desktop2xl:w-24"
           />
           <div className="flex flex-col items-start gap-1  ">
           <h1 className="lg:text-2xl text-blue-700 phone:text-sm ">Policy Sansar</h1>
