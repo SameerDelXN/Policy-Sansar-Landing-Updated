@@ -51,7 +51,7 @@ const InsurancePlans = () => {
                 </div>
               </div>
             </Link>
-            <p className="desktop3xl:text-2xl desktop3xl:w-56 desktop3xl:flex desktop3xl:items-center desktop3xl:justify-center desktop3xl:h-24 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-white px-3 py-1 rounded-lg shadow-md lg:w-24 xs:w-28  xxs:text-xs">
+            <p className="desktop3xl:text-2xl desktop3xl:w-56 desktop3xl:flex desktop3xl:items-center desktop3xl:justify-center desktop3xl:h-24 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-sm font-medium bg-[#E6ECFF] px-3 py-1 rounded-lg shadow-md lg:w-24 xs:w-28  xxs:text-xs">
               {plan.name}
             </p>
           </div>
