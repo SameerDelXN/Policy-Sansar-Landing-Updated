@@ -19,6 +19,7 @@ import Banner4 from "../../../public/images/banner/banner1.png";
 import handShakeIcon from "../../../public/icons/handshake.png";
 import coupleIcon from "../../../public/images/couple.png";
 import Link from "next/link";
+import Family from "../../../public/illustrations/family6.png"
 
 const Homee = () => {
   const banners = [Banner1, Banner2, Banner3, Banner4];
@@ -90,13 +91,13 @@ const Homee = () => {
           </p>
         </div>
         <div className="w-full flex items-start justify-center   laptop:h-2/3 desktopxl:h-2/3    h-full phone:h-1/2 ">
-        <div className="w-1/3 h-96 laptop:h-full   phone:hidden lg:block xs:hidden desktopxl:h-full ">
+        <div className="w-1/3 h-full  laptop:h-full   phone:hidden lg:block xs:hidden desktopxl:h-full ">
             <Image
-              src={coupleIcon}
+              src={Family}
               width={1920}
               height={1080}
               alt="couple"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="w-1/2 h-96 desktopxl:h-full   laptop:h-full   phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
