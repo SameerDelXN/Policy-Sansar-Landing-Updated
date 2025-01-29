@@ -8,7 +8,7 @@ import Image from "next/image";
 
 
 const testimonials = [
-  { icon:man, date:"18 Aug 2024" , name: "Rahul Jori", text: "Policy Sansar made my insurance buying experience so smooth! I found the perfect term plan in just minutes and got it approved on the same day. Highly recommended!" },
+  { icon:man, date:"18 Aug 2024" , name: "Rahul Jori", text: "Policy Sansar made my insurance buying experience so smooth! I found the perfect term plan in just minutes and got it approved on the same day." },
   { icon:women,date:"11 Mar 2024", name: "Neha Verma", text: "I was confused about choosing the right health insurance, but their expert advice and transparent comparison helped me make an informed decision. Great service!" },
   { icon:man,date:"13 Jul 2024" , name: "Amit Gupta", text: "Amazing platform! I renewed my car insurance in just a few clicks. Their seamless interface and great customer support are worth praising." },
   { icon:women, date:"9 Feb 2024" , name: "Priya Singh", text: "Thanks to Policy Sansar, I finally understood the benefits of term plans and picked the right one for my family. Highly trustworthy platform!" },
@@ -53,24 +53,24 @@ const Customers = () => {
           {testimonials.map((testimonial, index) => 
           (
             
-            <motion.div
+          <motion.div
               key={index}
               className="bg-white p-6 rounded-lg shadow-md w-96 shrink-0"
               style={{ minWidth: "24rem" }} // set min width so it doesn't shrink on smaller screens
             >
               <MessageSquare className="text-blue-500 mb-4 h-8 w-8" />
               <p className="text-base mb-4">{testimonial.text}</p>
-              <Image
-  src={testimonial.icon}
-  alt={testimonial.name}
-  width={50}
-  height={50}
-  className="w-16 h-16 rounded-full  mx-auto" // Larger size for testing
-/>
-<div className="flex flex-col justify-between"></div>
-<div className="flex  justify-between"> <span className="font-semibold text-sm">{` ${testimonial.name}`}</span>
-<span className="font-semibold text-sm">{`- ${testimonial.date}`}</span></div>
-            </motion.div>
+              
+              <div className="flex flex-col justify-between bgorange-900 items-center">
+                <div className="">
+                <Image src={testimonial.icon} alt={testimonial.name} width={50} height={50} className="w-16 h-16 rounded-full  mx-auto" />
+                </div>
+                <div className="">
+                <span className="font-semibold text-sm">{` ${testimonial.name}`}</span>
+
+                </div>
+              </div>
+          </motion.div>
           ))}
         </motion.div>
       </div>
