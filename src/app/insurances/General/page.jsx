@@ -17,8 +17,8 @@ import securePaymentIcon from "../../../../public/icons/Flaticons/securePayment.
 import {toast,Toaster} from "react-hot-toast"
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
-const GeneralInsurance = () => {
-  const [formData, setFormData] = useState({ fname: "",lname:"", email: "", mobile: "" });
+const GeneralInsurance = () => { 
+  const [formData, setFormData] = useState({ fname: "",lname:"", email: "", mobile: "",insuranceType:"General" });
   const [showModal, setShowModal] = useState(true); // Initially show the modal
   const [annualIncome, setAnnualIncome] = useState(""); // Track the selected annual income
   const [insuranceType, setInsuranceType] = useState(""); // Track the selected insurance type
@@ -93,23 +93,23 @@ const GeneralInsurance = () => {
             transition={{ duration: 0.5 }} // Duration of the animation
           className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl xxs:p-4 xxs:w-5/6 ">
            <div className="w-full flex items-center justify-between">
-                      <h1 className="text-xl font-semibold">Get in touch for  <span></span>General Insurance</h1>
+                      <h1 className="text-xl font-semibold">Reach out for <span className="text-blue-700">General Insurance</span> !</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
                       </div>
-            <form className="w-full flex flex-col gap-4" >
+                      <form className="w-full flex flex-col gap-4">
               <div className="flex items-center justify-between w-full gap-4">
                 <input
                   required
-                  name="fname"
                   value={formData.fname}
+                  name="fname"
                   onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="First Name"
                 />
                 <input
                   required
-                  name="lname"
                   value={formData.lname}
+                  name="lname"
                   onChange={handleChange}
                   className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                   placeholder="Last Name"
@@ -117,16 +117,16 @@ const GeneralInsurance = () => {
               </div>
 
               <input
-              name="mobile"
                 required
                 type="tel"
                 pattern="^[0-9]{10}$"
+                name="mobile"
                 value={formData.mobile}
                 onChange={handleChange}
                 className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 xxs:p-3 xxs:text-xs"
                 placeholder="Mobile Number"
               />
-               <input
+                <input
                name="email"
                 required
                 type="email"
@@ -136,13 +136,10 @@ const GeneralInsurance = () => {
                 placeholder="Email address"
               />
 
-             
-
               <input
                 onClick={handleSubmit}
                 type="submit"
                 value="Continue"
-                
                 className={`lg:p-4 xxs:p-3 rounded-lg text-white cursor-pointer bg-blue-700`}
               />
             </form>
