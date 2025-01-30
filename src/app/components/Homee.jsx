@@ -18,6 +18,12 @@ import Banner3 from "../../../public/images/banner/banner3.png";
 import Banner4 from "../../../public/images/banner/banner1.png";
 import handShakeIcon from "../../../public/icons/handshake.png";
 import coupleIcon from "../../../public/images/couple.png";
+import Banner1BG from "../../../public/images/banner/banner1/banner1BG.png"
+import Banner1Family from "../../../public/images/banner/banner1/family1.png"
+import Banner1Man from "../../../public/images/banner/banner1/man.png"
+import BestPriceIcon from "../../../public/images/banner/banner1/bestPrice.png"
+import InstantIcon from "../../../public/images/banner/banner1/Instant.png"
+import TrustIcon from "../../../public/images/banner/banner1/Trust.png"
 import Link from "next/link";
 import Family from "../../../public/illustrations/family6.png"
 
@@ -51,24 +57,44 @@ const Homee = () => {
   return (
     <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktop2xl:h-[100vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-between phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
       {/* Moving Advertisement */}
-      <div className="relative laptop:w-4/5 laptop:h-40 desktop2xl:w-5/6 desktopxl:w-5/6    phone:h-1/4     rounded-2xl overflow-hidden   phone:w-full">
-        <div
-          className="flex transition-transform duration-500 ease-in-out w-full h-full bg-blue-700 "
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {banners.map((banner, index) => (
-            <div key={index} className="min-w-full h-full">
-              <Image
-                src={banner}
-                alt={`Banner ${index + 1}`}
-                width={1920}
-                height={1080}
-                className="rounded-2xl bg-cover w-full h-full object-cover phone:object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <div
+  className="relative laptop:w-5/6 laptop:h-40 desktopxl:h-40 desktop2xl:w-5/6 desktopxl:w-5/6 phone:h-1/4 rounded-2xl overflow-hidden phone:w-full bg-cover bg-center"
+  style={{ backgroundImage: `url(${Banner1BG.src})` }}
+>
+
+  <Image
+    src={Banner1Family}
+    width={1920}
+    height={1080}
+    className="absolute w-44 h-44 top-0 left-3  object-contain phone:hidden "
+  />
+   <Image
+    src={Banner1Man}
+    width={1920}
+    height={1080}
+    className="absolute w-44 h-44 top-0 right-3  object-contain phone:w-40 phone:h-40 phone:top-auto phone:bottom-0 phone:right-0"
+  />
+ 
+    <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-lg phone:left-2 phone:top-5">Save Big on Insurance! Compare Plans <br/>&  
+    Get the Best Deal!</h1>
+  
+  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-6">
+    <div className="flex flex-col items-center gap-1 phone:hidden">
+      <Image src={BestPriceIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
+      <h1 className="text-sm font-bold phone:text-xs">Best Prices</h1>
+    </div>
+    <div className="flex flex-col items-center gap-1 phone:hidden">
+    <Image src={InstantIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
+      <h1 className="text-sm font-bold phone:text-xs ">Instant Quotes</h1>
+    </div>
+    <div className="flex flex-col items-center gap-1 phone:hidden">
+    <Image src={TrustIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
+      <h1 className="text-sm font-bold phone:text-xs">Trusted Insurer</h1>
+    </div>
+    <button className="bg-[#5383FE] p-3 text-white font-bold rounded-lg  phone:text-sm phone:p-2 ">Get Quotes Now</button>
+  </div>
+ 
+</div>
 
       
       <div className="w-5/6   bg-white flex flex-col justify-evenly desktopxl:h-3/4 desktop2xl:h-4/5    phone:justify-evenly phone:h-2/3   phone:w-full rounded-2xl shadow-lg border border-slate-200  p-5  h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
