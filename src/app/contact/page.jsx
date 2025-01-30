@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=" w-full h-[150vh] phone:min-h-[200vh] phone:mb-3  ">
+    <div className=" w-full laptop:min-h-[150vh] phone:min-h-[200vh] phone:mb-3  ">
       {/* Hero Section */}
       <Toaster />
       <div className="relative w-full h-56 bg-black ">
@@ -99,7 +99,7 @@ const Contact = () => {
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
-        <div className="flex   h-full phone:h-full lg:flex-col phone:flex-col  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
+        <div className="flex   h-full phone:h-full lg:flex-col phone:flex-col items-center  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
           {/* Map Section */}
           <div className="w-full h-2/3 tablet:h-full phone:justify-start phone:h-1/2 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start justify-evenly ">
             <div className="">
@@ -132,7 +132,7 @@ const Contact = () => {
              <div className="flex flex-col gap-2 items-center "> <h1 className="text-xl font-bold phone:text-sm">Corporate Office</h1>
              <p className="text-center phone:text-xs">104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road, Andheri East, Mumbai-40072</p></div>
               <div
-                className="w-full  h-2/3 relative rounded-2xl overflow-hidden phone:rounded-sm  cursor-pointer"
+                className="w-full  h-56 relative rounded-2xl overflow-hidden phone:rounded-sm  cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/qDDFFVQkVke94YA59",
@@ -159,7 +159,7 @@ const Contact = () => {
              <p className="text-center phone:text-xs">3rd Floor, Plot No.264/265, Vaswani Chamber,
              Dr.Annie Besant Road, Worli Colony, Mumbai-400018</p></div>
              <div
-                className="w-full h-full  relative rounded-2xl phone:rounded-sm overflow-hidden cursor-pointer"
+                className="w-full h-56  relative rounded-2xl phone:rounded-sm overflow-hidden cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/waCc29mgzyJsvb7eA",

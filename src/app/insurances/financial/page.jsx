@@ -197,7 +197,7 @@ const GeneralInsurance = () => {
 </p>
 </div>
 
-          <div className="lg:w-1/2  flex flex-col  lg:justify-evenly phone:justify-end  phone:w-full ">
+          <div className="lg:w-1/2  flex flex-col  lg:justify-between phone:justify-end  phone:w-full ">
           <div className="flex flex-col gap-5 lg:p-8 phone:p-4">
           <div className="flex flex-col items-start gap-3">
             <h1 className="lg:text-2xl font-semibold  phone:text-sm tablet:text-lg">Types of <span className="text-blue-700">Financial</span> Insurance</h1>

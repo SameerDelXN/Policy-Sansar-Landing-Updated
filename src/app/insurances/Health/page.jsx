@@ -262,7 +262,7 @@ const GeneralInsurance = () => {
             <hr className="w-64"/>
             
             </div>
-           <h1 className="lg:text-xl phone:text-sm">At Policy Sansar, we understand the importance of safeguarding your health and well-being. Our health insurance plans offer comprehensive coverage options, ensuring that you and your family receive the best medical care when needed.</h1>
+           <h1 className="lg:text-xl phone:text-sm">At Policy Sansar, we understand the importance of safeguarding your health and well-being. Our health insurance plans offer comprehensive coverage options.</h1>
           </div>
           <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
           <div className="flex flex-col items-start gap-3 ">
@@ -271,7 +271,7 @@ const GeneralInsurance = () => {
             
             </div>
            <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-                       <div className="lg:w-72 xl:w-64 tablet:w-44 tablet:h-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+                       <div className="laptop:w-56 xl:w-64 tablet:w-44 tablet:h-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                            <Image
                              src={PersonalizedIcon}
                              width={480}
@@ -284,7 +284,7 @@ const GeneralInsurance = () => {
          
          </p>
                        </div>
-                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+                       <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                            <Image
                              src={CashlessIcon}
                              width={480}
@@ -298,7 +298,7 @@ const GeneralInsurance = () => {
          
          </p>
                        </div>
-                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+                       <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                            <Image
                              src={FreeHealthIcon}
                              width={480}
@@ -312,7 +312,7 @@ const GeneralInsurance = () => {
          
          </p>
                        </div>
-                       <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+                       <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                            <Image
                              src={familyFloaterIcon}
                              width={480}

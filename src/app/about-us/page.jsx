@@ -79,10 +79,10 @@ const Experts = () => {
             Our company website is under development:{" "}
             <a href="https://www.policysansar.com" className=" font-semibold underline">www.policysansar.com</a>. We plan to launch our <b >app by May 2025</b>.
           </p>
-          <div className=" flex lg:flex-row items-center w-full justify-between xxs:flex-col xxs:gap-2">
-           <div className="flex items-center gap-5"> <p className="lg:text-lg xxs:text-sm font-semibold flex items-center gap-1 "><span><IoMdCall className="lg:text-2xl xxs:text-sm"/></span>Contact Us</p>
-           <p className="lg:text-xl xxs:text-sm font-bold text-[#164574]">+91 9644170004</p></div>
-            <button className="xxs:w-full lg:w-56 px-6 py-2 bg-[#164574] text-white rounded-md hover:bg-[#123c60] transition">
+          <div className=" flex lg:flex-row items-center w-full justify-between phone:flex-col phone:gap-2">
+           <div className="flex items-center gap-5"> <p className="lg:text-lg phone:text-sm font-semibold flex items-center gap-1 "><span><IoMdCall className="lg:text-2xl phone:text-sm"/></span>Contact Us</p>
+           <p className="lg:text-xl phone:text-sm font-bold text-[#164574]">+91 9644170004</p></div>
+            <button className="phone:w-full lg:w-56 px-6 py-2 bg-[#164574] text-white rounded-md hover:bg-[#123c60] transition">
               Call Our Experts
             </button>
           </div>
@@ -115,13 +115,13 @@ const Experts = () => {
         {/* <div className="absolute bottom-6 right-6 w-32 h-32 bg-indigo-400 rounded-full opacity-30 blur-lg"></div> */}
       </div>
 
-      <div className="relative w-full flex items-center justify-center">
+      <div className="relative w-full flex items-center justify-center ">
         <Image
           width={400}
           height={400}
           src={member.img}
           alt={member.name}
-          className="object-cover rounded-full shadow-lg border-4 border-white xxs:w-2/3 lg:w-2/3"
+          className="object-cover rounded-full shadow-lg border-4 border-white phone:w-2/3 laptop:w-1/3 "
         />
 
         {/* LinkedIn Logo */}
@@ -129,7 +129,7 @@ const Experts = () => {
           href={member.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute lg:bottom-14 lg:right-24 xxs:bottom-2 xxs:right-14"
+          className="absolute laptop:bottom-0 laptop:right-80 phone:bottom-2 phone:right-14 desktopxl:bottom-4 desktopxl:right-28"
         >
         <div className="border border-[#009AE5] p-1 rounded-full"> <div className="border border-[#009AE5] p-1 rounded-full">
          <div className="border-2 border-[#009AE5] p-0.5 rounded-full"> <Image
@@ -137,7 +137,7 @@ const Experts = () => {
             alt="LinkedIn"
             width={720}
             height={720}
-            className="rounded-full shadow-md lg:w-16 xxs:w-8"
+            className="rounded-full shadow-md lg:w-16  phone:w-12 "
           /></div>
          </div></div>
         </Link>
@@ -151,12 +151,12 @@ const Experts = () => {
     
  {/* Vision & Mission Section */}
  <div
-        className="relative w-full xl:h-96 2xl:h-96 md:h-[40rem] xxs:min-h-[24rem] bg-cover bg-center xxs:p-3 xs:p-3 sm:p-3 "
+        className="relative w-full xl:h-96 2xl:h-96 md:h-[40rem] phone:min-h-[24rem] bg-cover bg-center phone:p-3 xs:p-3 sm:p-3 "
         style={{ backgroundImage: `url(${aboutcover.src})` }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 xxs:gap-4 text-white w-full h-full ">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 phone:gap-4 text-white w-full h-full ">
           {/* Vision Card */}
           <motion.div
             ref={visionRef}

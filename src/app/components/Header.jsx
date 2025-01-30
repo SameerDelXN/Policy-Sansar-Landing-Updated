@@ -149,7 +149,7 @@ const Header = () => {
             width={1920}
             height={1080}
             alt="Logo"
-            className="transition-all laptop:p-1 tablet:p-1 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
+            className="transition-all laptop:p-1 tablet:p-1 laptop:w-20 laptop:h-20 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
           />
           <div className="flex flex-col items-start gap-1  ">
           <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm ">Policy Sansar</h1>

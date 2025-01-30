@@ -55,7 +55,7 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktop2xl:h-[100vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-evenly phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
+    <div className="w-full phone:h-[92vh]   laptop:min-h-[125vh] desktop2xl:h-[100vh]  desktopxl:p-2  flex flex-col items-center justify-evenly phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
       {/* Moving Advertisement */}
       <div
   className="relative laptop:w-5/6 desktop3xl:w-5/6 laptop:h-40 tablet:h-40 tablet:w-5/6 desktopxl:h-40 desktop3xl:h-40 desktop2xl:h-56  desktop2xl:w-5/6 desktopxl:w-5/6 phone:h-1/4 rounded-2xl overflow-hidden phone:w-full bg-cover bg-center"
@@ -97,7 +97,7 @@ const Homee = () => {
 </div>
 
       
-      <div className="w-5/6   bg-white flex flex-col justify-evenly desktopxl:h-3/4 desktop2xl:h-4/5    phone:justify-evenly phone:h-2/3   phone:w-full rounded-2xl shadow-lg border border-slate-200  p-5  h-full xxs:h-full xs:h-full lg:h-5/6 xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
+      <div className="w-5/6   bg-white flex flex-col justify-evenly   desktop2xl:h-4/5    phone:justify-evenly phone:h-2/3   phone:w-full rounded-2xl shadow-lg border border-slate-200  p-5 laptop:h-3/4  xxs:h-full xs:h-full  xxs:justify-center xs:justify-start xs:gap-10 xxs:w-full  lg:w-5/6 xs:w-full  ">
         <div className="flex flex-col items-center  gap-1 ">
           <h1 className="text-blue-600 font-bold lg:text-5xl xxs:text-2xl xxs:text-center xs:text-3xl desktop2xl:text-7xl phone:text-2xl">
             The Insurance Partner
@@ -116,7 +116,7 @@ const Homee = () => {
             Your One-Stop Insurance Shop for Life's Essentials
           </p>
         </div>
-        <div className="w-full flex items-start justify-center   laptop:h-2/3 desktopxl:h-2/3    h-full phone:h-1/2 ">
+        <div className="w-full flex items-center justify-center   laptop:h-2/3  desktopxl:h-2/3    h-full phone:h-1/2 ">
         <div className="w-1/3 h-full  laptop:h-full tablet:hidden  phone:hidden lg:block xs:hidden desktopxl:h-full ">
             <Image
               src={Family}
@@ -165,7 +165,7 @@ const Homee = () => {
             <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5 desktop2xl:w-14" />
             <div className="flex flex-col items-start phone:items-center ">
               <h1 className="text-sm font-bold xxs:text-sm xs:text-xs sm:text-sm">{value}</h1>
-              <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs phone:text-center">{label}</p>
+              <p className="text-xs font-normal xxs:text-xs xs:text-xs sm:text-xs phone:text-center desktopxl:text-xs">{label}</p>
             </div>
           </div>
         ))}

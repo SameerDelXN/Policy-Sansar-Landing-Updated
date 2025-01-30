@@ -5,7 +5,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="w-full h-auto flex flex-col gap-5 p-5">
-       <div className="w-full h-56 bg-black p-6 relative ">
+       <div className="w-full h-56 bg-black p-8 relative ">
               <Image src={termscover} layout="fill" objectFit="cover" alt="about-us"  />
               <div className="absolute inset-0 bg-black opacity-40"></div>
               <div className="absolute inset-0 flex items-center pl-16 text-white ">
