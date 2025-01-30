@@ -27,13 +27,23 @@ const Unique = () => {
     threshold: 0.5,
   });
   
+  const { ref: card4Ref, inView: card4InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  
+  const { ref: card5Ref, inView: card5InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  
   const { ref: imageRef, inView: imageInView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
   return (
-    <div className="w-full h-auto flex flex-col items-center gap-14 ">
+    <div className="w-full h-auto flex flex-col items-center gap-14">
       <div className="w-full bg-white flex flex-col lg:flex-row items-center justify-between p-5 gap-10">
         <div className="flex flex-col items-start gap-14 w-full lg:w-2/4">
           {/* Title and Divider */}
@@ -56,35 +66,34 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card1InView ? 1 : 0, x: card1InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 desktop3xl:w-1/2 h-32 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  p-3"
+              className="w-full lg:w-96 desktop3xl:w-1/2 h-32 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
-              <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2 w-full">
-                <div className="bg-[#0040FF] w-10 h-10 phone:p-5 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4 desktop3xl:w-12 desktop3xl:h-12">1</div>
+              <div className="flex items-start gap-6 p-3 w-full">
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">1</div>
                 <div className="flex flex-col items-start gap-3 w-full">
-                  <h1 className="text-lg font-bold xxs:text-sm xs:text-sm sm:text-sm desktop3xl:text-3xl">Real-Solutions</h1>
-                  <p className="text-sm font-medium xxs:text-xs xs:text-xs sm:text-xs desktop3xl:text-xl ">Seamless support and claim assistance.</p>
+                  <h1 className="text-lg font-bold">Real-Solutions</h1>
+                  <p className="text-sm font-medium">Seamless support and claim assistance.</p>
                 </div>
               </div>
             </motion.div>
-            
-            
+
             {/* Card 2 */}
-            <div className="w-full flex items-center justify-end">
-              <motion.div
-                ref={card2Ref}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: card2InView ? 1 : 0, x: card2InView ? 0 : 100 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  xs:justify-start xxs:justify-start sm:justify-start p-3"
-              >
-                <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2">
-                  <div className="bg-[#0040FF] w-10 h-10 phone:p-5 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4 desktop3xl:w-12 desktop3xl:h-12">2</div>
-                  <div className="flex flex-col items-start gap-3">
-                    <h1 className="text-lg font-bold xxs:text-sm xs:text-sm sm:text-sm desktop3xl:text-3xl">Diverse Insurance </h1>
-                    <p className="text-sm font-medium xxs:text-xs xs:text-xs sm:text-xs desktop3xl:text-xl">Comprehensive coverage options.</p>
-                  </div>
+            <div className="w-full flex items-end justify-end">
+            <motion.div
+              ref={card2Ref}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: card2InView ? 1 : 0, x: card2InView ? 0 : 100 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+            >
+              <div className="flex items-start gap-6 p-3">
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">2</div>
+                <div className="flex flex-col items-start gap-3">
+                  <h1 className="text-lg font-bold">Diverse Insurance Products</h1>
+                  <p className="text-sm font-medium">Comprehensive coverage options.</p>
                 </div>
-              </motion.div>
+              </div>
+            </motion.div>
             </div>
 
             {/* Card 3 */}
@@ -93,14 +102,50 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card3InView ? 1 : 0, x: card3InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white  xxs:justify-start xs:justify-start sm:justify-start p-3"
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
-              <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2 ">
-                <div className="bg-[#0040FF] desktop3xl:w-12 phone:p-5 desktop3xl:h-12 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4">3</div>
+              <div className="flex items-start gap-6 p-3">
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">3</div>
                 <div className="flex flex-col items-start gap-3">
-                  <h1 className="text-lg font-bold xxs:text-sm xs:text-sm sm:text-sm desktop3xl:text-3xl">Local Experts</h1>
-                  <p className="text-sm font-medium xxs:text-xs xs:text-xs sm:text-xs desktop3xl:text-xl">Knowledgeable team providing personalized care.</p>
-                </div> 
+                  <h1 className="text-lg font-bold">Local Experts</h1>
+                  <p className="text-sm font-medium">Knowledgeable team providing personalized care.</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Card 4 */}
+          <div className="flex w-full items-end justify-end">
+          <motion.div
+              ref={card4Ref}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: card4InView ? 1 : 0, x: card4InView ? 0 : 100 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+            >
+              <div className="flex items-start gap-6 p-3">
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">4</div>
+                <div className="flex flex-col items-start gap-3">
+                  <h1 className="text-lg font-bold">Flexible Plans</h1>
+                  <p className="text-sm font-medium">Customized insurance plans for diverse needs.</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+            {/* Card 5 */}
+            <motion.div
+              ref={card5Ref}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: card5InView ? 1 : 0, x: card5InView ? 0 : -100 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+            >
+              <div className="flex items-start gap-6 p-3">
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">5</div>
+                <div className="flex flex-col items-start gap-3">
+                  <h1 className="text-lg font-bold">24/7 Customer Support</h1>
+                  <p className="text-sm font-medium">Round-the-clock assistance for queries and issues.</p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -119,7 +164,7 @@ const Unique = () => {
             width={7680}
             height={4320}
             alt="promote Image"
-            className="w-full h-full object-cover rounded-2xl "
+            className="w-full h-full object-cover rounded-2xl"
           />
         </motion.div>
       </div>
