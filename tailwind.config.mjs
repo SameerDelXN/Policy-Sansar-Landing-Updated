@@ -39,8 +39,8 @@ export default {
           tablet: { 'min': '768px', 'max': '1024px' }, // Tablets and small laptops
           laptop: {'min':'1025px','max':'1367px'},
           // desktop: {'min':'1281px','max':'1366px'},
-          desktopxl: {'min':'1368px','max':'1920px'},
-          desktop2xl: {'min':'1921px','max':'2560px'},
+          desktopxl: {'min':'1368px','max':'2560px'},
+          // desktop2xl: {'min':'1921px','max':'2560px'},
           desktop3xl: {'min':'2561px','max':'3840px'},
       },
     },
