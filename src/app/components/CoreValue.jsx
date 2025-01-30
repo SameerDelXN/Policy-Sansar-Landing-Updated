@@ -2,14 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import AnimatedHeader from './AnimatedHeader';
-import Integrity from "../../../public/core/result.png";
-import Inclusivity from "../../../public/core/inclusivity.png";
-import Empowerment from "../../../public/core/empowerment.png";
-import Customer from "../../../public/core/customer.png";
-import Compassion from "../../../public/core/compare.png";
-import Innovation from "../../../public/core/innovation.png";
-import Sustainability from "../../../public/core/sustainability.png";
-import Accountability from "../../../public/insurance/micro.png";
+import Integrity from "../../../public/icons/values/integrity.png";
+import Inclusivity from "../../../public/icons/values/inclusive.png";
+import Empowerment from "../../../public/icons/values/empowerment.png";
+import Customer from "../../../public/icons/values/Customer.png";
+import Compassion from "../../../public/icons/values/Compassion.png";
+import Innovation from "../../../public/icons/values/innovaation.png";
+import Sustainability from "../../../public/icons/values/suatain.png";
+import Accountability from "../../../public/icons/values/accountab.png";
+import Image from 'next/image';
 
 // Core values data
 const coreValues = [
@@ -38,50 +39,20 @@ const CoreValue = () => {
         {coreValues.map((value, index) => (
           <motion.div
             key={index}
-            className="relative w-96 h-80 text-black rounded-lg overflow-hidden group bg-white shadow-lg"
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ 
-              duration: 0.8, 
-              ease: 'easeOut', 
-              delay: index * 0.2 // Delay each card by 0.2s multiplied by its index
-            }}
-            whileHover={{ scale: 1.05 }}
+            className="relative w-80 h-80 text-black rounded-lg overflow-hidden group bg-white shadow-lg p-6 flex flex-col items-center justify-center text-center gap-4"
+            
           >
-            {/* Background Image */}
+                        <img src={value.image.src} alt={value.name} className="w-20 h-20" />
             <motion.div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${value.image.src})` }}
-              initial={{ opacity: 1 }}
-              whileHover={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            ></motion.div>
-
-            {/* Name - Moves Up on Hover */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center text-3xl font-extrabold text-white bg-black/50"
-              initial={{ y: 0 }}
-              whileHover={{ y: -30 }}
-              transition={{ duration: 0.3 }}
-            >
+              className='text-2xl font-semibold'>
               {value.name}
             </motion.div>
 
-            {/* Description - Appears on Hover */}
-            <motion.div
-              className="absolute inset-0 flex flex-col justify-center p-4 backdrop-blur-md bg-white/0 text-white opacity-0 group-hover:opacity-100"
-              initial={{ y: '100%' }}
-              whileHover={{ y: 0 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              <div className="flex flex-col items-center justify-center text-center">
-                {/* Name */}
-                <motion.h3 className="text-2xl font-extrabold mb-4">{value.name}</motion.h3>
-                {/* Description */}
-                <p>{value.desc}</p>
-              </div>
-            </motion.div>
+
+              
+            {/* </motion.div> */}
+            <p className="text-base text-gray-600">{value.desc}</p>
+
           </motion.div>
         ))}
       </motion.div>
