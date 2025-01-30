@@ -178,10 +178,10 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-      <div className="bg-white w-full laptop:h-[190vh] md2:h-[150vh] phone:min-h-[145vh] xs:h-[123vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full laptop:h-[220vh] md2:h-[150vh] phone:min-h-[100vh]   rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2 laptop:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
+  className="lg:w-1/2  laptop:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage.src})`,
     backgroundSize: 'cover',
@@ -266,7 +266,7 @@ const GeneralInsurance = () => {
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={InvestmentProtectionIcon}
                     width={480}
@@ -277,7 +277,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-xs xs:text-sm tablet:text-lg">Investment Protection</h1>
                   <p className="lg:text-sm text-center text-slate-500 phone:text-xs">Offers coverage for market-linked investments </p>
               </div>
-              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={SuretyBondIcon}
                     width={480}
@@ -288,7 +288,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-xs xs:text-sm tablet:text-lg">Surety Bonds</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Guarantees project completion for contractors.</p>
               </div>
-              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={LiabilityProtectionIcon}
                     width={480}
@@ -299,7 +299,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-xs xs:text-sm  tablet:text-lg">Liability Protection</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Covers legal costs and compensation in  liabilities.</p>
               </div>
-              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-56 bg-white rounded-2xl hover:shadow-md tablet:w-44 tablet:h-64 hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 phone:gap-1 xs:gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={MortgageIcon}
                     width={480}

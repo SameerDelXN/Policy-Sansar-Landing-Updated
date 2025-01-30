@@ -176,7 +176,7 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-        <div className="bg-white w-full tablet:min-h-[100vh] laptop:h-[190vh]  desktop2xl:h-[100vh] phone:min-h-[135vh] xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+        <div className="bg-white w-full tablet:min-h-[100vh] laptop:h-[220vh]  desktop2xl:h-[100vh] phone:min-h-[100vh] xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
             className=" w-1/2 bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
@@ -286,7 +286,7 @@ const GeneralInsurance = () => {
                   <hr className="w-64" />
                 </div>
                 <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CoverageIcon}
                       width={480}
@@ -302,7 +302,7 @@ const GeneralInsurance = () => {
                       under a single policy.
                     </p>
                   </div>
-                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-40 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CostEffectiveIcon}
                       width={480}
@@ -318,7 +318,7 @@ const GeneralInsurance = () => {
                       to group pooling.
                     </p>
                   </div>
-                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CustomizedIcon}
                       width={480}
@@ -334,7 +334,7 @@ const GeneralInsurance = () => {
                       or organization.
                     </p>
                   </div>
-                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={SimpleIcon}
                       width={480}

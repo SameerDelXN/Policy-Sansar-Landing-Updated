@@ -180,7 +180,7 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-      <div className="bg-white w-full  laptop:h-[190vh] md2:h-[150vh] desktop2xl:h-[100vh] phone:min-h-[145vh]  xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+      <div className="bg-white w-full  laptop:h-[220vh] md2:h-[150vh] desktop2xl:h-[100vh] phone:min-h-[100vh]  xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
   className="lg:w-1/2 laptop:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
@@ -269,7 +269,7 @@ const GeneralInsurance = () => {
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={GuranteeIcon}
                     width={480}
@@ -280,7 +280,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Guaranteed Returns</h1>
                   <p className="lg:text-sm text-center text-slate-500 phone:text-xs">Provides assured payouts at maturity, ensuring financial stability.</p>
               </div>
-              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={BenefitIcon}
                     width={480}
@@ -291,7 +291,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Tax Benefits</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Offers tax deductions on premiums paid under Section 80C of the Income Tax Act.</p>
               </div>
-              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={WithdrawIcon}
                     width={480}
@@ -302,7 +302,7 @@ const GeneralInsurance = () => {
                   <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Partial Withdrawals</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Allows withdrawals after a specific period to meet financial needs.</p>
               </div>
-              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="laptop:w-56 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-40 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={LoanIcon}
                     width={480}
