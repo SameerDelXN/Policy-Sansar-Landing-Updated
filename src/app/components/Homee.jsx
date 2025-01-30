@@ -72,13 +72,13 @@ const Homee = () => {
     src={Banner1Man}
     width={1920}
     height={1080}
-    className="absolute w-44 h-44 top-0 right-3  object-contain phone:w-40 phone:h-40 phone:top-auto phone:bottom-0 phone:right-0"
+    className="absolute w-44 h-44 top-0 right-3  object-contain phone:w-36 phone:h-36 phone:top-auto phone:bottom-0 phone:right-0"
   />
  
-    <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-lg phone:left-2 phone:top-5">Save Big on Insurance! Compare Plans <br/>&  
+    <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-sm phone:left-2 phone:top-5">Save Big on Insurance! Compare Plans <br/>&  
     Get the Best Deal!</h1>
   
-  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-6">
+  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-3">
     <div className="flex flex-col items-center gap-1 phone:hidden">
       <Image src={BestPriceIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
       <h1 className="text-sm font-bold phone:text-xs">Best Prices</h1>
