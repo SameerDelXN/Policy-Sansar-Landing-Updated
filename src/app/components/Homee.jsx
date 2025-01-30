@@ -78,7 +78,7 @@ const Homee = () => {
     <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-sm phone:left-2 phone:top-5 tablet:text-lg desktop2xl:text-3xl desktop2xl:top-10 desktop2xl:left-72">Save Big on Insurance! Compare Plans <br/>&  
     Get the Best Deal!</h1>
   
-  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-3 tablet:left-48 desktop2xl:right-60">
+  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-3 tablet:left-48 desktop2xl:right-60 ">
     <div className="flex flex-col items-center gap-1 phone:hidden">
       <Image src={BestPriceIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6 tablet:w-8 tablet:h-8 desktop2xl:w-24 desktop2xl:h-24"/>
       <h1 className="text-sm font-bold phone:text-xs tablet:text-xs desktop2xl:text-2xl">Best Prices</h1>
