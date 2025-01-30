@@ -149,7 +149,7 @@ const Header = () => {
             width={1920}
             height={1080}
             alt="Logo"
-            className="transition-all laptop:p-1 tablet:p-1 laptop:w-20 desktopxl:w-20 desktopxl:h-20 laptop:h-20 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
+            className="transition-all laptop:p-1 tablet:p-1 laptop:w-20 desktopxl:w-20 desktopxl:h-20 laptop:h-20 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-16 tablet:h-16"
           />
           <div className="flex flex-col items-start justify-start  gap-1 w-full  ">
           <Image src={policy} width={1920} height={1080} className="w-1/2 lg:h-8 object-contain xxs:h- 5"/>
