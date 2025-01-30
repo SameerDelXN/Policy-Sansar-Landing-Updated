@@ -80,7 +80,7 @@ const Unique = () => {
                 <div className="flex items-start gap-6 p-3 xxs:p-2 xs:p-2 sm:p-2 xxs:gap-2 xs:gap-2 sm:gap-2">
                   <div className="bg-[#0040FF] w-10 h-10 phone:p-5 rounded-full flex items-center justify-center text-white font-bold xxs:w-6 xs:w-6 sm:w-6 xxs:h-6 xs:h-6 sm:h-6 xxs:p-4 xs:p-4 sm:p-4 desktop3xl:w-12 desktop3xl:h-12">2</div>
                   <div className="flex flex-col items-start gap-3">
-                    <h1 className="text-lg font-bold xxs:text-sm xs:text-sm sm:text-sm desktop3xl:text-3xl">Diverse Insurance Products</h1>
+                    <h1 className="text-lg font-bold xxs:text-sm xs:text-sm sm:text-sm desktop3xl:text-3xl">Diverse Insurance </h1>
                     <p className="text-sm font-medium xxs:text-xs xs:text-xs sm:text-xs desktop3xl:text-xl">Comprehensive coverage options.</p>
                   </div>
                 </div>

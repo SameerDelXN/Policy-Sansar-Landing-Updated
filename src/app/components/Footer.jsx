@@ -152,11 +152,11 @@ const Footer = () => {
               Contact
             </h1>
             <div className="laptop:flex laptop:justify-between w-full desktopxl:flex ">
-            <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full ">
-              <IoCallSharp className="text-lg"/><h1 className="text-sm sm:text-base">+91 9644170004</h1>
+            <div className="flex items-center gap-2 text-lg xxs:text-xs  w-full ">
+              <IoCallSharp className="text-md"/><h1 className="text-sm sm:text-base">+91 9561113316</h1>
             </div>
-            <div className="flex items-center gap-3 text-lg xxs:text-xs  w-full">
-              <IoMailOpenSharp className="text-lg"/>
+            <div className="flex items-center gap-2 text-lg xxs:text-xs  w-full">
+              <IoMailOpenSharp className="text-md"/>
               <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
             </div>
             </div>

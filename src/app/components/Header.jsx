@@ -12,7 +12,7 @@ import healthInsuranceIcon from "../../../public/icons/Flaticons/healthInsurance
 import groupInsuranceIcon from "../../../public/icons/Flaticons/groupInsurance.png";
 import financialInsuranceIcon from "../../../public/icons/Flaticons/financialInsurance.png";
 import wealthInsuranceIcon from "../../../public/icons/Flaticons/wealthInsurance.png";
-import tagLine1 from "../../../public/tagline/tagline1.png"
+import policy from "../../../public/tagline/policy.png"
 import tagLine2 from "../../../public/tagline/tagline2.png"
 import tagLine3 from "../../../public/tagline/tagline3.png"
 import tagLine4 from "../../../public/tagline/tagline4.png"
@@ -142,19 +142,21 @@ const Header = () => {
         {/* Logo Section */}
         <Link1
           href={"/"}
-          className="text-2xl font-bold text-black tracking-wide flex items-center gap-3 lg:w-1/3 xxs:w-3/4"
+          className="text-2xl font-bold text-black tracking-wide flex items-center gap-1 lg:w-1/3 xxs:w-3/4"
         >
           <Image
             src={Logo}
             width={1920}
             height={1080}
             alt="Logo"
-            className="transition-all laptop:p-1 tablet:p-1 laptop:w-20 laptop:h-20 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
+            className="transition-all laptop:p-1 tablet:p-1 laptop:w-20 desktopxl:w-20 desktopxl:h-20 laptop:h-20 w-24 h-24 phone:w-16 phone:h-16 ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
           />
-          <div className="flex flex-col items-start gap-1  ">
-          <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm ">Policy Sansar</h1>
-          {/* <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1> */}
-          <Image src={tagLine7} width={1920} height={1080} className="w-full lg:h-8 object-contain xxs:h-5"/>
+          <div className="flex flex-col items-start justify-start  gap-1 w-full  ">
+          <Image src={policy} width={1920} height={1080} className="w-1/2 lg:h-8 object-contain xxs:h- 5"/>
+
+          {/* <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm ">Policy Sansar</h1> */}
+               {/* <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1> */}
+          <Image src={tagLine7} width={1920} height={1080} className="w-1/2  lg:h-4 object-contain xxs:h-5"/>
           </div>
         </Link1>
 
