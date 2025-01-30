@@ -151,16 +151,20 @@ const Footer = () => {
             >
               Contact
             </h1>
-            <div className="laptop:flex laptop:justify-between w-full desktopxl:flex ">
-            <div className="flex items-center gap-2 text-lg xxs:text-xs  w-full ">
-              <IoCallSharp className="text-md"/><h1 className="text-sm sm:text-base">+91 9561113316</h1>
-            </div>
-            <div className="flex items-center gap-2 text-lg xxs:text-xs  w-full">
-              <IoMailOpenSharp className="text-md"/>
-              <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
-            </div>
-            </div>
-            <div className="flex items-start gap-3 w-full flex-col  ">
+            <div className="laptop:flex laptop:justify-between w-full desktopxl:flex phone:flex">
+      {/* Phone Number */}
+      <a href="tel:+919561113316" className="flex items-center gap-2 text-lg xxs:text-xs w-full">
+        <IoCallSharp className="text-md" />
+        <h1 className="text-sm sm:text-base">+91 9561113316</h1>
+      </a>
+
+      {/* Email */}
+      <a href="mailto:po@policysansar.com" className="flex items-center gap-2 text-lg xxs:text-xs w-full">
+        <IoMailOpenSharp className="text-md" />
+        <h1 className="text-sm sm:text-base">po@policysansar.com</h1>
+      </a>
+    </div>
+            <div className="flex items-start gap-3  w-full flex-col  ">
               <h1 className="flex items-center gap-1 text-xl font-bold"> <HiMiniBuildingOffice className="text-lg "/>
               Registered office </h1>
            
