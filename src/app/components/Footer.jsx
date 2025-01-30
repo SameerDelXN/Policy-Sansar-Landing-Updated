@@ -151,7 +151,7 @@ const Footer = () => {
             >
               Contact
             </h1>
-            <div className="laptop:flex laptop:justify-between w-full desktopxl:flex phone:flex">
+            <div className="laptop:flex laptop:justify-between w-full desktopxl:flex phone:flex-col phone:items-start ">
       {/* Phone Number */}
       <a href="tel:+919561113316" className="flex items-center gap-2 text-lg xxs:text-xs w-full">
         <IoCallSharp className="text-md" />
