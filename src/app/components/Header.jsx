@@ -105,7 +105,7 @@ const Header = () => {
     setShowLoginModal(true)
   }
   return (
-    <div className="w-full sticky top-0 z-20 bg-white  lg:h-[17vh] desktop2xl:h-[10vh] desktopxl:h-[13vh] md2:h-[13vh] phone:h-[8vh] ">
+    <div className="w-full sticky top-0 z-20 bg-white lg:h-[13vh] xxs:h-[8vh] ">
         {showLoginModal && (
               <div
                 className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 xxs:p-5"
@@ -146,15 +146,15 @@ const Header = () => {
         >
           <Image
             src={Logo}
-            width={1920}
-            height={1080}
+            width={90}
+            height={90}
             alt="Logo"
-            className="transition-all ease-in-out duration-300 phone:w-12  desktopxl:w-24 laptop:w-24 desktop2xl:w-24"
+            className="transition-all ease-in-out duration-300 xxs:w-12 lg:w-24 xs:w-12 desktop:w-24 tablet:w-24"
           />
           <div className="flex flex-col items-start gap-1  ">
-          <h1 className="lg:text-2xl text-blue-700 phone:text-sm ">Policy Sansar</h1>
+          <h1 className="lg:text-2xl text-blue-700 xxs:text-sm xs:text-sm ">Policy Sansar</h1>
           {/* <h1 className="text-sm xxs:text-xs text-wrap">आपके संसार की सुरक्षा का भरोसा-पॉलिसी संसार</h1> */}
-          <Image src={tagLine7} width={1920} height={1080} className="w-full lg:h-8 object-contain phone:h-5"/>
+          <Image src={tagLine7} width={1920} height={1080} className="w-full lg:h-8 object-contain xxs:h-5"/>
           </div>
         </Link1>
 
@@ -174,7 +174,7 @@ const Header = () => {
         <div className="hidden lg:flex gap-8  items-center">
           <Link1
             href="/"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
           >
             Home
           </Link1>
@@ -183,7 +183,7 @@ const Header = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <span className="relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700">
+            <span className="relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm">
               Products
             </span>
             {isDropdownOpen && (
@@ -198,7 +198,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/General"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center">
                   <Image src={generalInsuranceIcon} width={20} height={20} alt="General Insurance" className="mr-2" />
@@ -210,7 +210,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Health"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 "
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center">
                   <Image src={healthInsuranceIcon} width={20} height={20} alt="Health Insurance" className="mr-2" />
@@ -222,7 +222,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/Life"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center ">
                   <Image src={lifeInsuranceIcon} width={20} height={20} alt="Life Insurance" className="mr-2" />
@@ -234,7 +234,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/group"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center">
                   <Image src={groupInsuranceIcon} width={20} height={20} alt="Group Insurance" className="mr-2" />
@@ -246,7 +246,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/financial"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center">
                   <Image src={financialInsuranceIcon} width={20} height={20} alt="Financial Insurance" className="mr-2" />
@@ -258,7 +258,7 @@ const Header = () => {
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   href="/insurances/wealth"
-                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+                  className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
                 >
                   <div className="flex items-center">
                   <Image src={wealthInsuranceIcon} width={20} height={20} alt="Wealth Insurance" className="mr-2" />
@@ -273,24 +273,24 @@ const Header = () => {
           </div>
           <Link1
             href="/Distribution"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
           >
             Process
           </Link1>
           <Link1
             href="/about-us"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
           >
             About Us
           </Link1>
           <Link1
             href="/contact"
-            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
           >
             Contact Us
           </Link1>
           <div className="flex items-center gap-2">
-          <button className="bg-blue-700 text-white p-3 rounded-lg w-32" onClick={()=>setShowLoginModal(true)}>Get Started</button></div>
+          <button className="bg-blue-700 text-white p-3 rounded-lg w-32 tablet:text-sm" onClick={()=>setShowLoginModal(true)}>Get Started</button></div>
         </div>
         
         {/* Mobile Menu */}
@@ -398,7 +398,9 @@ const Header = () => {
                 </Link1>
                 <Link1
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  href="/insurances/wealth"
+                  href="/insurances/wealth
+                  
+                  ealth"
                   className="block px-4 py-3 text-black relative after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700"
                 >
                   <div className="flex items-center">

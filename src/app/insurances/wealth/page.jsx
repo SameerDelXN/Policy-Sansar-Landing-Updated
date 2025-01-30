@@ -203,7 +203,7 @@ const GeneralInsurance = () => {
          <div className="flex flex-col items-start w-full">
          <div className="flex flex-col gap-5 lg:p-8 phone:p-4 w-full">
           <div className="flex flex-col items-start gap-3">
-            <h1 className="lg:text-2xl font-semibold  phone:text-sm ">Types of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-semibold  phone:text-sm tablet:text-lg">Types of <span className="text-blue-700">Wealth</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
@@ -214,7 +214,7 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Ulip Icon"
-                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                 />
                <div className="flex flex-col items-center ">
                <h1 className="text-lg font-bold phone:text-sm">ULIP's</h1>
@@ -227,7 +227,7 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Endowment Icon"
-                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                 />
                <div className="flex flex-col items-center ">
                <h1 className="text-lg font-bold phone:text-sm">Endowment</h1>
@@ -240,7 +240,7 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Pension Icon"
-                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                 />
                <div className="flex flex-col items-center ">
                <h1 className="text-lg font-bold phone:text-sm">Pension</h1>
@@ -253,7 +253,7 @@ const GeneralInsurance = () => {
                   width={50}
                   height={50}
                   alt="Child Icon"
-                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                  className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                 />
                <div className="flex flex-col items-center ">
                <h1 className="text-lg font-bold phone:text-sm">Child</h1>
@@ -264,53 +264,53 @@ const GeneralInsurance = () => {
           </div>
           <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
           <div className="flex flex-col items-start gap-3 ">
-            <h1 className="lg:text-2xl font-bold phone:text-sm">Top Features of <span className="text-blue-700">Wealth</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg">Top Features of <span className="text-blue-700">Wealth</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={GuranteeIcon}
                     width={480}
                     height={480}
                     alt="Gurantee Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Guaranteed Returns</h1>
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Guaranteed Returns</h1>
                   <p className="lg:text-sm text-center text-slate-500 phone:text-xs">Provides assured payouts at maturity, ensuring financial stability.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={BenefitIcon}
                     width={480}
                     height={480}
                     alt="Tax Benefit Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Tax Benefits</h1>
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Tax Benefits</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Offers tax deductions on premiums paid under Section 80C of the Income Tax Act.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={WithdrawIcon}
                     width={480}
                     height={480}
                     alt="Withdraw Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm ">Partial Withdrawals</h1>
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Partial Withdrawals</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Allows withdrawals after a specific period to meet financial needs.</p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={LoanIcon}
                     width={480}
                     height={480}
                     alt="Loan Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Loan Facility</h1>
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Loan Facility</h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Enables policyholders to borrow against the policy during emergencies.</p>
               </div>
             </div>

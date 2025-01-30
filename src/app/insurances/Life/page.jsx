@@ -35,7 +35,7 @@ const GeneralInsurance = () => {
  
    const validateForm = () => {
      const { fname, lname, email, mobile } = formData;
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     const emailRegex = /^[^\s@]+@gmail\.com$/;
      const mobileRegex = /^[0-9]{10}$/;
  
      if (!fname.trim() || !lname.trim()) {
@@ -193,7 +193,7 @@ const GeneralInsurance = () => {
            <div className="flex flex-col items-start">
            <div className="flex flex-col gap-5 p-6">
           <div className="flex flex-col items-start gap-3">
-            <h1 className="lg:text-2xl font-bold phone:text-sm">Why <span className="text-blue-700">Life</span> Insurance?</h1>
+            <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg">Why <span className="text-blue-700">Life</span> Insurance?</h1>
             <hr className="w-64"/>
             
             </div>
@@ -202,61 +202,61 @@ const GeneralInsurance = () => {
 </h1></div>
           <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
           <div className="flex flex-col items-start gap-3 ">
-            <h1 className="lg:text-2xl font-bold phone:text-sm">Top Features of <span className="text-blue-700">Life</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg">Top Features of <span className="text-blue-700">Life</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
             <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={MatureIcon}
                     width={480}
                     height={480}
                     alt="Maturity Benefit Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Maturity Benefit</h1>
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Maturity Benefit</h1>
                   <p className="lg:text-sm text-center text-slate-500 phone:text-xs">Some plans (like endowment or whole life insurance) offer payouts at the end of the policy term if the policyholder survives.
 
 </p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={WealthIcon}
                     width={480}
                     height={480}
                     alt="Wealth Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Wealth Accumulation
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Wealth Accumulation
                   </h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Combines protection with investment, allowing policyholders to build wealth over time.
 
 </p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={IncomeReplaceIcon}
                     width={480}
                     height={480}
                     alt="Income Replace Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm ">Income Replacement
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Income Replacement
                   </h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Provides a regular income stream to beneficiaries after the policyholder's death.
 
 </p>
               </div>
-              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
+              <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52  phone:shadow-md phone:border phone:border-slate-100">
                   <Image
                     src={DeathBenefitIcon}
                     width={480}
                     height={480}
                     alt="Death Benefit Icon"
-                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                    className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                   />
-                  <h1 className="lg:text-2xl text-center phone:text-sm">Death Benefit
+                  <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">Death Benefit
                   </h1>
                   <p className="text-center lg:text-sm text-slate-500 phone:text-xs">Provides a lump-sum payment to the beneficiary upon the policyholder’s death.
 

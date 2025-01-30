@@ -94,14 +94,14 @@ const Contact = () => {
       {/* Main Contact Section */}
       <div
         name="contact"
-        className="h-full  phone:h-full w-full flex flex-col items-center justify-center phone:justify-start gap-12   p-6 sm:p-10 bg-white"
+        className="h-full   phone:h-full w-full flex flex-col items-center justify-center phone:justify-start gap-12   p-6 sm:p-10 bg-white"
       >
         <AnimatedHeader text="Contact Us" />
 
         {/* Parent Container */}
         <div className="flex   h-full phone:h-full lg:flex-col phone:flex-col  xs:flex-col md:flex-col xl:flex-row 2xl:flex-row sm:flex-col w-full  gap-6 sm:gap-12">
           {/* Map Section */}
-          <div className="w-full h-2/3 phone:justify-start phone:h-1/2 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start justify-evenly ">
+          <div className="w-full h-2/3 tablet:h-full phone:justify-start phone:h-1/2 lg:w-full md:w-full sm:w-full xl:w-1/2 2xl:w-1/2   bg-[#E6ECFF] rounded-2xl p-10 sm:p-10 phone:p-4 flex flex-col items-start justify-evenly ">
             <div className="">
               <p className="text-xl sm:text-3xl font-bold">
                 Visit Policy Sansar
@@ -183,7 +183,7 @@ const Contact = () => {
           </div>
 
           {/* Google Form Embed Section */}
-          <div className="bg-white w-full phone:h-1/3  lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-2/3 p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
+          <div className="bg-white w-full phone:h-1/3 tablet:h-1/2 lg:w-full md:w-full xl:w-1/2 2xl:w-1/2 sm:w-full h-2/3 p-6 sm:p-8 flex flex-col items-start justify-center gap-6 sm:gap-12 rounded-2xl border border-gray-400">
             <p className="text-xl sm:text-2xl font-bold">Get in Touch</p>
             {/* <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfA_lb0gzs4Pk2k_8gN0atWHIXCb6820M_AUCw5T6G_y7QM4A/viewform?embedded=true"

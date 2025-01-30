@@ -27,7 +27,7 @@ const InsurancePlans = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative laptop:w-64 laptop:h-64 desktop2xl:w-96 desktop2xl:h-96  border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto phone:w-44 phone:h-44 xs:w-44 xs:h-44 xl:w-72 xl:h-72"
+            className="relative laptop:w-64 laptop:h-64 tablet:w-52 tablet:h-52 desktop2xl:w-96 desktop2xl:h-96  border-2 bg-white border-slate-300 rounded-full p-3 group hover:p-0 transition-all duration-300 mx-auto phone:w-44 phone:h-44 xs:w-44 xs:h-44 xl:w-72 xl:h-72"
           >
             <Link href={plan.link}>
               <div className="relative w-full h-full rounded-full overflow-hidden">

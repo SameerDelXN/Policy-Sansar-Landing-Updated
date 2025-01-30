@@ -55,10 +55,10 @@ const Homee = () => {
   }
 
   return (
-    <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktop2xl:h-[100vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-between phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
+    <div className="w-full phone:h-[92vh]  laptop:h-[135vh] desktop2xl:h-[100vh] desktopxl:h-[87vh] desktopxl:p-2  flex flex-col items-center justify-evenly phone:justify-start   gap-2  laptop:p-3  phone:p-2   ">
       {/* Moving Advertisement */}
       <div
-  className="relative laptop:w-5/6 laptop:h-40 desktopxl:h-40 desktop2xl:w-5/6 desktopxl:w-5/6 phone:h-1/4 rounded-2xl overflow-hidden phone:w-full bg-cover bg-center"
+  className="relative laptop:w-5/6 laptop:h-40 tablet:h-40 tablet:w-5/6 desktopxl:h-40 desktop3xl:h-40  desktop2xl:w-5/6 desktopxl:w-5/6 phone:h-1/4 rounded-2xl overflow-hidden phone:w-full bg-cover bg-center"
   style={{ backgroundImage: `url(${Banner1BG.src})` }}
 >
 
@@ -66,32 +66,32 @@ const Homee = () => {
     src={Banner1Family}
     width={1920}
     height={1080}
-    className="absolute w-44 h-44 top-0 left-3  object-contain phone:hidden "
+    className="absolute w-44 h-44 top-0 left-3  object-contain phone:hidden tablet:w-32 tablet:h-32 tablet:bottom-0 tablet:top-auto "
   />
    <Image
     src={Banner1Man}
     width={1920}
     height={1080}
-    className="absolute w-44 h-44 top-0 right-3  object-contain phone:w-36 phone:h-36 phone:top-auto phone:bottom-0 phone:right-0"
+    className="absolute w-44 h-44 top-0 right-3  object-contain phone:w-36 phone:h-36 phone:top-auto phone:bottom-0 phone:right-0 tablet:right-0"
   />
  
-    <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-sm phone:left-2 phone:top-5">Save Big on Insurance! Compare Plans <br/>&  
+    <h1 className="text-white text-2xl font-extrabold absolute top-3 left-56 phone:text-sm phone:left-2 phone:top-5 tablet:text-lg">Save Big on Insurance! Compare Plans <br/>&  
     Get the Best Deal!</h1>
   
-  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-3">
+  <div className="flex items-center gap-6 absolute bottom-2 right-52 phone:right-auto phone:left-5 phone:bottom-3 tablet:left-48">
     <div className="flex flex-col items-center gap-1 phone:hidden">
-      <Image src={BestPriceIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
-      <h1 className="text-sm font-bold phone:text-xs">Best Prices</h1>
+      <Image src={BestPriceIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6 tablet:w-8 tablet:h-8"/>
+      <h1 className="text-sm font-bold phone:text-xs tablet:text-xs">Best Prices</h1>
     </div>
     <div className="flex flex-col items-center gap-1 phone:hidden">
-    <Image src={InstantIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
-      <h1 className="text-sm font-bold phone:text-xs ">Instant Quotes</h1>
+    <Image src={InstantIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6 tablet:w-8 tablet:h-8"/>
+      <h1 className="text-sm font-bold phone:text-xs tablet:text-xs">Instant Quotes</h1>
     </div>
     <div className="flex flex-col items-center gap-1 phone:hidden">
-    <Image src={TrustIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6"/>
-      <h1 className="text-sm font-bold phone:text-xs">Trusted Insurer</h1>
+    <Image src={TrustIcon} width={1920} height={1080} className="w-12 h-12 phone:w-6 phone:h-6 tablet:w-8 tablet:h-8"/>
+      <h1 className="text-sm font-bold phone:text-xs tablet:text-xs">Trusted Insurer</h1>
     </div>
-    <button className="bg-[#5383FE] p-3 text-white font-bold rounded-lg  phone:text-sm phone:p-2 ">Get Quotes Now</button>
+    <button className="bg-[#5383FE] p-3 text-white font-bold rounded-lg  phone:text-sm phone:p-2 tablet:p-2 tablet:text-xs ">Get Quotes Now</button>
   </div>
  
 </div>
@@ -117,16 +117,16 @@ const Homee = () => {
           </p>
         </div>
         <div className="w-full flex items-start justify-center   laptop:h-2/3 desktopxl:h-2/3    h-full phone:h-1/2 ">
-        <div className="w-1/3 h-full  laptop:h-full   phone:hidden lg:block xs:hidden desktopxl:h-full ">
+        <div className="w-1/3 h-full  laptop:h-full tablet:hidden  phone:hidden lg:block xs:hidden desktopxl:h-full ">
             <Image
               src={Family}
               width={1920}
               height={1080}
               alt="couple"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain "
             />
           </div>
-          <div className="w-1/2 h-96 desktop2xl:h-full desktopxl:h-full   laptop:h-full    phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
+          <div className="w-1/2 h-96 desktop2xl:h-full desktopxl:h-full tablet:w-full   laptop:h-full    phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
 
             <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
               {[

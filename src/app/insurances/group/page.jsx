@@ -176,7 +176,7 @@ const GeneralInsurance = () => {
         </div>
       )}
       <div>
-        <div className="bg-white w-full  lg:h-[150vh] desktop2xl:h-[100vh] phone:min-h-[135vh] xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
+        <div className="bg-white w-full tablet:min-h-[100vh]  lg:h-[150vh] desktop2xl:h-[100vh] phone:min-h-[135vh] xs:h-[120vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
             className="lg:w-1/2 lg:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
@@ -204,7 +204,7 @@ const GeneralInsurance = () => {
             <div className="flex flex-col items-start w-full">
               <div className="flex flex-col gap-5 lg:p-8 phone:p-4 w-full">
                 <div className="flex flex-col items-start gap-3">
-                  <h1 className="lg:text-2xl font-semibold  phone:text-sm ">
+                  <h1 className="lg:text-2xl font-semibold  phone:text-sm tablet:text-lg">
                     Types of <span className="text-blue-700">Group</span>{" "}
                     Insurance
                   </h1>
@@ -217,7 +217,7 @@ const GeneralInsurance = () => {
                       width={50}
                       height={50}
                       alt="HeartIcon"
-                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                     />
                     <div className="flex flex-col items-center ">
                       <h1 className="text-lg font-bold phone:text-sm">Life</h1>
@@ -232,7 +232,7 @@ const GeneralInsurance = () => {
                       width={50}
                       height={50}
                       alt="HealthIcon"
-                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                     />
                     <div className="flex flex-col items-center ">
                       <h1 className="text-lg font-bold phone:text-sm">Health</h1>
@@ -247,7 +247,7 @@ const GeneralInsurance = () => {
                       width={50}
                       height={50}
                       alt="Accident Icon"
-                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                     />
                     <div className="flex flex-col items-center ">
                       <h1 className="text-lg font-bold phone:text-sm">
@@ -264,7 +264,7 @@ const GeneralInsurance = () => {
                       width={50}
                       height={50}
                       alt="Term Life Icon"
-                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14"
+                      className="phone:w-8 phone:h-8 lg:w-14 lg:h-14 tablet:w-10 tablet:h-10"
                     />
                     <div className="flex flex-col items-center ">
                       <h1 className="text-lg font-bold phone:text-sm">
@@ -279,22 +279,22 @@ const GeneralInsurance = () => {
               </div>
               <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
                 <div className="flex flex-col items-start gap-3 ">
-                  <h1 className="lg:text-2xl font-bold phone:text-sm">
+                  <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg">
                     Top Features of <span className="text-blue-700">Group</span>{" "}
                     Insurance
                   </h1>
                   <hr className="w-64" />
                 </div>
                 <div className="w-full flex flex-wrap items-center justify-center  gap-3 ">
-                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CoverageIcon}
                       width={480}
                       height={480}
                       alt="Coverage Icon"
-                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                     />
-                    <h1 className="lg:text-2xl text-center phone:text-sm">
+                    <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">
                       Comprehensive Coverage
                     </h1>
                     <p className="lg:text-sm text-center text-slate-500 phone:text-xs">
@@ -302,15 +302,15 @@ const GeneralInsurance = () => {
                       under a single policy.
                     </p>
                   </div>
-                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56  phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CostEffectiveIcon}
                       width={480}
                       height={480}
                       alt="Cost Effective Icon"
-                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                     />
-                    <h1 className="lg:text-2xl text-center phone:text-sm">
+                    <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">
                       Cost-Effective Premiums
                     </h1>
                     <p className="text-center lg:text-sm text-slate-500 phone:text-xs">
@@ -318,15 +318,15 @@ const GeneralInsurance = () => {
                       to group pooling.
                     </p>
                   </div>
-                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={CustomizedIcon}
                       width={480}
                       height={480}
                       alt="Customized Icon"
-                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                     />
-                    <h1 className="lg:text-2xl text-center phone:text-sm ">
+                    <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">
                       Customizable Plans
                     </h1>
                     <p className="text-center lg:text-sm text-slate-500 phone:text-xs">
@@ -334,15 +334,15 @@ const GeneralInsurance = () => {
                       or organization.
                     </p>
                   </div>
-                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
+                  <div className="lg:w-72 xl:w-64 desktop2xl:w-72 tablet:w-44 tablet:h-64 bg-white rounded-2xl hover:shadow-md hover:rounded-2xl hover:border hover:border-slate-200 lg:h-80 flex flex-col items-center justify-center gap-3 p-3 transition-all ease-in duration-300 xs:w-40 xs:h-56 phone:w-44 phone:h-52 phone:shadow-md phone:border phone:border-slate-100">
                     <Image
                       src={SimpleIcon}
                       width={480}
                       height={480}
                       alt="Simple Icon"
-                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20"
+                      className="phone:w-12 phone:h-12 lg:w-20 lg:h-20 tablet:w-16 tablet:h-16"
                     />
-                    <h1 className="lg:text-2xl text-center phone:text-sm">
+                    <h1 className="lg:text-2xl text-center phone:text-sm tablet:text-lg">
                       Simplified Enrollment
                     </h1>
                     <p className="text-center lg:text-sm text-slate-500 phone:text-xs">
