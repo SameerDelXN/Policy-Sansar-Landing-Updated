@@ -44,7 +44,7 @@ const Experts = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-24 bg-[#ee82ee13] ">
       {/* Cover Section */}
       <div className="w-full h-56 bg-black p-6 relative ">
         <Image src={aboutcover} layout="fill" objectFit="cover" alt="about-us" />
@@ -90,7 +90,7 @@ const Experts = () => {
       </div>
 
       {/* Team Section */}
-      <div className=" flex flex-col items-center gap-8  ">
+      <div className=" flex flex-col items-center gap-8 bg[#0040ff24]  ">
         <h2 className="text-3xl font-bold text-[#164574]">Meet Our Experts</h2>
         {/* <h2 className="text-[#164574]  font-bold text-3xl">
         <AnimatedHeader text="Meet Our Experts"  className="!text-3xl  "/>
@@ -99,7 +99,7 @@ const Experts = () => {
 {teamMembers.map((member, index) => (
   <div
     key={index}
-    className={`relative w-full md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 ${
+    className={`relative w-full md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 bg-[#0040ff0f]  rounded-2xl ${
       index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
     }`}
   >
@@ -111,8 +111,8 @@ const Experts = () => {
     <div className="relative flex-1 w-full md:h-full">
       {/* Decorative Background Shapes */}
       <div className="absolute inset-0 w-full h-full -z-10">
-        <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-500 rounded-full opacity-30 blur-lg"></div>
-        <div className="absolute bottom-6 right-6 w-32 h-32 bg-indigo-400 rounded-full opacity-30 blur-lg"></div>
+        {/* <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-500 rounded-full opacity-30 blur-lg"></div> */}
+        {/* <div className="absolute bottom-6 right-6 w-32 h-32 bg-indigo-400 rounded-full opacity-30 blur-lg"></div> */}
       </div>
 
       <div className="relative w-full flex items-center justify-center">
