@@ -128,7 +128,7 @@ const Homee = () => {
           </div>
           <div className="w-1/2 h-96 desktop2xl:h-full desktopxl:h-full tablet:w-full   laptop:h-full    phone:h-56   xxs:h-64 xs:h-96 phone:w-full lg:w-1/2 xs:w-full flex flex-col items-center  ">
 
-            <div className="w-full  rounded-2xl h-full flex items-center flex-wrap   ">
+            <div className="w-full  rounded-2xl h-full flex items-center flex-wrap  tablet:gap-10 tablet:justify-center  ">
               {[
                 { icon: generalInsuranceIcon, title: "General" },
                 { icon: healthInsuranceIcon, title: "Health" },
@@ -140,7 +140,7 @@ const Homee = () => {
                 <Link
                   href={`/insurances/${title}`}
                   key={idx}
-                  className="flex flex-col w-1/3 items-center gap-2  hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl desktop2xl:p-10"
+                  className="flex flex-col laptop:w-1/3 desktopxl:w-1/3 phone:w-1/3 tablet:w-20 items-center gap-2  hover:bg-blue-50 hover:scale-90 transition-all ease-in-out duration-500 cursor-pointer p-3 rounded-2xl desktop2xl:p-10"
                 >
                   <Image
                     src={icon}
@@ -156,12 +156,12 @@ const Homee = () => {
                 </Link>
               ))}
             </div>
-            <div className="w-full flex items-center justify-center lg:gap-10 phone:gap-3 lg:flex  phone:hidden    ">
+            <div className="w-full flex items-center justify-center lg:gap-10 phone:gap-3 lg:flex  phone:hidden  tablet:gap-10   ">
         {[{ icon: puzzleIcon, value: "100+", label: "Diverse Variety" },
           { icon: goalIcon, value: "100%", label: "Achievement Rate" },
           { icon: starIcon, value: "4.9", label: "Customer Rating" }
         ].map(({ icon, value, label }, idx) => (
-          <div key={idx} className="flex items-center gap-3  border border-slate-300 rounded-lg p-3 desktopxl:w-1/3 laptop:w-1/3 phone:flex-col  phone:items-center lg:flex-row">
+          <div key={idx} className="flex items-center gap-3  border border-slate-300 flex-grow h-16 rounded-lg p-3 desktopxl:w-1/3 laptop:w-1/3 phone:flex-col  phone:items-center lg:flex-row">
             <Image src={icon} width={25} height={25} alt={label} className="xxs:w-5 desktop2xl:w-14" />
             <div className="flex flex-col items-start phone:items-center ">
               <h1 className="text-sm font-bold xxs:text-sm xs:text-xs sm:text-sm">{value}</h1>

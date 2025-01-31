@@ -120,7 +120,7 @@ const Contact = () => {
               <div className="flex items-center gap-2 phone:flex-col">
                 <Image width={25} height={25} src={callicon} alt="Phone Icon" />
                 <p className="text-xs sm:text-base">
-                  <span>+91 </span> <span>9644170004</span>
+                  <span>+91 </span> <span>9561113316</span>
                 </p>
               </div>
             </div>

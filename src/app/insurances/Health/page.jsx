@@ -120,7 +120,7 @@ const GeneralInsurance = () => {
             animate={{ opacity: 1, y: 0 }} // Animate to its final position
             exit={{  y: 100,opacity:0 }} // Exit animation
             transition={{ duration: 0.5 }} // Duration of the animation
-          className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl phone:p-4 phone:w-5/6 ">
+          className="bg-white lg:p-10 rounded-lg shadow-lg flex flex-col items-start gap-6 w-full max-w-4xl phone:p-4 phone:w-5/6 tablet:w-3/4 tablet:p-10">
            <div className="w-full flex items-center justify-between">
                       <h1 className="text-xl font-semibold">Reach out for <span className="text-blue-700">Health Insurance</span> !</h1>
                       <button className="text-red-500 text-xl" onClick={handleCloseModal}><RxCross1 /></button>
@@ -131,14 +131,14 @@ const GeneralInsurance = () => {
                   value={formData.fname}
                   name="fname"
                   onChange={handleChange}
-                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs tablet:p-3"
                   placeholder="First Name"
                 />
                 <input
                   value={formData.lname}
                   name="lname"
                   onChange={handleChange}
-                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                  className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs tablet:p-3"
                   placeholder="Last Name"
                 />
               </div>
@@ -149,7 +149,7 @@ const GeneralInsurance = () => {
                 name="mobile"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs tablet:p-3"
                 placeholder="Mobile Number"
               />
                 <input
@@ -157,7 +157,7 @@ const GeneralInsurance = () => {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs"
+                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 phone:p-3 phone:text-xs tablet:p-3"
                 placeholder="Email address"
               />
 
@@ -177,7 +177,7 @@ const GeneralInsurance = () => {
       <div className="bg-white w-full  laptop:h-[220vh] md2:h-[150vh] desktop2xl:h-[100vh]  phone:min-h-[100vh] xs:h-[133vh]  rounded-2xl phone:flex-col lg:flex-row  flex shadow-lg border border-slate-300 ">
           {/* Red container with background image */}
           <div
-  className="lg:w-1/2 laptop:h-full bg-black lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
+  className="lg:w-1/2 laptop:h-full tablet:w-1/2 bg-black tablet:rounded-tl-2xl rounded-bl-2xl lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none text-white tablet:p-6 lg:pt-24 lg:pl-10 lg:flex lg:flex-col phone:rounded-tl-2xl lg:items-start gap-2 bg-opacity-10 backdrop-blur-2xl phone:w-full phone:rounded-bl-none phone:rounded-tr-2xl phone:p-10"
   style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage.src})`,
     backgroundSize: 'cover',
@@ -186,15 +186,15 @@ const GeneralInsurance = () => {
   }}
 >
 
-  <h1 className="lg:text-4xl phone:text-xl">
-    <span className="lg:text-5xl font-bold phone:text-2xl">H</span>ealth Insurance
+  <h1 className="lg:text-4xl phone:text-xl tablet:text-xl">
+    <span className="lg:text-5xl font-bold phone:text-2xl tablet:text-3xl">H</span>ealth Insurance
   </h1>
-  <p className="w-2/3 phone:w-full phone:text-sm lg:text-xl">
+  <p className="w-2/3 phone:w-full phone:text-sm lg:text-xl tablet:text-xl tablet:w-full">
   Health insurance provides financial protection against medical expenses, including hospitalization, surgeries, and treatments for illnesses or injuries. It ensures that individuals and families can access necessary healthcare services without significant financial strain, offering coverage for a range of medical needs and emergencies.
 </p>
 </div>
 
-          <div className="lg:w-1/2  flex flex-col  lg:justify-between phone:justify-end  phone:w-full ">
+          <div className="lg:w-1/2 tablet:w-1/2  flex flex-col  lg:justify-between phone:justify-end  phone:w-full ">
           {/* <div className="flex flex-col gap-5 lg:p-8 phone:p-4">
           <div className="flex flex-col items-start gap-3">
             <h1 className="lg:text-2xl font-semibold  phone:text-sm ">Types of <span className="text-blue-700">Health</span> Insurance</h1>
@@ -264,9 +264,9 @@ const GeneralInsurance = () => {
             </div>
            <h1 className="lg:text-xl phone:text-sm">At Policy Sansar, we understand the importance of safeguarding your health and well-being. Our health insurance plans offer comprehensive coverage options.</h1>
           </div>
-          <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4">
+          <div className="flex flex-col gap-5 lg:p-8 w-full phone:p-4 tablet:p-4">
           <div className="flex flex-col items-start gap-3 ">
-            <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg">Top Features of <span className="text-blue-700">Health</span> Insurance</h1>
+            <h1 className="lg:text-2xl font-bold phone:text-sm tablet:text-lg ">Top Features of <span className="text-blue-700">Health</span> Insurance</h1>
             <hr className="w-64"/>
             
             </div>
