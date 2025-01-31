@@ -66,10 +66,10 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card1InView ? 1 : 0, x: card1InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 desktop3xl:w-1/2 h-32 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+              className="w-full lg:w-96 desktop3xl:w-1/2 h-32 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center phone:justify-start hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
               <div className="flex items-start gap-6 p-3 w-full">
-                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">1</div>
+                <div className="bg-[#0040FF] w-10 h-10 p-4 rounded-full flex items-center justify-center text-white font-bold phone:p-4">1</div>
                 <div className="flex flex-col items-start gap-3 w-full">
                   <h1 className="text-lg font-bold">Real-Solutions</h1>
                   <p className="text-sm font-medium">Seamless support and claim assistance.</p>
@@ -78,16 +78,16 @@ const Unique = () => {
             </motion.div>
 
             {/* Card 2 */}
-            <div className="w-full flex items-end justify-end">
+            <div className="w-full flex items-end justify-end  ">
             <motion.div
               ref={card2Ref}
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: card2InView ? 1 : 0, x: card2InView ? 0 : 100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center phone:justify-start hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
               <div className="flex items-start gap-6 p-3">
-                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">2</div>
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full p-4 flex items-center justify-center text-white font-bold phone:p-4">2</div>
                 <div className="flex flex-col items-start gap-3">
                   <h1 className="text-lg font-bold">Diverse Insurance Products</h1>
                   <p className="text-sm font-medium">Comprehensive coverage options.</p>
@@ -102,10 +102,10 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card3InView ? 1 : 0, x: card3InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center phone:justify-start hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
               <div className="flex items-start gap-6 p-3">
-                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">3</div>
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full p-4 flex items-center justify-center text-white font-bold phone:p-4">3</div>
                 <div className="flex flex-col items-start gap-3">
                   <h1 className="text-lg font-bold">Local Experts</h1>
                   <p className="text-sm font-medium">Knowledgeable team providing personalized care.</p>
@@ -120,10 +120,10 @@ const Unique = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: card4InView ? 1 : 0, x: card4InView ? 0 : 100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center phone:justify-start hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
               <div className="flex items-start gap-6 p-3">
-                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">4</div>
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full p-4 flex items-center justify-center text-white font-bold phone:p-4">4</div>
                 <div className="flex flex-col items-start gap-3">
                   <h1 className="text-lg font-bold">Flexible Plans</h1>
                   <p className="text-sm font-medium">Customized insurance plans for diverse needs.</p>
@@ -138,10 +138,10 @@ const Unique = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: card5InView ? 1 : 0, x: card5InView ? 0 : -100 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
+              className="w-full lg:w-96 h-32 desktop3xl:w-1/2 desktop3xl:h-44 bg-white shadow-lg border border-x border-slate-200 rounded-lg flex items-center justify-center phone:justify-start hover:bg-[#000f23] transition-all ease-in-out duration-700 hover:text-white p-3 phone:h-36"
             >
               <div className="flex items-start gap-6 p-3">
-                <div className="bg-[#0040FF] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold phone:p-4">5</div>
+                <div className="bg-[#0040FF] w-10 h-10 rounded-full p-4 flex items-center justify-center text-white font-bold phone:p-4">5</div>
                 <div className="flex flex-col items-start gap-3">
                   <h1 className="text-lg font-bold">24/7 Customer Support</h1>
                   <p className="text-sm font-medium">Round-the-clock assistance for queries and issues.</p>
