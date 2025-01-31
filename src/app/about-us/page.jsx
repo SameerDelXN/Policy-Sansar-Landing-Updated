@@ -121,7 +121,7 @@ const Experts = () => {
           height={400}
           src={member.img}
           alt={member.name}
-          className="object-cover rounded-full shadow-lg border-4 border-white phone:w-2/3 laptop:w-1/3 "
+          className="object-cover rounded-full shadow-lg border-4 border-white phone:w-2/3 laptop:w-1/2 desktopxl:w-1/2 "
         />
 
         {/* LinkedIn Logo */}
@@ -129,7 +129,7 @@ const Experts = () => {
           href={member.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute laptop:bottom-0 laptop:right-80 phone:bottom-2 phone:right-14 desktopxl:bottom-4 desktopxl:right-28"
+          className="absolute laptop:bottom-4 laptop:right-24 phone:bottom-2 phone:right-14 desktopxl:bottom-4 desktopxl:right-36 "
         >
         <div className="border border-[#009AE5] p-1 rounded-full"> <div className="border border-[#009AE5] p-1 rounded-full">
          <div className="border-2 border-[#009AE5] p-0.5 rounded-full"> <Image
@@ -137,7 +137,7 @@ const Experts = () => {
             alt="LinkedIn"
             width={720}
             height={720}
-            className="rounded-full shadow-md lg:w-16  phone:w-12 "
+            className="rounded-full shadow-md lg:w-12  phone:w-12 "
           /></div>
          </div></div>
         </Link>
