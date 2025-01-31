@@ -99,8 +99,8 @@ const Experts = () => {
 {teamMembers.map((member, index) => (
   <div
     key={index}
-    className={`relative w-full md:w-5/6 flex  xl:flex-row 2xl:flex-row  items-center gap-6 p-6 bg-[#0040ff0f]  rounded-2xl ${
-      index % 2 === 0 ? "md:flex-row-reverse  xl:flex-row-reverse 2xl:flex-row-reverse " : ""
+    className={`relative w-full md:w-5/6 flex phone:flex-col-reverse  xl:flex-row 2xl:flex-row  items-center gap-6 p-6 bg-[#0040ff0f]  rounded-2xl ${
+      index % 2 === 0 ? "md:flex-row-reverse phone:flex-col-reverse  xl:flex-row-reverse 2xl:flex-row-reverse " : ""
     }`}
   >
     <div className="flex-1">
@@ -137,7 +137,7 @@ const Experts = () => {
             alt="LinkedIn"
             width={720}
             height={720}
-            className="rounded-full shadow-md lg:w-12  phone:w-12 "
+            className="rounded-full shadow-md lg:w-12  phone:w-12 tablet:w-12 "
           /></div>
          </div></div>
         </Link>
