@@ -99,8 +99,8 @@ const Experts = () => {
 {teamMembers.map((member, index) => (
   <div
     key={index}
-    className={`relative w-full md:w-5/6 flex flex-col-reverse lg:flex-col-reverse xl:flex-row 2xl:flex-row md:flex-col-reverse items-center gap-6 p-6 bg-[#0040ff0f]  rounded-2xl ${
-      index % 2 === 0 ? "md:flex-row-reverse lg:flex-row-reverse xl:flex-row-reverse 2xl:flex-row-reverse " : ""
+    className={`relative w-full md:w-5/6 flex  xl:flex-row 2xl:flex-row  items-center gap-6 p-6 bg-[#0040ff0f]  rounded-2xl ${
+      index % 2 === 0 ? "md:flex-row-reverse  xl:flex-row-reverse 2xl:flex-row-reverse " : ""
     }`}
   >
     <div className="flex-1">
@@ -121,7 +121,7 @@ const Experts = () => {
           height={400}
           src={member.img}
           alt={member.name}
-          className="object-cover rounded-full shadow-lg border-4 border-white phone:w-2/3 laptop:w-1/2 desktopxl:w-1/2 "
+          className="object-cover rounded-full shadow-lg border-4 border-white phone:w-2/3 tablet:w-2/3 laptop:w-1/2 desktopxl:w-1/2 "
         />
 
         {/* LinkedIn Logo */}
@@ -129,7 +129,7 @@ const Experts = () => {
           href={member.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute laptop:bottom-4 laptop:right-24 phone:bottom-2 phone:right-14 desktopxl:bottom-4 desktopxl:right-36 "
+          className="absolute laptop:bottom-4 laptop:right-24 phone:bottom-2 phone:right-14 desktopxl:bottom-4 desktopxl:right-36 tablet:bottom-0 tablet:right-16 "
         >
         <div className="border border-[#009AE5] p-1 rounded-full"> <div className="border border-[#009AE5] p-1 rounded-full">
          <div className="border-2 border-[#009AE5] p-0.5 rounded-full"> <Image
