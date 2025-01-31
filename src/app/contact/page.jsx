@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=" w-full laptop:min-h-[150vh] phone:min-h-[200vh] phone:mb-3  ">
+    <div className=" w-full laptop:min-h-[150vh] phone:min-h-[100vh]  ">
       {/* Hero Section */}
       <Toaster />
       <div className="relative w-full h-56 bg-black ">
