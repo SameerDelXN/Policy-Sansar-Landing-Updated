@@ -286,6 +286,12 @@ const Header = () => {
             About Us
           </Link1>
           <Link1
+            href="/career"
+            className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
+          >
+            Careers
+          </Link1>
+          <Link1
             href="/contact"
             className="relative cursor-pointer text-black after:content-[''] after:block after:h-[2px] after:bg-blue-700 after:w-0 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-700 tablet:text-sm"
           >
@@ -428,6 +434,13 @@ const Header = () => {
                 className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
               >
                 About Us
+              </Link1>
+              <Link1
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                href="/career"
+                className="py-2 text-sm text-black border-b border-gray-200 w-full text-left"
+              >
+                Careers
               </Link1>
               <Link1
               onClick={()=>setIsMenuOpen(!isMenuOpen)}
