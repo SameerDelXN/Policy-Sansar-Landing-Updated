@@ -81,7 +81,7 @@ const Experts = () => {
           </p>
           <div className=" flex lg:flex-row items-center w-full justify-between phone:flex-col phone:gap-2">
            <div className="flex items-center gap-5"> <p className="lg:text-lg phone:text-sm font-semibold flex items-center gap-1 "><span><IoMdCall className="lg:text-2xl phone:text-sm"/></span>Contact Us</p>
-           <p className="lg:text-xl phone:text-sm font-bold text-[#164574]">+91 9644170004</p></div>
+           <p className="lg:text-xl phone:text-sm font-bold text-[#164574]">+91 9561113316</p></div>
             <button className="phone:w-full lg:w-56 px-6 py-2 bg-[#164574] text-white rounded-md hover:bg-[#123c60] transition">
               Call Our Experts
             </button>
