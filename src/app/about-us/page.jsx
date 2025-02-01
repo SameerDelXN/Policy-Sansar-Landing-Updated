@@ -70,15 +70,17 @@ const Experts = () => {
         <div className="w-full md:w-1/2 text-left space-y-4">
           <h2 className="text-3xl font-bold text-[#164574]">About Our Company</h2>
           <p className="text-gray-700 text-justify">
-            Welcome to <b>Policy Sansar Insurance Broking Private Limited</b>, a trusted name in the insurance brokerage industry. Policy Sansar was incorporated on <b>4th Sept 2024</b> under the Registered Company Act 2013. We have received our <b>IRDAI License</b> for Direct Broker - Life and General on <b>27 Dec 2024</b>.
-          </p>
-          <p className="text-gray-700 text-justify">
-            We currently operate with a strength of <b>20+ field officers</b> and <b>Business Development Managers</b> across <b>10 locations</b> in India. Our Registered and Corporate Offices are in <b>Mumbai</b>, and we are in the process of setting up branches in <b>Gujarat, MP, and Kerala</b>.
-          </p>
-          <p className="text-gray-700 text-justify">
-            Our company website is under development:{" "}
-            <a href="https://www.policysansar.com" className=" font-semibold underline">www.policysansar.com</a>. We plan to launch our <b >app by May 2025</b>.
-          </p>
+  Welcome to <b>Policy Sansar Insurance Broking Private Limited</b>, a trusted name in the insurance brokerage industry. We have received our <b>IRDAI License - IRDA/1019</b> for Direct Broker - Life and General. We are a registered entity under the <b>Udyam</b> initiative of the Government of India.
+</p>
+<p className="text-gray-700 text-justify">
+  Our Registered office 3rd Floor, Plot No.264/265, Vaswani Chamber, Dr.Annie Besant Road, Worli Colony, Mumbai-400018
+
+and Corporate Offices 104,1st Floor, A-Wing,Boomerang, Chandivali Farm Road, Andheri East, Mumbai-40072. We are in the process of setting up <b>10 branches in 2025-26</b> and <b>100 branches over the next 3 years</b> across India.
+</p>
+<p className="text-gray-700 text-justify">
+  For any business enquiry or to associate with us, please reach out at <a href="mailto:po@policysansar.com" className="font-semibold underline">po@policysansar.com</a> or call <b>+91 9561113316</b>.
+</p>
+
           <div className=" flex lg:flex-row items-center w-full justify-between phone:flex-col phone:gap-2">
            <div className="flex items-center gap-5"> <p className="lg:text-lg phone:text-sm font-semibold flex items-center gap-1 "><span><IoMdCall className="lg:text-2xl phone:text-sm"/></span>Contact Us</p>
            <Link href="tel:+919561113316"  className="lg:text-xl phone:text-sm font-bold text-[#164574]">+91 9561113316</Link></div>

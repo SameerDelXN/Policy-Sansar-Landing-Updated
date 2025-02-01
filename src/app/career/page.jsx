@@ -5,7 +5,7 @@ import { Toaster, toast } from "react-hot-toast";
 import mailicon from "../../../public/icons/Flaticons/mail.png";
 import callicon from "../../../public/icons/Flaticons/callI.png";
 import AnimatedHeader from "../components/AnimatedHeader";
-import careerbanner from "../../../public/coverimg/call.png"; // Update banner image
+import careerbanner from "../../../public/coverimg/career.jpg"; // Update banner image
 
 const Career = () => {
   const [formData, setFormData] = useState({
