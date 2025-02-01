@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/api/form-data", "destination": "/api/form-data.js" },
+      { "source": "/api/career-enquiry", "destination": "/api/career-enquiry.js" }
+    ]
+  }
+  
