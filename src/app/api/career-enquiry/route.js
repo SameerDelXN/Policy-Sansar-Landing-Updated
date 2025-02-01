@@ -24,19 +24,9 @@ export async function POST(req) {
     stream.push(buffer);
     stream.push(null); // End the stream
 
-    // Determine file extension based on MIME type
-    let fileExtension = "";
-    if (resume.type === "application/pdf") {
-      fileExtension = "pdf";
-    } else if (resume.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
-      fileExtension = "docx";
-    } else {
-      throw new Error("Only PDF and Word documents are allowed.");
-    }
-
     // Format date (e.g., 1Jan)
     const dateStr = format(new Date(), "dMMM");
-    const fileName = `${fname}${lname}${dateStr}.${fileExtension}`;
+    const fileName = `${fname}${lname}${dateStr}.pdf`;
 
     // Google Authentication
     const auth = new google.auth.GoogleAuth({
