@@ -169,12 +169,12 @@ const Career = () => {
                 placeholder="Mobile Number"
               />
               <input
-                type="file"
-                name="resume"
-                accept="application/pdf"
-                onChange={handleFileChange}
-                className="border border-slate-300 lg:p-4 lg:text-lg rounded-lg w-full bg-white focus:outline-none phone:p-3 phone:text-xs"
-              />
+  type="file"
+  name="resume"
+  accept=".pdf,.docx"
+  onChange={handleFileChange}
+/>
+
               <input
                 type="submit"
                 value={loading ? "Submitting..." : "Upload"}
